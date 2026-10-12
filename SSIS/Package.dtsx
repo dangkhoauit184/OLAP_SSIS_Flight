@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{1DB71166-205D-4498-AC11-EAB89BC0DE6A}">
+  DTS:VersionBuild="61"
+  DTS:VersionGUID="{E6DA96B2-0854-44CE-895D-BFF612A2608E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -236,10 +236,36 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{6B0EB960-A0A4-4407-B30A-D5C4728944F8}"
-              SQLTask:SqlStatementSource="USE Flight_DW;&#xA;&#xA;-- 1. DIM_CARRIER&#xA;IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='DIM_CARRIER' AND xtype='U')&#xA;BEGIN&#xA;CREATE TABLE DIM_CARRIER (&#xA;    CARRIER_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CARRIER_CODE NVARCHAR(50) NOT NULL UNIQUE&#xA;);&#xA;END&#xA;&#xA;-- 2. DIM_AIRPORT&#xA;IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='DIM_AIRPORT' AND xtype='U')&#xA;BEGIN&#xA;CREATE TABLE DIM_AIRPORT (&#xA;    AIRPORT_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    AIRPORT_CODE NVARCHAR(50) NOT NULL UNIQUE,&#xA;    CITY_NAME NVARCHAR(100) NULL&#xA;);&#xA;END&#xA;&#xA;-- 3. DIM_CANCELLATION&#xA;IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='DIM_CANCELLATION' AND xtype='U')&#xA;BEGIN&#xA;CREATE TABLE DIM_CANCELLATION (&#xA;    CANCELLATION_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CANCELLATION_CODE NVARCHAR(50) NOT NULL UNIQUE,&#xA;    CANCELLATION_REASON NVARCHAR(100) NULL&#xA;);&#xA;END&#xA;&#xA;-- 4. DIM_TIME&#xA;IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='DIM_TIME' AND xtype='U')&#xA;BEGIN&#xA;CREATE TABLE DIM_TIME (&#xA;    TIME_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CRS_TIME INT NOT NULL UNIQUE,&#xA;    HOUR_NUM INT NULL,&#xA;    TIME_OF_DAY NVARCHAR(50) NULL&#xA;);&#xA;END&#xA;&#xA;-- 5. DIM_DATE&#xA;IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='DIM_DATE' AND xtype='U')&#xA;BEGIN&#xA;CREATE TABLE DIM_DATE (&#xA;    DATE_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    FL_DATE DATE NOT NULL UNIQUE,&#xA;    YEAR_NUM INT NULL,&#xA;    QUARTER_NUM INT NULL,&#xA;    MONTH_NUM INT NULL,&#xA;    DAY_NUM INT NULL&#xA;);&#xA;END&#xA;&#xA;-- 6. FACT_FLIGHT&#xA;IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='FACT_FLIGHT' AND xtype='U')&#xA;BEGIN&#xA;CREATE TABLE FACT_FLIGHT (&#xA;    FLIGHT_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    DATE_ID INT NULL,&#xA;    DEP_TIME_ID INT NULL,&#xA;    CARRIER_ID INT NULL,&#xA;    ORIGIN_AIRPORT_ID INT NULL,&#xA;    DEST_AIRPORT_ID INT NULL,&#xA;    CANCELLATION_ID INT NULL,&#xA;    CRS_DEP_TIME INT NULL,&#xA;    CRS_ARR_TIME INT NULL,&#xA;    DISTANCE FLOAT NULL,&#xA;    CANCELLED INT NULL,&#xA;    DEP_DELAY FLOAT NULL,&#xA;    ARR_DELAY FLOAT NULL,&#xA;    CARRIER_DELAY FLOAT NULL,&#xA;    WEATHER_DELAY FLOAT NULL,&#xA;    NAS_DELAY FLOAT NULL,&#xA;    SECURITY_DELAY FLOAT NULL,&#xA;    LATE_AIRCRAFT_DELAY FLOAT NULL&#xA;);&#xA;END&#xA;&#xA;&#xA;&#xA;-- =============================================&#xA;-- XÓA DỮ LIỆU CŨ TRƯỚC KHI NẠP (CLEAN DATA)&#xA;-- =============================================&#xA;&#xA;-- 1. Xóa Fact trước (tránh lỗi Foreign Key)&#xA;IF OBJECT_ID('[dbo].[FACT_FLIGHT]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[FACT_FLIGHT];&#xA;&#xA;-- 2. Xóa các Dim&#xA;IF OBJECT_ID('[dbo].[DIM_CARRIER]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DIM_CARRIER];&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_CANCELLATION]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DIM_CANCELLATION];&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_AIRPORT]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DIM_AIRPORT];&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_DATE]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DIM_DATE];&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_TIME]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DIM_TIME];&#xA;&#xA;-- 3. Reset cột tự tăng (Identity) về 0&#xA;IF OBJECT_ID('[dbo].[FACT_FLIGHT]', 'U') IS NOT NULL&#xA;    DBCC CHECKIDENT ('[dbo].[FACT_FLIGHT]', RESEED, 0);&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_CARRIER]', 'U') IS NOT NULL&#xA;    DBCC CHECKIDENT ('[dbo].[DIM_CARRIER]', RESEED, 0);&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_CANCELLATION]', 'U') IS NOT NULL&#xA;    DBCC CHECKIDENT ('[dbo].[DIM_CANCELLATION]', RESEED, 0);&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_AIRPORT]', 'U') IS NOT NULL&#xA;    DBCC CHECKIDENT ('[dbo].[DIM_AIRPORT]', RESEED, 0);&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_TIME]', 'U') IS NOT NULL&#xA;    DBCC CHECKIDENT ('[dbo].[DIM_TIME]', RESEED, 0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="USE Flight_DW;&#xA;GO&#xA;&#xA;-- 1. DIM_CARRIER&#xA;CREATE TABLE DIM_CARRIER (&#xA;    CARRIER_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CARRIER_CODE NVARCHAR(50) NOT NULL UNIQUE&#xA;);&#xA;&#xA;-- 2. DIM_AIRPORT&#xA;CREATE TABLE DIM_AIRPORT (&#xA;    AIRPORT_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    AIRPORT_CODE NVARCHAR(50) NOT NULL UNIQUE,&#xA;    CITY_NAME NVARCHAR(100) NULL&#xA;);&#xA;&#xA;-- 3. DIM_CANCELLATION&#xA;CREATE TABLE DIM_CANCELLATION (&#xA;    CANCELLATION_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CANCELLATION_CODE NVARCHAR(50) NOT NULL UNIQUE,&#xA;    CANCELLATION_REASON NVARCHAR(100) NULL&#xA;);&#xA;&#xA;-- 4. DIM_TIME&#xA;CREATE TABLE DIM_TIME (&#xA;    TIME_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CRS_TIME INT NOT NULL UNIQUE,&#xA;    HOUR_NUM INT NULL,&#xA;    TIME_OF_DAY NVARCHAR(50) NULL&#xA;);&#xA;&#xA;-- 5. DIM_DATE&#xA;CREATE TABLE DIM_DATE (&#xA;    DATE_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    FL_DATE DATE NOT NULL UNIQUE,&#xA;    YEAR_NUM INT NULL,&#xA;    QUARTER_NUM INT NULL,&#xA;    MONTH_NUM INT NULL,&#xA;    DAY_NUM INT NULL&#xA;);&#xA;&#xA;-- 6. FACT_FLIGHT&#xA;CREATE TABLE FACT_FLIGHT (&#xA;    FLIGHT_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    DATE_ID INT NULL,&#xA;    DEP_TIME_ID INT NULL,&#xA;    CARRIER_ID INT NULL,&#xA;    ORIGIN_AIRPORT_ID INT NULL,&#xA;    DEST_AIRPORT_ID INT NULL,&#xA;    CANCELLATION_ID INT NULL,&#xA;    CRS_DEP_TIME INT NULL,&#xA;    CRS_ARR_TIME INT NULL,&#xA;    DISTANCE FLOAT NULL,&#xA;    CANCELLED INT NULL,&#xA;    DEP_DELAY FLOAT NULL,&#xA;    ARR_DELAY FLOAT NULL,&#xA;    CARRIER_DELAY FLOAT NULL,&#xA;    WEATHER_DELAY FLOAT NULL,&#xA;    NAS_DELAY FLOAT NULL,&#xA;    SECURITY_DELAY FLOAT NULL,&#xA;    LATE_AIRCRAFT_DELAY FLOAT NULL&#xA;);&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Build_DW\Drop_All_Tables"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2428F4DF-2D9D-4B66-824F-75D48E155C9C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Drop_All_Tables"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6B0EB960-A0A4-4407-B30A-D5C4728944F8}"
+              SQLTask:SqlStatementSource="USE Flight_DW;&#xA;GO&#xA;&#xA;-- 1. Xóa bảng Fact trước (để gỡ bỏ các ràng buộc khóa ngoại)&#xA;IF OBJECT_ID('[dbo].[FACT_FLIGHT]', 'U') IS NOT NULL&#xA;    DROP TABLE [dbo].[FACT_FLIGHT];&#xA;&#xA;-- 2. Xóa các bảng Dimension&#xA;IF OBJECT_ID('[dbo].[DIM_CARRIER]', 'U') IS NOT NULL&#xA;    DROP TABLE [dbo].[DIM_CARRIER];&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_AIRPORT]', 'U') IS NOT NULL&#xA;    DROP TABLE [dbo].[DIM_AIRPORT];&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_CANCELLATION]', 'U') IS NOT NULL&#xA;    DROP TABLE [dbo].[DIM_CANCELLATION];&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_TIME]', 'U') IS NOT NULL&#xA;    DROP TABLE [dbo].[DIM_TIME];&#xA;&#xA;IF OBJECT_ID('[dbo].[DIM_DATE]', 'U') IS NOT NULL&#xA;    DROP TABLE [dbo].[DIM_DATE];&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SEQ_Build_DW.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{6CB2BC14-6934-44A4-B7D9-64C2314989EF}"
+          DTS:From="Package\SEQ_Build_DW\Drop_All_Tables"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SEQ_Build_DW\Create_DIM_FACT_Table" />
+      </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\SEQ_Load_DIM"
@@ -6733,18 +6759,44 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="205.714285714286,42.2857142857143"
           Id="Package\SEQ_Build_DW\Create_DIM_FACT_Table"
-          TopLeft="108.396817272014,7.48050976594809" />
+          TopLeft="107.285706181139,76.0259605043409" />
+        <NodeLayout
+          Size="160,42.2857142857143"
+          Id="Package\SEQ_Build_DW\Drop_All_Tables"
+          TopLeft="130.087292536686,1.06818206432803" />
+        <EdgeLayout
+          Id="Package\SEQ_Build_DW.PrecedenceConstraints[Constraint]"
+          TopLeft="210.115070787484,43.3538963500423">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.6720641542986"
+              Start="0,0"
+              End="0,25.1720641542986">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.1720641542986" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="318.857142857143,105.142857142858"
-          Size="318.857142857143,148"
+          PanelSize="444.571428571429,173.142857142858"
+          Size="444.571428571429,216.571428571429"
           Id="Package\SEQ_Build_DW"
-          TopLeft="370.317453573042,142.409082999592" />
+          TopLeft="366.984120300417,136.499992418696" />
         <NodeLayout
           Size="210.857142857143,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT"
@@ -6859,7 +6911,7 @@ where [refTable].[CRS_TIME] = ?</property>
           PanelSize="314.857142857143,398.857142857143"
           Size="314.857142857143,441.714285714286"
           Id="Package\SEQ_Load_DIM"
-          TopLeft="372.222215443114,351.590889563308" />
+          TopLeft="372.222215443114,438.772703347313" />
         <NodeLayout
           Size="209.714285714286,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT"
@@ -6870,21 +6922,33 @@ where [refTable].[CRS_TIME] = ?</property>
           PanelSize="312,114.857142857143"
           Size="312,157.714285714286"
           Id="Package\SEQ_LOAD_FACT"
-          TopLeft="850.793635298547,535.556560062159" />
+          TopLeft="844.126968753297,489.465653531171" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="529.698405936649,290.409082999592">
+          TopLeft="589.269834586132,353.071420990125">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.181806563716"
+              EndConnector="-59.6190477144461,85.7012823571888"
               Start="0,0"
-              End="0,53.681806563716">
+              End="-59.6190477144461,78.2012823571888">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.681806563716" />
+                    End="0,38.8506411785944" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.8506411785944"
+                    Point2="0,42.8506411785944"
+                    Point3="-4,42.8506411785944" />
+                  <mssgle:LineSegment
+                    End="-55.6190477144461,42.8506411785944" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-55.6190477144461,42.8506411785944"
+                    Point2="-59.6190477144461,42.8506411785944"
+                    Point3="-59.6190477144461,46.8506411785944" />
+                  <mssgle:LineSegment
+                    End="-59.6190477144461,78.2012823571888" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6895,30 +6959,30 @@ where [refTable].[CRS_TIME] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="687.079358300257,572.448032420451">
+          TopLeft="687.079358300257,659.629846204456">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="163.71427699829,41.9656704988511"
+              EndConnector="157.04761045304,-91.3070498161425"
               Start="0,0"
-              End="156.21427699829,41.9656704988511">
+              End="149.54761045304,-91.3070498161425">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="77.857138499145,0" />
+                    End="74.5238052265202,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="77.857138499145,0"
-                    Point2="81.857138499145,0"
-                    Point3="81.857138499145,4" />
+                    Point1="74.5238052265202,0"
+                    Point2="78.5238052265202,0"
+                    Point3="78.5238052265202,-4" />
                   <mssgle:LineSegment
-                    End="81.857138499145,37.9656704988511" />
+                    End="78.5238052265202,-87.3070498161425" />
                   <mssgle:CubicBezierSegment
-                    Point1="81.857138499145,37.9656704988511"
-                    Point2="81.857138499145,41.9656704988511"
-                    Point3="85.857138499145,41.9656704988511" />
+                    Point1="78.5238052265202,-87.3070498161425"
+                    Point2="78.5238052265202,-91.3070498161425"
+                    Point3="82.5238052265202,-91.3070498161425" />
                   <mssgle:LineSegment
-                    End="156.21427699829,41.9656704988511" />
+                    End="149.54761045304,-91.3070498161425" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7633,6 +7697,26 @@ where [refTable].[CRS_TIME] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="155.428571428572,42.2857142857143"
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source"
+          TopLeft="641.999971300365,228.999989762903" />
+        <NodeLayout
+          Size="181.142857142858,42.2857142857143"
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Cancellation"
+          TopLeft="1265.7407176884,517.045425828394" />
+        <NodeLayout
+          Size="144,42.2857142857143"
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Date"
+          TopLeft="1342.29275079188,371.21211194973" />
+        <NodeLayout
+          Size="188,42.2857142857143"
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Origin_Airport"
+          TopLeft="1284.25923586965,625.378753144819" />
+        <NodeLayout
+          Size="176.571428571429,42.2857142857143"
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination"
+          TopLeft="443.333325259112,616.909056645535" />
+        <NodeLayout
           Size="154.285714285715,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Carrier"
           TopLeft="1282.99994264543,254.999988600612" />
@@ -7641,9 +7725,205 @@ where [refTable].[CRS_TIME] = ?</property>
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Data Conversion"
           TopLeft="993.999955564739,232.999989584089" />
         <NodeLayout
-          Size="155.428571428572,42.2857142857143"
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source"
-          TopLeft="641.999971300365,228.999989762903" />
+          Size="181.142857142858,42.2857142857143"
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport"
+          TopLeft="1010.18516678716,624.39390471467" />
+        <NodeLayout
+          Size="145.142857142858,42.2857142857143"
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time"
+          TopLeft="754.629615885916,627.020167195068" />
+        <EdgeLayout
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output5]"
+          TopLeft="754.629615885916,648.163024337925">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-134.724862055375,-10.1111105495332"
+              Start="0,0"
+              End="-127.224862055375,-10.1111105495332">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-63.3624310276873,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-63.3624310276873,0"
+                    Point2="-67.3624310276873,0"
+                    Point3="-67.3624310276873,-4" />
+                  <mssgle:LineSegment
+                    End="-67.3624310276873,-6.11111054953324" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-67.3624310276873,-6.11111054953324"
+                    Point2="-67.3624310276873,-10.1111105495332"
+                    Point3="-71.3624310276873,-10.1111105495332" />
+                  <mssgle:LineSegment
+                    End="-127.224862055375,-10.1111105495332" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-115.553817746437,1,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output4]"
+          TopLeft="1414.29275079188,413.497826235444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-57.9806045320463,103.54759959295"
+              Start="0,0"
+              End="-57.9806045320463,96.04759959295">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.773799796475" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.773799796475"
+                    Point2="0,51.773799796475"
+                    Point3="-4,51.773799796475" />
+                  <mssgle:LineSegment
+                    End="-53.9806045320463,51.773799796475" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-53.9806045320463,51.773799796475"
+                    Point2="-57.9806045320463,51.773799796475"
+                    Point3="-57.9806045320463,55.773799796475" />
+                  <mssgle:LineSegment
+                    End="-57.9806045320463,96.04759959295" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-109.502040547273,56.773799796475,161.0234765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output3]"
+          TopLeft="1360.14279978829,297.285702886326">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.1499510035885,73.9264090634032"
+              Start="0,0"
+              End="54.1499510035885,66.4264090634032">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.9632045317016" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.9632045317016"
+                    Point2="0,36.9632045317016"
+                    Point3="4,36.9632045317016" />
+                  <mssgle:LineSegment
+                    End="50.1499510035885,36.9632045317016" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.1499510035885,36.9632045317016"
+                    Point2="54.1499510035885,36.9632045317016"
+                    Point3="54.1499510035885,40.9632045317016" />
+                  <mssgle:LineSegment
+                    End="54.1499510035885,66.4264090634032" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-53.4367627794558,41.9632045317016,161.0234765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output2]"
+          TopLeft="1010.18516678716,646.849893097726">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-110.412693758386,0"
+              Start="0,0"
+              End="-102.912693758386,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-102.912693758386,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.647733597943,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output1]"
+          TopLeft="1284.25923586965,646.029186072602">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-92.9312119396347,0"
+              Start="0,0"
+              End="-85.4312119396347,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-85.4312119396347,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-123.227344251067,5,161.0234765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output]"
+          TopLeft="1356.31214625983,559.331140114108">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.9470896098212,66.047613030711"
+              Start="0,0"
+              End="21.9470896098212,58.547613030711">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.0238065153555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.0238065153555"
+                    Point2="0,33.0238065153555"
+                    Point3="4,33.0238065153555" />
+                  <mssgle:LineSegment
+                    End="17.9470896098212,33.0238065153555" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.9470896098212,33.0238065153555"
+                    Point2="21.9470896098212,33.0238065153555"
+                    Point3="21.9470896098212,37.0238065153555" />
+                  <mssgle:LineSegment
+                    End="21.9470896098212,58.547613030711" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-69.5381934763394,38.0238065153555,161.0234765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Flat File Source Output]"
           TopLeft="797.428542728936,252.142846816353">
@@ -7704,255 +7984,16 @@ where [refTable].[CRS_TIME] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="181.142857142858,42.2857142857143"
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Cancellation"
-          TopLeft="1265.7407176884,517.045425828394" />
-        <NodeLayout
-          Size="188,42.2857142857143"
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Origin_Airport"
-          TopLeft="1284.25923586965,625.378753144819" />
-        <EdgeLayout
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output]"
-          TopLeft="1356.31214625983,559.331140114108">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="21.9470896098212,66.047613030711"
-              Start="0,0"
-              End="21.9470896098212,58.547613030711">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.0238065153555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.0238065153555"
-                    Point2="0,33.0238065153555"
-                    Point3="4,33.0238065153555" />
-                  <mssgle:LineSegment
-                    End="17.9470896098212,33.0238065153555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="17.9470896098212,33.0238065153555"
-                    Point2="21.9470896098212,33.0238065153555"
-                    Point3="21.9470896098212,37.0238065153555" />
-                  <mssgle:LineSegment
-                    End="21.9470896098212,58.547613030711" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-69.5381934763394,38.0238065153555,161.0234765625,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="181.142857142858,42.2857142857143"
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport"
-          TopLeft="1010.18516678716,624.39390471467" />
-        <EdgeLayout
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output1]"
-          TopLeft="1284.25923586965,646.029186072602">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-92.9312119396347,0"
-              Start="0,0"
-              End="-85.4312119396347,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-85.4312119396347,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-123.227344251067,5,161.0234765625,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="145.142857142858,42.2857142857143"
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time"
-          TopLeft="754.629615885916,627.020167195068" />
-        <EdgeLayout
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output2]"
-          TopLeft="1010.18516678716,646.849893097726">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-110.412693758386,0"
-              Start="0,0"
-              End="-102.912693758386,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-102.912693758386,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.647733597943,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="144,42.2857142857143"
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Date"
-          TopLeft="1342.29275079188,371.21211194973" />
-        <EdgeLayout
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output3]"
-          TopLeft="1360.14279978829,297.285702886326">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="54.1499510035885,73.9264090634032"
-              Start="0,0"
-              End="54.1499510035885,66.4264090634032">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.9632045317016" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.9632045317016"
-                    Point2="0,36.9632045317016"
-                    Point3="4,36.9632045317016" />
-                  <mssgle:LineSegment
-                    End="50.1499510035885,36.9632045317016" />
-                  <mssgle:CubicBezierSegment
-                    Point1="50.1499510035885,36.9632045317016"
-                    Point2="54.1499510035885,36.9632045317016"
-                    Point3="54.1499510035885,40.9632045317016" />
-                  <mssgle:LineSegment
-                    End="54.1499510035885,66.4264090634032" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-53.4367627794558,41.9632045317016,161.0234765625,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output4]"
-          TopLeft="1414.29275079188,413.497826235444">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-57.9806045320463,103.54759959295"
-              Start="0,0"
-              End="-57.9806045320463,96.04759959295">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.773799796475" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,47.773799796475"
-                    Point2="0,51.773799796475"
-                    Point3="-4,51.773799796475" />
-                  <mssgle:LineSegment
-                    End="-53.9806045320463,51.773799796475" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-53.9806045320463,51.773799796475"
-                    Point2="-57.9806045320463,51.773799796475"
-                    Point3="-57.9806045320463,55.773799796475" />
-                  <mssgle:LineSegment
-                    End="-57.9806045320463,96.04759959295" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-109.502040547273,56.773799796475,161.0234765625,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176.571428571429,42.2857142857143"
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination"
-          TopLeft="443.333325259112,616.909056645535" />
-        <EdgeLayout
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output5]"
-          TopLeft="754.629615885916,648.163024337925">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-134.724862055375,-10.1111105495332"
-              Start="0,0"
-              End="-127.224862055375,-10.1111105495332">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-63.3624310276873,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-63.3624310276873,0"
-                    Point2="-67.3624310276873,0"
-                    Point3="-67.3624310276873,-4" />
-                  <mssgle:LineSegment
-                    End="-67.3624310276873,-6.11111054953324" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-67.3624310276873,-6.11111054953324"
-                    Point2="-67.3624310276873,-10.1111105495332"
-                    Point3="-71.3624310276873,-10.1111105495332" />
-                  <mssgle:LineSegment
-                    End="-127.224862055375,-10.1111105495332" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-115.553817746437,1,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Carrier">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_CARRIER]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Cancellation">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7962,76 +8003,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Origin_Airport">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_AIRPORT]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_AIRPORT]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_TIME]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8044,7 +8016,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8054,7 +8026,30 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Origin_Airport">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_AIRPORT]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8071,6 +8066,75 @@ where [refTable].[CRS_TIME] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Carrier">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_CARRIER]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_AIRPORT]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_TIME]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
