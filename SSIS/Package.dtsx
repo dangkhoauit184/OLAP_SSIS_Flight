@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="61"
-  DTS:VersionGUID="{E6DA96B2-0854-44CE-895D-BFF612A2608E}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{B679B059-C9E3-49EB-9502-1E36ACB916CD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -40,7 +40,7 @@
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
           DTS:ConnectionString="D:\OLAP\flight_cleaned_50k.csv">
           <DTS:FlatFileColumns>
@@ -48,10 +48,10 @@
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
-              DTS:DataType="130"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fl_date"
-              DTS:DTSID="{532AB7EA-CC3C-4990-A257-9A254E5DF1A8}"
+              DTS:DTSID="{F8388469-8227-45AC-89AE-01532E23DF12}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -60,7 +60,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="crs_dep_time"
-              DTS:DTSID="{8F698A53-75A7-4A05-9334-37E88C86DF31}"
+              DTS:DTSID="{CEEA0D28-4B71-49CE-806A-D779BCFC1982}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -69,7 +69,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="crs_arr_time"
-              DTS:DTSID="{B0E5CB19-5D41-4C83-84FF-F2494AD6BDDA}"
+              DTS:DTSID="{D93D0DB1-8D70-445C-9618-F8E0597AAD74}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -78,7 +78,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="op_unique_carrier"
-              DTS:DTSID="{E0150378-8CF4-4E2C-9846-B9FD028C093E}"
+              DTS:DTSID="{BD2F11BD-C08B-499F-9347-082D3BB8EC9F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -87,7 +87,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="origin"
-              DTS:DTSID="{2FDD92DD-412C-478A-94FA-F19F2A69B3F3}"
+              DTS:DTSID="{CA96A546-1842-4602-9435-019D5A1E8DC1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -96,7 +96,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="origin_city_name"
-              DTS:DTSID="{F09BEBF0-EDE9-40C4-B699-ECA83821DCEF}"
+              DTS:DTSID="{08A8DB29-42E9-4925-8A9E-CB6A081F87CA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -105,7 +105,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dest"
-              DTS:DTSID="{7246F6DD-CDE6-468D-BA71-AE670D6F7401}"
+              DTS:DTSID="{9BEC9178-7D42-48FA-A4A2-EC730846F291}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -114,7 +114,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dest_city_name"
-              DTS:DTSID="{B8DA681A-6846-4382-A2D5-26E554EEF800}"
+              DTS:DTSID="{1BDF44DC-37ED-4915-BC85-6E9113840607}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -123,7 +123,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="distance"
-              DTS:DTSID="{4C7F5815-0CF4-493E-A439-43230DE40AB9}"
+              DTS:DTSID="{2BFE4CAA-FDBE-4E74-86EE-F1654DB81B87}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +132,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="cancelled"
-              DTS:DTSID="{7317DECE-C28C-4D76-B744-762B99322C19}"
+              DTS:DTSID="{394B73CF-B8E0-49CE-AF6E-97320FDB4F7B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -141,7 +141,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="cancellation_code"
-              DTS:DTSID="{E5E917F7-06BF-4F7E-84A4-B4B058A08FFB}"
+              DTS:DTSID="{86BB014B-D25A-44C9-A915-72C81A330CF8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +150,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dep_delay"
-              DTS:DTSID="{0FBF190D-4D99-4C13-B0FA-AE176DFC61EE}"
+              DTS:DTSID="{226A4C70-9BDA-4AE0-B614-74DA21348CF8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +159,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="arr_delay"
-              DTS:DTSID="{379EA060-0A07-4C34-9FD2-D5E9E20352FC}"
+              DTS:DTSID="{75DD0ACF-3FD6-4E9F-A24E-50EF6E33E88D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -168,7 +168,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="carrier_delay"
-              DTS:DTSID="{1400206C-C7F5-4724-978E-4C2CB3BC9F02}"
+              DTS:DTSID="{162A809F-AC54-4AAB-91CF-F2F588263E2F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -177,7 +177,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="weather_delay"
-              DTS:DTSID="{FD8D79E5-2B52-49BF-9BCC-7090FBE1F667}"
+              DTS:DTSID="{1ECCA7D3-049E-49AC-B208-AEF2EA32FF20}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -186,7 +186,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="nas_delay"
-              DTS:DTSID="{D674762A-7B45-4361-997F-7032C5485056}"
+              DTS:DTSID="{D431A360-EF76-4A42-A478-D747AC5AAEDE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -195,7 +195,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="security_delay"
-              DTS:DTSID="{78E10AC0-AA99-4630-A9EF-28037666452E}"
+              DTS:DTSID="{9729EBC0-E84C-4D4C-A747-F62F407BCA8A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -204,7 +204,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="late_aircraft_delay"
-              DTS:DTSID="{1342D2FE-FDD3-4C87-AC08-EBCE1EFF44B6}"
+              DTS:DTSID="{F9752E40-B689-46CD-9D7E-7AC47FDA61FD}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1425,7 +1425,7 @@
                         <externalMetadataColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CANCELLATION_CODE]"
                           dataType="wstr"
-                          length="10"
+                          length="50"
                           name="CANCELLATION_CODE" />
                         <externalMetadataColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CANCELLATION_REASON]"
@@ -4137,7 +4137,8 @@
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_TIME\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           length="50"
                           name="fl_date" />
                         <externalMetadataColumn
@@ -7119,15 +7120,15 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="157.142857142858,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION\Derived Column"
-          TopLeft="1135.99994921684,358.99998395145" />
+          TopLeft="1137.85180103496,358.99998395145" />
         <NodeLayout
           Size="99.4285714285715,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION\Sort"
-          TopLeft="1162.99994800985,560.999974921347" />
+          TopLeft="1164.85179982797,560.999974921347" />
         <NodeLayout
           Size="155.428571428572,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION\Flat File Source"
@@ -7142,13 +7143,13 @@ where [refTable].[CRS_TIME] = ?</property>
           TopLeft="1156.99994827807,464.999979212881" />
         <EdgeLayout
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION.Paths[Derived Column Output]"
-          TopLeft="1214.57137778827,401.285698237164">
+          TopLeft="1216.42322960639,401.285698237164">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="22.4285704897986,63.7142809757166"
+              EndConnector="20.5767186716764,63.7142809757167"
               Start="0,0"
-              End="22.4285704897986,56.2142809757166">
+              End="20.5767186716764,56.2142809757167">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -7159,21 +7160,19 @@ where [refTable].[CRS_TIME] = ?</property>
                     Point2="0,31.8571404878583"
                     Point3="4,31.8571404878583" />
                   <mssgle:LineSegment
-                    End="18.4285704897986,31.8571404878583" />
+                    End="16.5767186716764,31.8571404878583" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.4285704897986,31.8571404878583"
-                    Point2="22.4285704897986,31.8571404878583"
-                    Point3="22.4285704897986,35.8571404878583" />
+                    Point1="16.5767186716764,31.8571404878583"
+                    Point2="20.5767186716764,31.8571404878583"
+                    Point3="20.5767186716764,35.8571404878583" />
                   <mssgle:LineSegment
-                    End="22.4285704897986,56.2142809757166" />
+                    End="20.5767186716764,56.2142809757167" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-16.7792889738507,36.8571404878583,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7182,9 +7181,9 @@ where [refTable].[CRS_TIME] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-24.2857145539356,53.7142814227515"
+              EndConnector="-22.4338627358095,53.7142814227517"
               Start="0,0"
-              End="-24.2857145539356,46.2142814227515">
+              End="-22.4338627358095,46.2142814227517">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -7195,45 +7194,41 @@ where [refTable].[CRS_TIME] = ?</property>
                     Point2="0,26.8571407113758"
                     Point3="-4,26.8571407113758" />
                   <mssgle:LineSegment
-                    End="-20.2857145539356,26.8571407113758" />
+                    End="-18.4338627358095,26.8571407113758" />
                   <mssgle:CubicBezierSegment
-                    Point1="-20.2857145539356,26.8571407113758"
-                    Point2="-24.2857145539356,26.8571407113758"
-                    Point3="-24.2857145539356,30.8571407113758" />
+                    Point1="-18.4338627358095,26.8571407113758"
+                    Point2="-22.4338627358095,26.8571407113758"
+                    Point3="-22.4338627358095,30.8571407113758" />
                   <mssgle:LineSegment
-                    End="-24.2857145539356,46.2142814227515" />
+                    End="-22.4338627358095,46.2142814227517" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-40.1364314957178,31.8571407113758,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION.Paths[Sort Output]"
-          TopLeft="1162.99994800985,581.642832086556">
+          TopLeft="1164.85179982797,581.642832086556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-51.4285612361775,0"
+              EndConnector="-53.2804130543011,0"
               Start="0,0"
-              End="-43.9285612361775,0">
+              End="-45.7804130543011,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-43.9285612361775,0" />
+                    End="-45.7804130543011,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-46.7737532743388,5,49.6189453125,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7242,22 +7237,20 @@ where [refTable].[CRS_TIME] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="109.571416725006,0"
+              EndConnector="111.423268543125,0"
               Start="0,0"
-              End="102.071416725006,0">
+              End="103.923268543125,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="102.071416725006,0" />
+                    End="103.923268543125,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="23.042134143753,5,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7522,7 +7515,7 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_TIME">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="157.142857142858,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_TIME\Derived Column"
@@ -7574,9 +7567,7 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-59.8177463978726,1,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7598,9 +7589,7 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-40.0814458812006,5,49.6189453125,11.2236328125"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7634,9 +7623,7 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="36.7536721599761,-17.228515625,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7670,9 +7657,7 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-23.4331348302471,56.1648319324296,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
