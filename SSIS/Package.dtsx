@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{B679B059-C9E3-49EB-9502-1E36ACB916CD}">
+  DTS:VersionBuild="75"
+  DTS:VersionGUID="{E6E70777-2679-4D5F-A32D-3CBD696BE968}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -51,7 +51,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fl_date"
-              DTS:DTSID="{F8388469-8227-45AC-89AE-01532E23DF12}"
+              DTS:DTSID="{1F8E1147-C341-49C0-A128-4DD7CA6DC7C9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -60,7 +60,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="crs_dep_time"
-              DTS:DTSID="{CEEA0D28-4B71-49CE-806A-D779BCFC1982}"
+              DTS:DTSID="{9D3DDF2E-0584-47C5-8A02-9A53392A2DBE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -69,7 +69,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="crs_arr_time"
-              DTS:DTSID="{D93D0DB1-8D70-445C-9618-F8E0597AAD74}"
+              DTS:DTSID="{95527A37-FD05-40E8-BD50-69706D1AD637}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -78,7 +78,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="op_unique_carrier"
-              DTS:DTSID="{BD2F11BD-C08B-499F-9347-082D3BB8EC9F}"
+              DTS:DTSID="{73E9EEFD-60D4-4672-BAB5-037B304B2DC7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -87,7 +87,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="origin"
-              DTS:DTSID="{CA96A546-1842-4602-9435-019D5A1E8DC1}"
+              DTS:DTSID="{1AB9DAFA-01C9-453A-BB70-476C384C6AC8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -96,7 +96,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="origin_city_name"
-              DTS:DTSID="{08A8DB29-42E9-4925-8A9E-CB6A081F87CA}"
+              DTS:DTSID="{A45BA4D4-3586-4B1E-A0DB-F37434679DFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -105,7 +105,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dest"
-              DTS:DTSID="{9BEC9178-7D42-48FA-A4A2-EC730846F291}"
+              DTS:DTSID="{0C2C80E3-1EA0-4277-AF79-CB3160B9396E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -114,7 +114,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dest_city_name"
-              DTS:DTSID="{1BDF44DC-37ED-4915-BC85-6E9113840607}"
+              DTS:DTSID="{DDF355DD-B4CD-4E46-A4B7-13BEAE1D92D9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -123,7 +123,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="distance"
-              DTS:DTSID="{2BFE4CAA-FDBE-4E74-86EE-F1654DB81B87}"
+              DTS:DTSID="{C2C223E4-C98F-414E-90C6-4B9E8B8A82E5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +132,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="cancelled"
-              DTS:DTSID="{394B73CF-B8E0-49CE-AF6E-97320FDB4F7B}"
+              DTS:DTSID="{617B6A61-D605-422E-969E-8D6D88D3F2FA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -141,7 +141,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="cancellation_code"
-              DTS:DTSID="{86BB014B-D25A-44C9-A915-72C81A330CF8}"
+              DTS:DTSID="{77654607-49A9-474A-9629-A8965715BF51}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +150,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dep_delay"
-              DTS:DTSID="{226A4C70-9BDA-4AE0-B614-74DA21348CF8}"
+              DTS:DTSID="{39E7CD85-7249-4BE3-B566-06B4F16EA4FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +159,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="arr_delay"
-              DTS:DTSID="{75DD0ACF-3FD6-4E9F-A24E-50EF6E33E88D}"
+              DTS:DTSID="{5CA29F14-FC47-4764-B059-98119773C380}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -168,7 +168,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="carrier_delay"
-              DTS:DTSID="{162A809F-AC54-4AAB-91CF-F2F588263E2F}"
+              DTS:DTSID="{A7F8EED1-6E4E-4B61-A8AB-D12F6517A3D7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -177,7 +177,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="weather_delay"
-              DTS:DTSID="{1ECCA7D3-049E-49AC-B208-AEF2EA32FF20}"
+              DTS:DTSID="{31A178B1-0367-4766-9DAA-73E86AF17514}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -186,7 +186,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="nas_delay"
-              DTS:DTSID="{D431A360-EF76-4A42-A478-D747AC5AAEDE}"
+              DTS:DTSID="{EC959A14-A53D-413D-99C5-FE4F70444D98}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -195,7 +195,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="security_delay"
-              DTS:DTSID="{9729EBC0-E84C-4D4C-A747-F62F407BCA8A}"
+              DTS:DTSID="{D43F95FA-2A38-4ADB-B413-A81EE77F58D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -204,7 +204,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="late_aircraft_delay"
-              DTS:DTSID="{F9752E40-B689-46CD-9D7E-7AC47FDA61FD}"
+              DTS:DTSID="{90D14211-F94A-48F6-9857-C959F5B6C6FF}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -477,7 +477,8 @@
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           length="50"
                           name="fl_date" />
                         <externalMetadataColumn
@@ -710,7 +711,7 @@
                         <externalMetadataColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AIRPORT_CODE]"
                           dataType="wstr"
-                          length="10"
+                          length="50"
                           name="AIRPORT_CODE" />
                         <externalMetadataColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CITY_NAME]"
@@ -1193,7 +1194,8 @@
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           length="50"
                           name="fl_date" />
                         <externalMetadataColumn
@@ -1776,7 +1778,8 @@
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\Flat File Source.Outputs[Flat File Source Output].Columns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_date]"
@@ -2174,7 +2177,8 @@
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           length="50"
                           name="fl_date" />
                         <externalMetadataColumn
@@ -2399,7 +2403,7 @@
                         <externalMetadataColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CARRIER_CODE]"
                           dataType="wstr"
-                          length="10"
+                          length="50"
                           name="CARRIER_CODE" />
                       </externalMetadataColumns>
                     </input>
@@ -2454,7 +2458,8 @@
                       <inputColumns>
                         <inputColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\Sort.Inputs[Sort Input].Columns[fl_date]"
-                          cachedDataType="wstr"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
                           cachedLength="50"
                           cachedName="fl_date"
                           lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\Flat File Source.Outputs[Flat File Source Output].Columns[fl_date]">
@@ -2804,7 +2809,8 @@
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\Sort.Outputs[Sort Output].Columns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           length="50"
                           lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\Sort.Outputs[Sort Output].Columns[fl_date]"
                           name="fl_date">
@@ -3141,7 +3147,8 @@
                       <inputColumns>
                         <inputColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\Derived Column.Inputs[Derived Column Input].Columns[fl_date]"
-                          cachedDataType="wstr"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
                           cachedLength="50"
                           cachedName="fl_date"
                           lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\Flat File Source.Outputs[Flat File Source Output].Columns[fl_date]" />
@@ -3328,7 +3335,8 @@
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\Flat File Source.Outputs[Flat File Source Output].Columns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_date]"
@@ -3352,7 +3360,8 @@
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           length="50"
                           name="fl_date" />
                         <externalMetadataColumn
@@ -3672,7 +3681,8 @@
                       <inputColumns>
                         <inputColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\Sort.Inputs[Sort Input].Columns[fl_date]"
-                          cachedDataType="wstr"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
                           cachedLength="50"
                           cachedName="fl_date"
                           lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\Flat File Source.Outputs[Flat File Source Output].Columns[fl_date]">
@@ -3779,7 +3789,8 @@
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\Sort.Outputs[Sort Output].Columns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           length="50"
                           lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\Sort.Outputs[Sort Output].Columns[fl_date]"
                           name="fl_date">
@@ -4707,7 +4718,8 @@
                           lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[dest]" />
                         <inputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Data Conversion.Inputs[Data Conversion Input].Columns[fl_date]"
-                          cachedDataType="wstr"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
                           cachedLength="50"
                           cachedName="fl_date"
                           lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[fl_date]" />
@@ -4914,7 +4926,8 @@
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_date]"
@@ -5312,7 +5325,8 @@
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fl_date]"
-                          dataType="wstr"
+                          codePage="1252"
+                          dataType="str"
                           length="50"
                           name="fl_date" />
                         <externalMetadataColumn
@@ -5500,7 +5514,7 @@ where [refTable].[CANCELLATION_CODE] = ?</property>
                     <property
                       dataType="System.String"
                       description="Indicates whether to reference metadata in an XML format."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CANCELLATION_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CANCELLATION_CODE" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CANCELLATION_REASON" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CANCELLATION_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CANCELLATION_CODE" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CANCELLATION_REASON" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -5658,7 +5672,7 @@ where [refTable].[CARRIER_CODE] = ?</property>
                     <property
                       dataType="System.String"
                       description="Indicates whether to reference metadata in an XML format."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CARRIER_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CARRIER_CODE" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CARRIER_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CARRIER_CODE" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -5974,7 +5988,7 @@ where [refTable].[AIRPORT_CODE] = ?</property>
                     <property
                       dataType="System.String"
                       description="Indicates whether to reference metadata in an XML format."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AIRPORT_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AIRPORT_CODE" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CITY_NAME" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AIRPORT_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AIRPORT_CODE" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CITY_NAME" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -6132,7 +6146,7 @@ where [refTable].[AIRPORT_CODE] = ?</property>
                     <property
                       dataType="System.String"
                       description="Indicates whether to reference metadata in an XML format."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AIRPORT_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AIRPORT_CODE" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CITY_NAME" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AIRPORT_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AIRPORT_CODE" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CITY_NAME" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -6476,14 +6490,6 @@ where [refTable].[CRS_TIME] = ?</property>
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRS_ARR_TIME]"
                           lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_arr_time]" />
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[distance]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="distance"
-                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DISTANCE]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[distance]" />
-                        <inputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cancelled]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -6578,10 +6584,26 @@ where [refTable].[CRS_TIME] = ?</property>
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEST_AIRPORT_ID]"
                           lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport.Outputs[Lookup Match Output].Columns[DEST_AIRPORT_ID]" />
                         <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[crs_dep_time]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="crs_dep_time"
+                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRS_DEP_TIME]"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_dep_time]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[distance]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="distance"
+                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DISTANCE]"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[distance]" />
+                        <inputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DEP_TIME_ID]"
                           cachedDataType="i4"
                           cachedName="DEP_TIME_ID"
-                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRS_DEP_TIME]"
+                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEP_TIME_ID]"
                           lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time.Outputs[Lookup Match Output].Columns[DEP_TIME_ID]" />
                       </inputColumns>
                       <externalMetadataColumns
@@ -6654,6 +6676,10 @@ where [refTable].[CRS_TIME] = ?</property>
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LATE_AIRCRAFT_DELAY]"
                           dataType="r8"
                           name="LATE_AIRCRAFT_DELAY" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEP_TIME_ID]"
+                          dataType="i4"
+                          name="DEP_TIME_ID" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -6794,7 +6820,7 @@ where [refTable].[CRS_TIME] = ?</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="444.571428571429,173.142857142858"
+          PanelSize="444.571428571429,173.714285714286"
           Size="444.571428571429,216.571428571429"
           Id="Package\SEQ_Build_DW"
           TopLeft="366.984120300417,136.499992418696" />
@@ -6923,7 +6949,7 @@ where [refTable].[CRS_TIME] = ?</property>
           PanelSize="312,114.857142857143"
           Size="312,157.714285714286"
           Id="Package\SEQ_LOAD_FACT"
-          TopLeft="844.126968753297,489.465653531171" />
+          TopLeft="842.738079889703,586.965648115954" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="589.269834586132,353.071420990125">
@@ -6960,30 +6986,18 @@ where [refTable].[CRS_TIME] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="687.079358300257,659.629846204456">
+          TopLeft="687.079358300257,662.726318588776">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="157.04761045304,-91.3070498161425"
+              EndConnector="155.658721589446,0"
               Start="0,0"
-              End="149.54761045304,-91.3070498161425">
+              End="148.158721589446,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="74.5238052265202,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="74.5238052265202,0"
-                    Point2="78.5238052265202,0"
-                    Point3="78.5238052265202,-4" />
-                  <mssgle:LineSegment
-                    End="78.5238052265202,-87.3070498161425" />
-                  <mssgle:CubicBezierSegment
-                    Point1="78.5238052265202,-87.3070498161425"
-                    Point2="78.5238052265202,-91.3070498161425"
-                    Point3="82.5238052265202,-91.3070498161425" />
-                  <mssgle:LineSegment
-                    End="149.54761045304,-91.3070498161425" />
+                    End="148.158721589446,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6999,11 +7013,11 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="176.571428571429,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination"
-          TopLeft="858.999961599709,403.999981939793" />
+          TopLeft="861.999961465598,402.999981984497" />
         <NodeLayout
           Size="155.428571428572,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source"
@@ -7035,9 +7049,7 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="37.5421334955525,5,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7059,9 +7071,7 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-27.99357421875,33.49288218362,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7070,34 +7080,32 @@ where [refTable].[CRS_TIME] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-101.428559001004,25.9999988377094"
+              EndConnector="-98.4285591351131,24.9999988824125"
               Start="0,0"
-              End="-93.9285590010036,25.9999988377094">
+              End="-90.9285591351131,24.9999988824125">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-46.7142795005018,0" />
+                    End="-45.2142795675566,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-46.7142795005018,0"
-                    Point2="-50.7142795005018,0"
-                    Point3="-50.7142795005018,4" />
+                    Point1="-45.2142795675566,0"
+                    Point2="-49.2142795675566,0"
+                    Point3="-49.2142795675566,4" />
                   <mssgle:LineSegment
-                    End="-50.7142795005018,21.9999988377094" />
+                    End="-49.2142795675566,20.9999988824125" />
                   <mssgle:CubicBezierSegment
-                    Point1="-50.7142795005018,21.9999988377094"
-                    Point2="-50.7142795005018,25.9999988377094"
-                    Point3="-54.7142795005018,25.9999988377094" />
+                    Point1="-49.2142795675566,20.9999988824125"
+                    Point2="-49.2142795675566,24.9999988824125"
+                    Point3="-53.2142795675566,24.9999988824125" />
                   <mssgle:LineSegment
-                    End="-93.9285590010036,25.9999988377094" />
+                    End="-90.9285591351131,24.9999988824125" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-71.5936935630018,-15.6025390625,41.758828125,9.6025390625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7140,33 +7148,21 @@ where [refTable].[CRS_TIME] = ?</property>
         <NodeLayout
           Size="160,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION\Data Conversion"
-          TopLeft="1156.99994827807,464.999979212881" />
+          TopLeft="1128.99994952977,467.999979078771" />
         <EdgeLayout
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION.Paths[Derived Column Output]"
-          TopLeft="1216.42322960639,401.285698237164">
+          TopLeft="1212.71158956808,401.285698237164">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20.5767186716764,63.7142809757167"
+              EndConnector="0,66.7142808416062"
               Start="0,0"
-              End="20.5767186716764,56.2142809757167">
+              End="0,59.2142808416062">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.8571404878583" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.8571404878583"
-                    Point2="0,31.8571404878583"
-                    Point3="4,31.8571404878583" />
-                  <mssgle:LineSegment
-                    End="16.5767186716764,31.8571404878583" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.5767186716764,31.8571404878583"
-                    Point2="20.5767186716764,31.8571404878583"
-                    Point3="20.5767186716764,35.8571404878583" />
-                  <mssgle:LineSegment
-                    End="20.5767186716764,56.2142809757167" />
+                    End="0,59.2142808416062" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7177,30 +7173,18 @@ where [refTable].[CRS_TIME] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION.Paths[Data Conversion Output]"
-          TopLeft="1236.99994827807,507.285693498595">
+          TopLeft="1211.78301753601,510.285693364485">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-22.4338627358095,53.7142814227517"
+              EndConnector="0,50.7142815568621"
               Start="0,0"
-              End="-22.4338627358095,46.2142814227517">
+              End="0,43.2142815568621">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.8571407113758" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.8571407113758"
-                    Point2="0,26.8571407113758"
-                    Point3="-4,26.8571407113758" />
-                  <mssgle:LineSegment
-                    End="-18.4338627358095,26.8571407113758" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.4338627358095,26.8571407113758"
-                    Point2="-22.4338627358095,26.8571407113758"
-                    Point3="-22.4338627358095,30.8571407113758" />
-                  <mssgle:LineSegment
-                    End="-22.4338627358095,46.2142814227517" />
+                    End="0,43.2142815568621" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7273,7 +7257,7 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="176.571428571429,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\OLE DB Destination"
@@ -7281,7 +7265,7 @@ where [refTable].[CRS_TIME] = ?</property>
         <NodeLayout
           Size="155.428571428572,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\Flat File Source"
-          TopLeft="771.999965488912,371.999983370305" />
+          TopLeft="768.296261852662,411.393920576278" />
         <NodeLayout
           Size="160,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\Data Conversion"
@@ -7309,45 +7293,29 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-52.7987526931938,5,35.6689453125,9.4462890625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER.Paths[Flat File Source Output]"
-          TopLeft="927.428536917484,393.142840513162">
+          TopLeft="923.724833281233,433.839808177376">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="123.571416099157,41.9999981224537"
+              EndConnector="127.275119735406,0"
               Start="0,0"
-              End="116.071416099157,41.9999981224537">
+              End="119.775119735406,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="57.7857080495786,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="57.7857080495786,0"
-                    Point2="61.7857080495786,0"
-                    Point3="61.7857080495786,4" />
-                  <mssgle:LineSegment
-                    End="61.7857080495786,37.9999981224537" />
-                  <mssgle:CubicBezierSegment
-                    Point1="61.7857080495786,37.9999981224537"
-                    Point2="61.7857080495786,41.9999981224537"
-                    Point3="65.7857080495786,41.9999981224537" />
-                  <mssgle:LineSegment
-                    End="116.071416099157,41.9999981224537" />
+                    End="119.775119735406,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="33.7921338308286,-17.228515625,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7369,9 +7337,7 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-27.99357421875,34.9928821165648,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7394,7 +7360,7 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="176.571428571429,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\OLE DB Destination"
@@ -7430,9 +7396,7 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="50.042132936759,5,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7466,9 +7430,7 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8.92214714488815,51.3571398396578,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7490,9 +7452,7 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-77.669845347958,5,36.4111328125,9.6025390625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7684,23 +7644,23 @@ where [refTable].[CRS_TIME] = ?</property>
         <NodeLayout
           Size="155.428571428572,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source"
-          TopLeft="641.999971300365,228.999989762903" />
+          TopLeft="757.999966114761,267.999988019467" />
         <NodeLayout
           Size="181.142857142858,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Cancellation"
-          TopLeft="1265.7407176884,517.045425828394" />
+          TopLeft="1266.7407176437,523.045425560173" />
         <NodeLayout
           Size="144,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Date"
-          TopLeft="1342.29275079188,371.21211194973" />
+          TopLeft="1284.29275338468,373.212111860323" />
         <NodeLayout
           Size="188,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Origin_Airport"
-          TopLeft="1284.25923586965,625.378753144819" />
+          TopLeft="1264.25923676372,626.378753100116" />
         <NodeLayout
           Size="176.571428571429,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination"
-          TopLeft="443.333325259112,616.909056645535" />
+          TopLeft="465.333324275635,631.909055974983" />
         <NodeLayout
           Size="154.285714285715,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Carrier"
@@ -7708,7 +7668,7 @@ where [refTable].[CRS_TIME] = ?</property>
         <NodeLayout
           Size="160,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Data Conversion"
-          TopLeft="993.999955564739,232.999989584089" />
+          TopLeft="1001.99995520711,259.999988377095" />
         <NodeLayout
           Size="181.142857142858,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport"
@@ -7719,109 +7679,73 @@ where [refTable].[CRS_TIME] = ?</property>
           TopLeft="754.629615885916,627.020167195068" />
         <EdgeLayout
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output5]"
-          TopLeft="754.629615885916,648.163024337925">
+          TopLeft="754.629615885916,650.607468727882">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-134.724862055375,-10.1111105495332"
+              EndConnector="-112.724863038852,0"
               Start="0,0"
-              End="-127.224862055375,-10.1111105495332">
+              End="-105.224863038852,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-63.3624310276873,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-63.3624310276873,0"
-                    Point2="-67.3624310276873,0"
-                    Point3="-67.3624310276873,-4" />
-                  <mssgle:LineSegment
-                    End="-67.3624310276873,-6.11111054953324" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-67.3624310276873,-6.11111054953324"
-                    Point2="-67.3624310276873,-10.1111105495332"
-                    Point3="-71.3624310276873,-10.1111105495332" />
-                  <mssgle:LineSegment
-                    End="-127.224862055375,-10.1111105495332" />
+                    End="-105.224863038852,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-115.553817746437,1,96.3827734375,11.609375"
+              BoundingBox="-100.803818238176,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output4]"
-          TopLeft="1414.29275079188,413.497826235444">
+          TopLeft="1356.8024497999,415.497826146037">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-57.9806045320463,103.54759959295"
+              EndConnector="0,107.547599414136"
               Start="0,0"
-              End="-57.9806045320463,96.04759959295">
+              End="0,100.047599414136">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.773799796475" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,47.773799796475"
-                    Point2="0,51.773799796475"
-                    Point3="-4,51.773799796475" />
-                  <mssgle:LineSegment
-                    End="-53.9806045320463,51.773799796475" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-53.9806045320463,51.773799796475"
-                    Point2="-57.9806045320463,51.773799796475"
-                    Point3="-57.9806045320463,55.773799796475" />
-                  <mssgle:LineSegment
-                    End="-57.9806045320463,96.04759959295" />
+                    End="0,100.047599414136" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-109.502040547273,56.773799796475,161.0234765625,11.609375"
+              BoundingBox="-48.19138671875,44.2191122070679,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output3]"
-          TopLeft="1360.14279978829,297.285702886326">
+          TopLeft="1358.21777658648,297.285702886326">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="54.1499510035885,73.9264090634032"
+              EndConnector="0,75.9264089739967"
               Start="0,0"
-              End="54.1499510035885,66.4264090634032">
+              End="0,68.4264089739967">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.9632045317016" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.9632045317016"
-                    Point2="0,36.9632045317016"
-                    Point3="4,36.9632045317016" />
-                  <mssgle:LineSegment
-                    End="50.1499510035885,36.9632045317016" />
-                  <mssgle:CubicBezierSegment
-                    Point1="50.1499510035885,36.9632045317016"
-                    Point2="54.1499510035885,36.9632045317016"
-                    Point3="54.1499510035885,40.9632045317016" />
-                  <mssgle:LineSegment
-                    End="54.1499510035885,66.4264090634032" />
+                    End="0,68.4264089739967" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-53.4367627794558,41.9632045317016,161.0234765625,11.609375"
+              BoundingBox="-48.19138671875,28.4085169869984,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7851,122 +7775,94 @@ where [refTable].[CRS_TIME] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output1]"
-          TopLeft="1284.25923586965,646.029186072602">
+          TopLeft="1264.25923676372,646.52918605025">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-92.9312119396347,0"
+              EndConnector="-72.9312128337021,0"
               Start="0,0"
-              End="-85.4312119396347,0">
+              End="-65.4312128337021,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-85.4312119396347,0" />
+                    End="-65.4312128337021,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-123.227344251067,5,161.0234765625,11.609375"
+              BoundingBox="-80.9069931356011,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output]"
-          TopLeft="1356.31214625983,559.331140114108">
+          TopLeft="1357.78569148942,565.331139845887">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="21.9470896098212,66.047613030711"
+              EndConnector="0,61.0476132542282"
               Start="0,0"
-              End="21.9470896098212,58.547613030711">
+              End="0,53.5476132542282">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.0238065153555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.0238065153555"
-                    Point2="0,33.0238065153555"
-                    Point3="4,33.0238065153555" />
-                  <mssgle:LineSegment
-                    End="17.9470896098212,33.0238065153555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="17.9470896098212,33.0238065153555"
-                    Point2="21.9470896098212,33.0238065153555"
-                    Point3="21.9470896098212,37.0238065153555" />
-                  <mssgle:LineSegment
-                    End="21.9470896098212,58.547613030711" />
+                    End="0,53.5476132542282" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-69.5381934763394,38.0238065153555,161.0234765625,11.609375"
+              BoundingBox="-48.19138671875,20.9691191271141,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Flat File Source Output]"
-          TopLeft="797.428542728936,252.142846816353">
+          TopLeft="913.428537543333,285.142845341138">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="196.571412835803,0"
+              EndConnector="88.5714176637787,0"
               Start="0,0"
-              End="189.071412835803,0">
+              End="81.0714176637787,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="189.071412835803,0" />
+                    End="81.0714176637787,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="66.5421321991515,5,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Data Conversion Output]"
-          TopLeft="1153.99995556474,254.142846726946">
+          TopLeft="1161.99995520711,278.642845631711">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="128.999987080694,21.9999990165234"
+              EndConnector="120.999987438319,0"
               Start="0,0"
-              End="121.499987080694,21.9999990165234">
+              End="113.499987438319,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="60.4999935403468,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="60.4999935403468,0"
-                    Point2="64.4999935403468,0"
-                    Point3="64.4999935403468,4" />
-                  <mssgle:LineSegment
-                    End="64.4999935403468,17.9999990165234" />
-                  <mssgle:CubicBezierSegment
-                    Point1="64.4999935403468,17.9999990165234"
-                    Point2="64.4999935403468,21.9999990165234"
-                    Point3="68.4999935403468,21.9999990165234" />
-                  <mssgle:LineSegment
-                    End="121.499987080694,21.9999990165234" />
+                    End="113.499987438319,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="36.5064193215968,-17.228515625,55.9871484375,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7978,7 +7874,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7988,7 +7884,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8001,7 +7897,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8011,7 +7907,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8024,7 +7920,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8034,7 +7930,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8060,7 +7956,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8070,7 +7966,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8083,7 +7979,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8093,7 +7989,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8106,7 +8002,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8116,7 +8012,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
