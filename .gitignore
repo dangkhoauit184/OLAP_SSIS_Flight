@@ -7,3 +7,7 @@ obj/
 *.sln.docstates
 [Dd]ebug/
 [Rr]elease/
+
+flight_data_2024.csv
+*.mdf
+*.ldf
