@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="75"
-  DTS:VersionGUID="{E6E70777-2679-4D5F-A32D-3CBD696BE968}">
+  DTS:VersionBuild="80"
+  DTS:VersionGUID="{E8AC592E-808E-4282-B35E-86B9CA3650B1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -51,7 +51,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fl_date"
-              DTS:DTSID="{1F8E1147-C341-49C0-A128-4DD7CA6DC7C9}"
+              DTS:DTSID="{F028CE5F-8239-4621-A9D4-B8B4B6C9346C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -60,7 +60,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="crs_dep_time"
-              DTS:DTSID="{9D3DDF2E-0584-47C5-8A02-9A53392A2DBE}"
+              DTS:DTSID="{8DA19748-DEC8-474A-BE0E-DEB7FA89953A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -69,7 +69,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="crs_arr_time"
-              DTS:DTSID="{95527A37-FD05-40E8-BD50-69706D1AD637}"
+              DTS:DTSID="{395B5FA0-51AB-4ACD-84C3-8919B3B50A40}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -78,7 +78,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="op_unique_carrier"
-              DTS:DTSID="{73E9EEFD-60D4-4672-BAB5-037B304B2DC7}"
+              DTS:DTSID="{950B673A-9FCD-4D66-AF91-D340C5BDCA13}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -87,7 +87,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="origin"
-              DTS:DTSID="{1AB9DAFA-01C9-453A-BB70-476C384C6AC8}"
+              DTS:DTSID="{26D846B1-51BF-4697-85C0-3147E2810E3F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -96,7 +96,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="origin_city_name"
-              DTS:DTSID="{A45BA4D4-3586-4B1E-A0DB-F37434679DFF}"
+              DTS:DTSID="{AAEA1711-23AC-40A0-9C75-B96C6F2DD6B7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -105,7 +105,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dest"
-              DTS:DTSID="{0C2C80E3-1EA0-4277-AF79-CB3160B9396E}"
+              DTS:DTSID="{71D2C480-4A5A-4D33-AC55-BB9C43B87A3B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -114,7 +114,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dest_city_name"
-              DTS:DTSID="{DDF355DD-B4CD-4E46-A4B7-13BEAE1D92D9}"
+              DTS:DTSID="{1F4B493F-A547-41F5-856D-6989E13B097B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -123,7 +123,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="distance"
-              DTS:DTSID="{C2C223E4-C98F-414E-90C6-4B9E8B8A82E5}"
+              DTS:DTSID="{9DFAC559-FFD9-4949-9188-EB62D295E322}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -132,7 +132,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="cancelled"
-              DTS:DTSID="{617B6A61-D605-422E-969E-8D6D88D3F2FA}"
+              DTS:DTSID="{9ECE9D6E-D967-4D7F-A070-5DA22F43A9B2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -141,7 +141,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="cancellation_code"
-              DTS:DTSID="{77654607-49A9-474A-9629-A8965715BF51}"
+              DTS:DTSID="{764EF3F8-0179-42CB-95C8-36C89E3ACE25}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +150,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dep_delay"
-              DTS:DTSID="{39E7CD85-7249-4BE3-B566-06B4F16EA4FD}"
+              DTS:DTSID="{F7304009-A125-499E-96A7-81764C193CA2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +159,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="arr_delay"
-              DTS:DTSID="{5CA29F14-FC47-4764-B059-98119773C380}"
+              DTS:DTSID="{7A5F9AA9-41A7-4E99-931F-760831F82CFC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -168,7 +168,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="carrier_delay"
-              DTS:DTSID="{A7F8EED1-6E4E-4B61-A8AB-D12F6517A3D7}"
+              DTS:DTSID="{F8423D4B-05D1-4F18-85E7-C03B1E81796F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -177,7 +177,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="weather_delay"
-              DTS:DTSID="{31A178B1-0367-4766-9DAA-73E86AF17514}"
+              DTS:DTSID="{BAA0B889-17D2-452E-9049-2FD9EED4ED2E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -186,7 +186,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="nas_delay"
-              DTS:DTSID="{EC959A14-A53D-413D-99C5-FE4F70444D98}"
+              DTS:DTSID="{E3CB8280-6E1D-452A-9173-9E4D58DD55F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -195,7 +195,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="security_delay"
-              DTS:DTSID="{D43F95FA-2A38-4ADB-B413-A81EE77F58D8}"
+              DTS:DTSID="{36A74527-F7D4-48A3-BF55-B56282C52170}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -204,7 +204,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="late_aircraft_delay"
-              DTS:DTSID="{90D14211-F94A-48F6-9857-C959F5B6C6FF}"
+              DTS:DTSID="{98945F67-34C4-46CC-8E89-F9676EB3E37B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -4894,6 +4894,117 @@
                   </outputs>
                 </component>
                 <component
+                  refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[dep_delay]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="dep_delay"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[dep_delay]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[arr_delay]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="arr_delay"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[arr_delay]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[ARR_DELAY_NUM]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[ARR_DELAY_NUM]"
+                          name="ARR_DELAY_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[arr_delay]}) ? NULL(DT_R8) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[arr_delay]}) == "" ? NULL(DT_R8) : (DT_R8)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[arr_delay]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(arr_delay) ? NULL(DT_R8) : (TRIM(arr_delay) == "" ? NULL(DT_R8) : (DT_R8)TRIM(arr_delay))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[DEP_DELAY_NUM]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[DEP_DELAY_NUM]"
+                          name="DEP_DELAY_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[dep_delay]}) ? NULL(DT_R8) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[dep_delay]}) == "" ? NULL(DT_R8) : (DT_R8)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[dep_delay]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(dep_delay) ? NULL(DT_R8) : (TRIM(dep_delay) == "" ? NULL(DT_R8) : (DT_R8)TRIM(dep_delay))</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source"
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -6455,7 +6566,7 @@ where [refTable].[CRS_TIME] = ?</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
+                      name="FastLoadKeepNulls">true</property>
                     <property
                       dataType="System.String"
                       description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -6482,6 +6593,14 @@ where [refTable].[CRS_TIME] = ?</property>
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[crs_dep_time]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="crs_dep_time"
+                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRS_DEP_TIME]"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_dep_time]" />
+                        <inputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[crs_arr_time]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -6490,6 +6609,14 @@ where [refTable].[CRS_TIME] = ?</property>
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRS_ARR_TIME]"
                           lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_arr_time]" />
                         <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[distance]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="distance"
+                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DISTANCE]"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[distance]" />
+                        <inputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cancelled]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -6497,22 +6624,6 @@ where [refTable].[CRS_TIME] = ?</property>
                           cachedName="cancelled"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CANCELLED]"
                           lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[cancelled]" />
-                        <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dep_delay]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="dep_delay"
-                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEP_DELAY]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[dep_delay]" />
-                        <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[arr_delay]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="arr_delay"
-                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ARR_DELAY]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[arr_delay]" />
                         <inputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[carrier_delay]"
                           cachedCodepage="1252"
@@ -6584,27 +6695,23 @@ where [refTable].[CRS_TIME] = ?</property>
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEST_AIRPORT_ID]"
                           lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport.Outputs[Lookup Match Output].Columns[DEST_AIRPORT_ID]" />
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[crs_dep_time]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="crs_dep_time"
-                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRS_DEP_TIME]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_dep_time]" />
-                        <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[distance]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="distance"
-                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DISTANCE]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[distance]" />
-                        <inputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DEP_TIME_ID]"
                           cachedDataType="i4"
                           cachedName="DEP_TIME_ID"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEP_TIME_ID]"
                           lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time.Outputs[Lookup Match Output].Columns[DEP_TIME_ID]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ARR_DELAY_NUM]"
+                          cachedDataType="r8"
+                          cachedName="ARR_DELAY_NUM"
+                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ARR_DELAY]"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[ARR_DELAY_NUM]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DEP_DELAY_NUM]"
+                          cachedDataType="r8"
+                          cachedName="DEP_DELAY_NUM"
+                          externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEP_DELAY]"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[DEP_DELAY_NUM]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -6616,6 +6723,10 @@ where [refTable].[CRS_TIME] = ?</property>
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DATE_ID]"
                           dataType="i4"
                           name="DATE_ID" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEP_TIME_ID]"
+                          dataType="i4"
+                          name="DEP_TIME_ID" />
                         <externalMetadataColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CARRIER_ID]"
                           dataType="i4"
@@ -6676,10 +6787,6 @@ where [refTable].[CRS_TIME] = ?</property>
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LATE_AIRCRAFT_DELAY]"
                           dataType="r8"
                           name="LATE_AIRCRAFT_DELAY" />
-                        <externalMetadataColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEP_TIME_ID]"
-                          dataType="i4"
-                          name="DEP_TIME_ID" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -6716,6 +6823,11 @@ where [refTable].[CRS_TIME] = ?</property>
                   name="Data Conversion Output"
                   startId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Data Conversion.Outputs[Data Conversion Output]" />
                 <path
+                  refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Derived Column Output]"
+                  endId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output]" />
+                <path
                   refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Flat File Source Output]"
                   endId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Data Conversion.Inputs[Data Conversion Input]"
                   name="Flat File Source Output"
@@ -6747,7 +6859,7 @@ where [refTable].[CRS_TIME] = ?</property>
                   startId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Date.Outputs[Lookup Match Output]" />
                 <path
                   refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output5]"
-                  endId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  endId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input]"
                   name="Lookup Match Output"
                   startId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time.Outputs[Lookup Match Output]" />
               </paths>
@@ -7013,7 +7125,7 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="176.571428571429,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination"
@@ -7049,7 +7161,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7071,7 +7185,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7105,7 +7221,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7128,7 +7246,7 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="157.142857142858,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CANCELLATION\Derived Column"
@@ -7168,7 +7286,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7190,7 +7310,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7212,7 +7334,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7234,7 +7358,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7257,7 +7383,7 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="176.571428571429,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_CARRIER\OLE DB Destination"
@@ -7293,7 +7419,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7315,7 +7443,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7337,7 +7467,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7360,7 +7492,7 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="176.571428571429,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_DATE\OLE DB Destination"
@@ -7396,7 +7528,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7430,7 +7564,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7452,7 +7588,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7475,7 +7613,7 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_TIME">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="157.142857142858,42.2857142857143"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_TIME\Derived Column"
@@ -7527,7 +7665,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7549,7 +7689,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7583,7 +7725,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7617,7 +7761,9 @@ where [refTable].[CRS_TIME] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7658,10 +7804,6 @@ where [refTable].[CRS_TIME] = ?</property>
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Origin_Airport"
           TopLeft="1264.25923676372,626.378753100116" />
         <NodeLayout
-          Size="176.571428571429,42.2857142857143"
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination"
-          TopLeft="465.333324275635,631.909055974983" />
-        <NodeLayout
           Size="154.285714285715,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Carrier"
           TopLeft="1282.99994264543,254.999988600612" />
@@ -7677,30 +7819,6 @@ where [refTable].[CRS_TIME] = ?</property>
           Size="145.142857142858,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time"
           TopLeft="754.629615885916,627.020167195068" />
-        <EdgeLayout
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output5]"
-          TopLeft="754.629615885916,650.607468727882">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-112.724863038852,0"
-              Start="0,0"
-              End="-105.224863038852,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-105.224863038852,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-100.803818238176,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output4]"
           TopLeft="1356.8024497999,415.497826146037">
@@ -7865,6 +7983,60 @@ where [refTable].[CRS_TIME] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="157.142857142858,42.2857142857143"
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column"
+          TopLeft="550.925915892172,631.017294247049" />
+        <EdgeLayout
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Lookup Match Output5]"
+          TopLeft="754.629615885916,650.161587863916">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-46.5608428508873,0"
+              Start="0,0"
+              End="-39.0608428508873,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-39.0608428508873,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-67.7218081441937,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176.571428571429,42.2857142857143"
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination"
+          TopLeft="316.666660899366,632.272706596443" />
+        <EdgeLayout
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Derived Column Output]"
+          TopLeft="550.925915892172,652.787857564603">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-57.6878264213772,0"
+              Start="0,0"
+              End="-50.1878264213772,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-50.1878264213772,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -7874,7 +8046,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7884,7 +8056,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7897,7 +8069,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7907,7 +8079,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7920,7 +8092,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7930,7 +8102,76 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Carrier">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_CARRIER]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_AIRPORT]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_TIME]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7947,75 +8188,6 @@ where [refTable].[CRS_TIME] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Carrier">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_CARRIER]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_AIRPORT]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DIM_TIME]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
