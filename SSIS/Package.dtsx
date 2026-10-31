@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="10/4/2026 7:49:26 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="80"
-  DTS:VersionGUID="{E8AC592E-808E-4282-B35E-86B9CA3650B1}">
+  DTS:VersionBuild="81"
+  DTS:VersionGUID="{452354CF-5166-5878-A4C8-6C2C8CB751CA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-7IVUF8R;Initial Catalog=Flight_DW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{6B0EB960-A0A4-4407-B30A-D5C4728944F8}DESKTOP-7IVUF8R.Flight_DW;" />
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=Flight_DW;Provider=MSOLEDBSQL;Integrated Security=SSPI;Trust Server Certificate=True;Application Name=SSIS-Flight-DW;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -211,7 +211,15 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:DTSID="{07074853-C887-5366-8DDA-DB25BAB79FB8}"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceRowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\SEQ_Build_DW"
@@ -235,8 +243,9 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
+              xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask"
               SQLTask:Connection="{6B0EB960-A0A4-4407-B30A-D5C4728944F8}"
-              SQLTask:SqlStatementSource="USE Flight_DW;&#xA;GO&#xA;&#xA;-- 1. DIM_CARRIER&#xA;CREATE TABLE DIM_CARRIER (&#xA;    CARRIER_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CARRIER_CODE NVARCHAR(50) NOT NULL UNIQUE&#xA;);&#xA;&#xA;-- 2. DIM_AIRPORT&#xA;CREATE TABLE DIM_AIRPORT (&#xA;    AIRPORT_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    AIRPORT_CODE NVARCHAR(50) NOT NULL UNIQUE,&#xA;    CITY_NAME NVARCHAR(100) NULL&#xA;);&#xA;&#xA;-- 3. DIM_CANCELLATION&#xA;CREATE TABLE DIM_CANCELLATION (&#xA;    CANCELLATION_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CANCELLATION_CODE NVARCHAR(50) NOT NULL UNIQUE,&#xA;    CANCELLATION_REASON NVARCHAR(100) NULL&#xA;);&#xA;&#xA;-- 4. DIM_TIME&#xA;CREATE TABLE DIM_TIME (&#xA;    TIME_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CRS_TIME INT NOT NULL UNIQUE,&#xA;    HOUR_NUM INT NULL,&#xA;    TIME_OF_DAY NVARCHAR(50) NULL&#xA;);&#xA;&#xA;-- 5. DIM_DATE&#xA;CREATE TABLE DIM_DATE (&#xA;    DATE_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    FL_DATE DATE NOT NULL UNIQUE,&#xA;    YEAR_NUM INT NULL,&#xA;    QUARTER_NUM INT NULL,&#xA;    MONTH_NUM INT NULL,&#xA;    DAY_NUM INT NULL&#xA;);&#xA;&#xA;-- 6. FACT_FLIGHT&#xA;CREATE TABLE FACT_FLIGHT (&#xA;    FLIGHT_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    DATE_ID INT NULL,&#xA;    DEP_TIME_ID INT NULL,&#xA;    CARRIER_ID INT NULL,&#xA;    ORIGIN_AIRPORT_ID INT NULL,&#xA;    DEST_AIRPORT_ID INT NULL,&#xA;    CANCELLATION_ID INT NULL,&#xA;    CRS_DEP_TIME INT NULL,&#xA;    CRS_ARR_TIME INT NULL,&#xA;    DISTANCE FLOAT NULL,&#xA;    CANCELLED INT NULL,&#xA;    DEP_DELAY FLOAT NULL,&#xA;    ARR_DELAY FLOAT NULL,&#xA;    CARRIER_DELAY FLOAT NULL,&#xA;    WEATHER_DELAY FLOAT NULL,&#xA;    NAS_DELAY FLOAT NULL,&#xA;    SECURITY_DELAY FLOAT NULL,&#xA;    LATE_AIRCRAFT_DELAY FLOAT NULL&#xA;);&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="USE Flight_DW;&#xA;GO&#xA;&#xA;-- 1. DIM_CARRIER&#xA;CREATE TABLE DIM_CARRIER (&#xA;    CARRIER_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CARRIER_CODE NVARCHAR(50) NOT NULL UNIQUE&#xA;);&#xA;&#xA;-- 2. DIM_AIRPORT&#xA;CREATE TABLE DIM_AIRPORT (&#xA;    AIRPORT_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    AIRPORT_CODE NVARCHAR(50) NOT NULL UNIQUE,&#xA;    CITY_NAME NVARCHAR(100) NULL&#xA;);&#xA;&#xA;-- 3. DIM_CANCELLATION&#xA;CREATE TABLE DIM_CANCELLATION (&#xA;    CANCELLATION_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CANCELLATION_CODE NVARCHAR(50) NOT NULL UNIQUE,&#xA;    CANCELLATION_REASON NVARCHAR(100) NULL&#xA;);&#xA;&#xA;-- 4. DIM_TIME&#xA;CREATE TABLE DIM_TIME (&#xA;    TIME_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    CRS_TIME INT NOT NULL UNIQUE,&#xA;    HOUR_NUM INT NULL,&#xA;    TIME_OF_DAY NVARCHAR(50) NULL&#xA;);&#xA;&#xA;-- 5. DIM_DATE&#xA;CREATE TABLE DIM_DATE (&#xA;    DATE_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    FL_DATE DATE NOT NULL UNIQUE,&#xA;    YEAR_NUM INT NULL,&#xA;    QUARTER_NUM INT NULL,&#xA;    MONTH_NUM INT NULL,&#xA;    DAY_NUM INT NULL&#xA;);&#xA;&#xA;-- 6. FACT_FLIGHT&#xA;CREATE TABLE FACT_FLIGHT (&#xA;    FLIGHT_ID INT IDENTITY(1,1) PRIMARY KEY,&#xA;    DATE_ID INT NULL,&#xA;    DEP_TIME_ID INT NULL,&#xA;    CARRIER_ID INT NULL,&#xA;    ORIGIN_AIRPORT_ID INT NULL,&#xA;    DEST_AIRPORT_ID INT NULL,&#xA;    CANCELLATION_ID INT NULL,&#xA;    CRS_DEP_TIME INT NULL,&#xA;    CRS_ARR_TIME INT NULL,&#xA;    DISTANCE FLOAT NULL,&#xA;    CANCELLED INT NULL,&#xA;    DEP_DELAY FLOAT NULL,&#xA;    ARR_DELAY FLOAT NULL,&#xA;    CARRIER_DELAY FLOAT NULL,&#xA;    WEATHER_DELAY FLOAT NULL,&#xA;    NAS_DELAY FLOAT NULL,&#xA;    SECURITY_DELAY FLOAT NULL,&#xA;    LATE_AIRCRAFT_DELAY FLOAT NULL&#xA;);&#xA;&#xA;-- Enforce all six Fact-to-Dimension relationships on every full refresh.&#xA;ALTER TABLE FACT_FLIGHT &#xA;    ADD CONSTRAINT FK_FACT_DATE FOREIGN KEY (DATE_ID) REFERENCES DIM_DATE(DATE_ID);&#xA;&#xA;ALTER TABLE FACT_FLIGHT &#xA;    ADD CONSTRAINT FK_FACT_CARRIER FOREIGN KEY (CARRIER_ID) REFERENCES DIM_CARRIER(CARRIER_ID);&#xA;&#xA;ALTER TABLE FACT_FLIGHT &#xA;    ADD CONSTRAINT FK_FACT_ORIGIN FOREIGN KEY (ORIGIN_AIRPORT_ID) REFERENCES DIM_AIRPORT(AIRPORT_ID);&#xA;&#xA;ALTER TABLE FACT_FLIGHT &#xA;    ADD CONSTRAINT FK_FACT_DEST FOREIGN KEY (DEST_AIRPORT_ID) REFERENCES DIM_AIRPORT(AIRPORT_ID);&#xA;&#xA;ALTER TABLE FACT_FLIGHT &#xA;    ADD CONSTRAINT FK_FACT_CANCEL FOREIGN KEY (CANCELLATION_ID) REFERENCES DIM_CANCELLATION(CANCELLATION_ID);&#xA;&#xA;ALTER TABLE FACT_FLIGHT &#xA;    ADD CONSTRAINT FK_FACT_TIME FOREIGN KEY (DEP_TIME_ID) REFERENCES DIM_TIME(TIME_ID);&#xA;GO" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -285,7 +294,8 @@
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="DFT_Load_DIM_AIRPORT"
-          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:DelayValidation="True">
           <DTS:Variables />
           <DTS:ObjectData>
             <pipeline
@@ -414,7 +424,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                      name="FileNameColumnName"></property>
+                      name="FileNameColumnName" />
                   </properties>
                   <connections>
                     <connection
@@ -634,12 +644,12 @@
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
+                      name="OpenRowsetVariable" />
                     <property
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -687,20 +697,20 @@
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of origin]"
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AIRPORT_CODE]"
                           cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="Copy of origin"
+                          cachedName="AIRPORT_CODE"
                           cachedSortKeyPosition="1"
                           externalMetadataColumnId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AIRPORT_CODE]"
-                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[Copy of origin]" />
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[AIRPORT_CODE]" />
                         <inputColumn
-                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of origin_city_name]"
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CITY_NAME]"
                           cachedDataType="wstr"
                           cachedLength="100"
-                          cachedName="Copy of origin_city_name"
+                          cachedName="CITY_NAME"
                           externalMetadataColumnId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CITY_NAME]"
-                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[Copy of origin_city_name]" />
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[CITY_NAME]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -770,47 +780,11 @@
                       name="Sort Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Inputs[Sort Input].Columns[origin]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="origin"
-                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source.Outputs[Flat File Source Output].Columns[origin]">
-                          <properties>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the comparison options for character data."
-                              name="NewComparisonFlags">0</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">0</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Inputs[Sort Input].Columns[origin_city_name]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="origin_city_name"
-                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source.Outputs[Flat File Source Output].Columns[origin_city_name]">
-                          <properties>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the comparison options for character data."
-                              name="NewComparisonFlags">0</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">0</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Inputs[Sort Input].Columns[Copy of origin]"
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Inputs[Sort Input].Columns[AIRPORT_CODE]"
                           cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="Copy of origin"
-                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of origin]">
+                          cachedName="AIRPORT_CODE"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[AIRPORT_CODE]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -823,11 +797,11 @@
                           </properties>
                         </inputColumn>
                         <inputColumn
-                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Inputs[Sort Input].Columns[Copy of origin_city_name]"
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Inputs[Sort Input].Columns[CITY_NAME]"
                           cachedDataType="wstr"
                           cachedLength="100"
-                          cachedName="Copy of origin_city_name"
-                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of origin_city_name]">
+                          cachedName="CITY_NAME"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[CITY_NAME]">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -850,64 +824,461 @@
                       name="Sort Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[origin]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
-                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[origin]"
-                          name="origin">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source.Outputs[Flat File Source Output].Columns[origin]}</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[origin_city_name]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
-                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[origin_city_name]"
-                          name="origin_city_name">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source.Outputs[Flat File Source Output].Columns[origin_city_name]}</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[Copy of origin]"
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[AIRPORT_CODE]"
                           dataType="wstr"
                           length="50"
-                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[Copy of origin]"
-                          name="Copy of origin"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[AIRPORT_CODE]"
+                          name="AIRPORT_CODE"
                           sortKeyPosition="1">
                           <properties>
                             <property
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of origin]}</property>
+                              name="SortColumnId">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[AIRPORT_CODE]}</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[Copy of origin_city_name]"
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[CITY_NAME]"
                           dataType="wstr"
                           length="100"
-                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[Copy of origin_city_name]"
-                          name="Copy of origin_city_name">
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output].Columns[CITY_NAME]"
+                          name="CITY_NAME">
                           <properties>
                             <property
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of origin_city_name]}</property>
+                              name="SortColumnId">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[CITY_NAME]}</property>
                           </properties>
                         </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source Destination"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName" />
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[FlatFile_FlightData]"
+                      connectionManagerRefId="Package.ConnectionManagers[FlatFile_FlightData]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].Columns[dest]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[dest]"
+                          length="50"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].Columns[dest]"
+                          name="dest"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].Columns[dest_city_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[dest_city_name]"
+                          length="50"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].Columns[dest_city_name]"
+                          name="dest_city_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[fl_date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="fl_date" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[crs_dep_time]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="crs_dep_time" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[crs_arr_time]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="crs_arr_time" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[op_unique_carrier]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="op_unique_carrier" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[origin]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="origin" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[origin_city_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="origin_city_name" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[dest]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="dest" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[dest_city_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="dest_city_name" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[distance]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="distance" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[cancelled]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="cancelled" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[cancellation_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="cancellation_code" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[dep_delay]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="dep_delay" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[arr_delay]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="arr_delay" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[carrier_delay]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="carrier_delay" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[weather_delay]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="weather_delay" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[nas_delay]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="nas_delay" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[security_delay]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="security_delay" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].ExternalColumns[late_aircraft_delay]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="late_aircraft_delay" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion Destination"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Inputs[Data Conversion Input].Columns[dest]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="dest"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].Columns[dest]" />
+                        <inputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Inputs[Data Conversion Input].Columns[dest_city_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="dest_city_name"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].Columns[dest_city_name]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Output].Columns[Copy of dest]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Output].Columns[Copy of dest]"
+                          name="Copy of dest"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].Columns[dest]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Output].Columns[Copy of dest_city_name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="100"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Output].Columns[Copy of dest_city_name]"
+                          name="Copy of dest_city_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output].Columns[dest_city_name]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports"
+                  componentClassID="Microsoft.UnionAll"
+                  contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Combine origin and destination airports before removing duplicate airport codes."
+                  name="Union All Airports"
+                  version="1">
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Inputs[Union All Input 1]"
+                      name="Union All Input 1">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Inputs[Union All Input 1].Columns[Copy of origin]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of origin"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of origin]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              name="OutputColumnLineageID"
+                              containsID="true">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[AIRPORT_CODE]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Inputs[Union All Input 1].Columns[Copy of origin_city_name]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Copy of origin_city_name"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of origin_city_name]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              name="OutputColumnLineageID"
+                              containsID="true">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[CITY_NAME]}</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Inputs[Union All Input 2]"
+                      name="Union All Input 2">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Inputs[Union All Input 2].Columns[Copy of dest]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Copy of dest"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Output].Columns[Copy of dest]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              name="OutputColumnLineageID"
+                              containsID="true">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[AIRPORT_CODE]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Inputs[Union All Input 2].Columns[Copy of dest_city_name]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Copy of dest_city_name"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Output].Columns[Copy of dest_city_name]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              name="OutputColumnLineageID"
+                              containsID="true">#{Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[CITY_NAME]}</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Inputs[Union All Input 3]"
+                      dangling="true"
+                      hasSideEffects="true"
+                      name="Union All Input 3">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1]"
+                      name="Union All Output 1">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[AIRPORT_CODE]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[AIRPORT_CODE]"
+                          name="AIRPORT_CODE" />
+                        <outputColumn
+                          refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[CITY_NAME]"
+                          dataType="wstr"
+                          length="100"
+                          lineageId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1].Columns[CITY_NAME]"
+                          name="CITY_NAME" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -917,7 +1288,7 @@
               <paths>
                 <path
                   refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT.Paths[Data Conversion Output]"
-                  endId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Inputs[Sort Input]"
+                  endId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Inputs[Union All Input 1]"
                   name="Data Conversion Output"
                   startId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion.Outputs[Data Conversion Output]" />
                 <path
@@ -930,6 +1301,21 @@
                   endId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   name="Sort Output"
                   startId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Outputs[Sort Output]" />
+                <path
+                  refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT.Paths[Destination Source Output]"
+                  endId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Inputs[Data Conversion Input]"
+                  name="Destination Source Output"
+                  startId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT.Paths[Destination Conversion Output]"
+                  endId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Inputs[Union All Input 2]"
+                  name="Destination Conversion Output"
+                  startId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT.Paths[All Airports Output]"
+                  endId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort.Inputs[Sort Input]"
+                  name="All Airports Output"
+                  startId="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports.Outputs[Union All Output 1]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -942,7 +1328,8 @@
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="DFT_Load_DIM_CANCELLATION"
-          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:DelayValidation="True">
           <DTS:Variables />
           <DTS:ObjectData>
             <pipeline
@@ -1661,7 +2048,8 @@
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="DFT_Load_DIM_CARRIER"
-          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:DelayValidation="True">
           <DTS:Variables />
           <DTS:ObjectData>
             <pipeline
@@ -3126,7 +3514,8 @@
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="DFT_Load_DIM_DATE"
-          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:DelayValidation="True">
           <DTS:Variables />
           <DTS:ObjectData>
             <pipeline
@@ -3902,7 +4291,8 @@
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="DFT_Load_DIM_TIME"
-          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:DelayValidation="True">
           <DTS:Variables />
           <DTS:ObjectData>
             <pipeline
@@ -4670,12 +5060,40 @@
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="DFT_Load_FACT_FLIGHT"
-          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:DelayValidation="True">
           <DTS:Variables />
           <DTS:ObjectData>
             <pipeline
               version="1">
               <components>
+                <component
+                  refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Count Source Rows"
+                  componentClassID="Microsoft.RowCount"
+                  name="Count Source Rows">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      name="VariableName">User::SourceRowCount</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Count Source Rows.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Count Source Rows.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Count Source Rows.Inputs[Row Count Input 1]">
+                      <outputColumns />
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
                 <component
                   refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Data Conversion"
                   componentClassID="Microsoft.DataConvert"
@@ -4920,6 +5338,69 @@
                           cachedLength="50"
                           cachedName="arr_delay"
                           lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[arr_delay]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[crs_dep_time]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="crs_dep_time"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_dep_time]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[crs_arr_time]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="crs_arr_time"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_arr_time]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[distance]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="distance"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[distance]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[cancelled]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="cancelled"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[cancelled]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[carrier_delay]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="carrier_delay"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[carrier_delay]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[weather_delay]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="weather_delay"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[weather_delay]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[nas_delay]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="nas_delay"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[nas_delay]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[security_delay]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="security_delay"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[security_delay]" />
+                        <inputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input].Columns[late_aircraft_delay]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="late_aircraft_delay"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[late_aircraft_delay]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -4974,6 +5455,204 @@
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
                               name="FriendlyExpression">ISNULL(dep_delay) ? NULL(DT_R8) : (TRIM(dep_delay) == "" ? NULL(DT_R8) : (DT_R8)TRIM(dep_delay))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CRS_DEP_TIME_NUM]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CRS_DEP_TIME_NUM]"
+                          name="CRS_DEP_TIME_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_dep_time]}) ? NULL(DT_I4) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_dep_time]}) == "" ? NULL(DT_I4) : (DT_I4)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_dep_time]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(crs_dep_time) ? NULL(DT_I4) : (TRIM(crs_dep_time) == "" ? NULL(DT_I4) : (DT_I4)TRIM(crs_dep_time))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CRS_ARR_TIME_NUM]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CRS_ARR_TIME_NUM]"
+                          name="CRS_ARR_TIME_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_arr_time]}) ? NULL(DT_I4) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_arr_time]}) == "" ? NULL(DT_I4) : (DT_I4)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_arr_time]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(crs_arr_time) ? NULL(DT_I4) : (TRIM(crs_arr_time) == "" ? NULL(DT_I4) : (DT_I4)TRIM(crs_arr_time))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[DISTANCE_NUM]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[DISTANCE_NUM]"
+                          name="DISTANCE_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[distance]}) ? NULL(DT_R8) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[distance]}) == "" ? NULL(DT_R8) : (DT_R8)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[distance]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(distance) ? NULL(DT_R8) : (TRIM(distance) == "" ? NULL(DT_R8) : (DT_R8)TRIM(distance))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CANCELLED_NUM]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CANCELLED_NUM]"
+                          name="CANCELLED_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[cancelled]}) ? NULL(DT_I4) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[cancelled]}) == "" ? NULL(DT_I4) : (DT_I4)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[cancelled]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(cancelled) ? NULL(DT_I4) : (TRIM(cancelled) == "" ? NULL(DT_I4) : (DT_I4)TRIM(cancelled))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CARRIER_DELAY_NUM]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CARRIER_DELAY_NUM]"
+                          name="CARRIER_DELAY_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[carrier_delay]}) ? NULL(DT_R8) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[carrier_delay]}) == "" ? NULL(DT_R8) : (DT_R8)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[carrier_delay]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(carrier_delay) ? NULL(DT_R8) : (TRIM(carrier_delay) == "" ? NULL(DT_R8) : (DT_R8)TRIM(carrier_delay))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[WEATHER_DELAY_NUM]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[WEATHER_DELAY_NUM]"
+                          name="WEATHER_DELAY_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[weather_delay]}) ? NULL(DT_R8) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[weather_delay]}) == "" ? NULL(DT_R8) : (DT_R8)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[weather_delay]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(weather_delay) ? NULL(DT_R8) : (TRIM(weather_delay) == "" ? NULL(DT_R8) : (DT_R8)TRIM(weather_delay))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[NAS_DELAY_NUM]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[NAS_DELAY_NUM]"
+                          name="NAS_DELAY_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[nas_delay]}) ? NULL(DT_R8) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[nas_delay]}) == "" ? NULL(DT_R8) : (DT_R8)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[nas_delay]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(nas_delay) ? NULL(DT_R8) : (TRIM(nas_delay) == "" ? NULL(DT_R8) : (DT_R8)TRIM(nas_delay))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[SECURITY_DELAY_NUM]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[SECURITY_DELAY_NUM]"
+                          name="SECURITY_DELAY_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[security_delay]}) ? NULL(DT_R8) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[security_delay]}) == "" ? NULL(DT_R8) : (DT_R8)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[security_delay]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(security_delay) ? NULL(DT_R8) : (TRIM(security_delay) == "" ? NULL(DT_R8) : (DT_R8)TRIM(security_delay))</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[LATE_AIRCRAFT_DELAY_NUM]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[LATE_AIRCRAFT_DELAY_NUM]"
+                          name="LATE_AIRCRAFT_DELAY_NUM"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[ISNULL](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[late_aircraft_delay]}) ? NULL(DT_R8) : ([TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[late_aircraft_delay]}) == "" ? NULL(DT_R8) : (DT_R8)[TRIM](#{Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[late_aircraft_delay]}))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">ISNULL(late_aircraft_delay) ? NULL(DT_R8) : (TRIM(late_aircraft_delay) == "" ? NULL(DT_R8) : (DT_R8)TRIM(late_aircraft_delay))</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -5609,7 +6288,7 @@ where [refTable].[CANCELLATION_CODE] = ?</property>
                       dataType="System.Int32"
                       description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                       name="NoMatchBehavior"
-                      typeConverter="LookupNoMatchBehavior">1</property>
+                      typeConverter="LookupNoMatchBehavior">0</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -5680,7 +6359,8 @@ where [refTable].[CANCELLATION_CODE] = ?</property>
                       errorOrTruncationOperation="Lookup"
                       exclusionGroup="1"
                       name="Lookup Match Output"
-                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Cancellation.Inputs[Lookup Input]">
+                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Cancellation.Inputs[Lookup Input]"
+                      errorRowDisposition="FailComponent">
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Cancellation.Outputs[Lookup Match Output].Columns[CANCELLATION_ID]"
@@ -5767,7 +6447,7 @@ where [refTable].[CARRIER_CODE] = ?</property>
                       dataType="System.Int32"
                       description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                       name="NoMatchBehavior"
-                      typeConverter="LookupNoMatchBehavior">1</property>
+                      typeConverter="LookupNoMatchBehavior">0</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -5838,7 +6518,8 @@ where [refTable].[CARRIER_CODE] = ?</property>
                       errorOrTruncationOperation="Lookup"
                       exclusionGroup="1"
                       name="Lookup Match Output"
-                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Carrier.Inputs[Lookup Input]">
+                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Carrier.Inputs[Lookup Input]"
+                      errorRowDisposition="FailComponent">
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Carrier.Outputs[Lookup Match Output].Columns[CARRIER_ID]"
@@ -5903,14 +6584,13 @@ where [refTable].[CARRIER_CODE] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DIM_DATE]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DATE_ID, CONVERT(nvarchar(10), FL_DATE, 23) AS FL_DATE, YEAR_NUM, QUARTER_NUM, MONTH_NUM, DAY_NUM FROM dbo.DIM_DATE</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DIM_DATE]) [refTable]
-where [refTable].[FL_DATE] = ?</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT * FROM (SELECT DATE_ID, CONVERT(nvarchar(10), FL_DATE, 23) AS FL_DATE, YEAR_NUM, QUARTER_NUM, MONTH_NUM, DAY_NUM FROM dbo.DIM_DATE) AS refTable WHERE refTable.FL_DATE = ?</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the type of connection used to access the reference dataset."
@@ -5925,7 +6605,7 @@ where [refTable].[FL_DATE] = ?</property>
                       dataType="System.Int32"
                       description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                       name="NoMatchBehavior"
-                      typeConverter="LookupNoMatchBehavior">1</property>
+                      typeConverter="LookupNoMatchBehavior">0</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -5996,7 +6676,8 @@ where [refTable].[FL_DATE] = ?</property>
                       errorOrTruncationOperation="Lookup"
                       exclusionGroup="1"
                       name="Lookup Match Output"
-                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Date.Inputs[Lookup Input]">
+                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Date.Inputs[Lookup Input]"
+                      errorRowDisposition="FailComponent">
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Date.Outputs[Lookup Match Output].Columns[DATE_ID]"
@@ -6083,7 +6764,7 @@ where [refTable].[AIRPORT_CODE] = ?</property>
                       dataType="System.Int32"
                       description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                       name="NoMatchBehavior"
-                      typeConverter="LookupNoMatchBehavior">1</property>
+                      typeConverter="LookupNoMatchBehavior">0</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -6154,7 +6835,8 @@ where [refTable].[AIRPORT_CODE] = ?</property>
                       errorOrTruncationOperation="Lookup"
                       exclusionGroup="1"
                       name="Lookup Match Output"
-                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport.Inputs[Lookup Input]">
+                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport.Inputs[Lookup Input]"
+                      errorRowDisposition="FailComponent">
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Dest_Airport.Outputs[Lookup Match Output].Columns[DEST_AIRPORT_ID]"
@@ -6241,7 +6923,7 @@ where [refTable].[AIRPORT_CODE] = ?</property>
                       dataType="System.Int32"
                       description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                       name="NoMatchBehavior"
-                      typeConverter="LookupNoMatchBehavior">1</property>
+                      typeConverter="LookupNoMatchBehavior">0</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -6312,7 +6994,8 @@ where [refTable].[AIRPORT_CODE] = ?</property>
                       errorOrTruncationOperation="Lookup"
                       exclusionGroup="1"
                       name="Lookup Match Output"
-                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Origin_Airport.Inputs[Lookup Input]">
+                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Origin_Airport.Inputs[Lookup Input]"
+                      errorRowDisposition="FailComponent">
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Origin_Airport.Outputs[Lookup Match Output].Columns[ORIGIN_AIRPORT_ID]"
@@ -6399,7 +7082,7 @@ where [refTable].[CRS_TIME] = ?</property>
                       dataType="System.Int32"
                       description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                       name="NoMatchBehavior"
-                      typeConverter="LookupNoMatchBehavior">1</property>
+                      typeConverter="LookupNoMatchBehavior">0</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -6469,7 +7152,8 @@ where [refTable].[CRS_TIME] = ?</property>
                       errorOrTruncationOperation="Lookup"
                       exclusionGroup="1"
                       name="Lookup Match Output"
-                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time.Inputs[Lookup Input]">
+                      synchronousInputId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time.Inputs[Lookup Input]"
+                      errorRowDisposition="FailComponent">
                       <outputColumns>
                         <outputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time.Outputs[Lookup Match Output].Columns[DEP_TIME_ID]"
@@ -6540,12 +7224,12 @@ where [refTable].[CRS_TIME] = ?</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
+                      name="OpenRowsetVariable" />
                     <property
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -6593,77 +7277,59 @@ where [refTable].[CRS_TIME] = ?</property>
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[crs_dep_time]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="crs_dep_time"
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CRS_DEP_TIME_NUM]"
+                          cachedDataType="i4"
+                          cachedName="CRS_DEP_TIME_NUM"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRS_DEP_TIME]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_dep_time]" />
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CRS_DEP_TIME_NUM]" />
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[crs_arr_time]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="crs_arr_time"
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CRS_ARR_TIME_NUM]"
+                          cachedDataType="i4"
+                          cachedName="CRS_ARR_TIME_NUM"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRS_ARR_TIME]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[crs_arr_time]" />
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CRS_ARR_TIME_NUM]" />
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[distance]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="distance"
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DISTANCE_NUM]"
+                          cachedDataType="r8"
+                          cachedName="DISTANCE_NUM"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DISTANCE]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[distance]" />
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[DISTANCE_NUM]" />
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cancelled]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="cancelled"
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CANCELLED_NUM]"
+                          cachedDataType="i4"
+                          cachedName="CANCELLED_NUM"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CANCELLED]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[cancelled]" />
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CANCELLED_NUM]" />
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[carrier_delay]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="carrier_delay"
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CARRIER_DELAY_NUM]"
+                          cachedDataType="r8"
+                          cachedName="CARRIER_DELAY_NUM"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CARRIER_DELAY]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[carrier_delay]" />
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[CARRIER_DELAY_NUM]" />
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[weather_delay]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="weather_delay"
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WEATHER_DELAY_NUM]"
+                          cachedDataType="r8"
+                          cachedName="WEATHER_DELAY_NUM"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WEATHER_DELAY]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[weather_delay]" />
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[WEATHER_DELAY_NUM]" />
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nas_delay]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="nas_delay"
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NAS_DELAY_NUM]"
+                          cachedDataType="r8"
+                          cachedName="NAS_DELAY_NUM"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NAS_DELAY]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[nas_delay]" />
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[NAS_DELAY_NUM]" />
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[security_delay]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="security_delay"
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SECURITY_DELAY_NUM]"
+                          cachedDataType="r8"
+                          cachedName="SECURITY_DELAY_NUM"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SECURITY_DELAY]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[security_delay]" />
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[SECURITY_DELAY_NUM]" />
                         <inputColumn
-                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[late_aircraft_delay]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="late_aircraft_delay"
+                          refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LATE_AIRCRAFT_DELAY_NUM]"
+                          cachedDataType="r8"
+                          cachedName="LATE_AIRCRAFT_DELAY_NUM"
                           externalMetadataColumnId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LATE_AIRCRAFT_DELAY]"
-                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output].Columns[late_aircraft_delay]" />
+                          lineageId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output].Columns[LATE_AIRCRAFT_DELAY_NUM]" />
                         <inputColumn
                           refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CARRIER_ID]"
                           cachedDataType="i4"
@@ -6829,7 +7495,7 @@ where [refTable].[CRS_TIME] = ?</property>
                   startId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Flat File Source Output]"
-                  endId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Data Conversion.Inputs[Data Conversion Input]"
+                  endId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Count Source Rows.Inputs[Row Count Input 1]"
                   name="Flat File Source Output"
                   startId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source.Outputs[Flat File Source Output]" />
                 <path
@@ -6862,11 +7528,40 @@ where [refTable].[CRS_TIME] = ?</property>
                   endId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Derived Column.Inputs[Derived Column Input]"
                   name="Lookup Match Output"
                   startId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Lookup_Time.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Counted Source Rows]"
+                  endId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Counted Source Rows"
+                  startId="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Count Source Rows.Outputs[Row Count Output 1]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Verify_Load"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Verify source/Fact row counts, Dimension keys and six foreign keys."
+      DTS:DTSID="{1542EA29-A70F-5201-AB38-733F603F0095}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:ObjectName="Verify_Load"
+      DTS:DelayValidation="True">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask"
+          SQLTask:Connection="{6B0EB960-A0A4-4407-B30A-D5C4728944F8}"
+          SQLTask:SqlStatementSource="SET NOCOUNT ON;&#xA;DECLARE @SourceRows INT;&#xA;SET @SourceRows = ?;&#xA;IF @SourceRows &lt;= 0&#xA;    THROW 51000, 'The CSV source is empty; the warehouse load is not valid.', 1;&#xA;IF (SELECT COUNT_BIG(*) FROM dbo.FACT_FLIGHT) &lt;&gt; @SourceRows&#xA;    THROW 51001, 'Fact row count does not match the CSV source row count.', 1;&#xA;IF EXISTS (SELECT 1 FROM dbo.FACT_FLIGHT WHERE DATE_ID IS NULL OR DEP_TIME_ID IS NULL OR CARRIER_ID IS NULL OR ORIGIN_AIRPORT_ID IS NULL OR DEST_AIRPORT_ID IS NULL OR CANCELLATION_ID IS NULL)&#xA;    THROW 51002, 'Fact contains a missing Dimension key.', 1;&#xA;IF (SELECT COUNT(*) FROM sys.foreign_keys WHERE parent_object_id = OBJECT_ID('dbo.FACT_FLIGHT') AND is_disabled = 0 AND is_not_trusted = 0) &lt;&gt; 6&#xA;    THROW 51003, 'All six enabled and trusted Fact foreign keys are required.', 1;&#xA;"
+          SQLTask:BypassPrepare="True">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::SourceRowCount"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
@@ -6886,6 +7581,14 @@ where [refTable].[CRS_TIME] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\SEQ_LOAD_FACT" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Verify completed load]"
+      DTS:CreationName=""
+      DTS:DTSID="{F4DAEE8F-702A-55ED-9390-D109B898912C}"
+      DTS:From="Package\SEQ_LOAD_FACT"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Verify completed load"
+      DTS:To="Package\Verify_Load" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -6898,7 +7601,10 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph"
+        xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph"
+        xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml"
+        Capacity="19">
         <NodeLayout
           Size="205.714285714286,42.2857142857143"
           Id="Package\SEQ_Build_DW\Create_DIM_FACT_Table"
@@ -7118,6 +7824,10 @@ where [refTable].[CRS_TIME] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="200,44"
+          Id="Package\Verify_Load"
+          TopLeft="842.738079889703,844.67993383024" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -7125,107 +7835,39 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph"
+        xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph"
+        xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph"
+        Capacity="7">
         <NodeLayout
-          Size="176.571428571429,42.2857142857143"
-          Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination"
-          TopLeft="861.999961465598,402.999981984497" />
-        <NodeLayout
-          Size="155.428571428572,42.2857142857143"
+          Size="190,44"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source"
-          TopLeft="808.999963834883,245.999989002944" />
+          TopLeft="60,40" />
         <NodeLayout
-          Size="99.4285714285715,42.2857142857143"
-          Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort"
-          TopLeft="1136.99994917214,377.999983102084" />
-        <NodeLayout
-          Size="160,42.2857142857143"
+          Size="190,44"
           Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion"
-          TopLeft="1102.99995069206,249.99998882413" />
-        <EdgeLayout
-          Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT.Paths[Flat File Source Output]"
-          TopLeft="964.428535263455,269.142846056394">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="138.571415428605,0"
-              Start="0,0"
-              End="131.071415428605,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="131.071415428605,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT.Paths[Data Conversion Output]"
-          TopLeft="1184.85709278924,292.285703109844">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,85.7142799922401"
-              Start="0,0"
-              End="0,78.2142799922401">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,78.2142799922401" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT.Paths[Sort Output]"
-          TopLeft="1136.99994917214,399.142840244941">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-98.4285591351131,24.9999988824125"
-              Start="0,0"
-              End="-90.9285591351131,24.9999988824125">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-45.2142795675566,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-45.2142795675566,0"
-                    Point2="-49.2142795675566,0"
-                    Point3="-49.2142795675566,4" />
-                  <mssgle:LineSegment
-                    End="-49.2142795675566,20.9999988824125" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-49.2142795675566,20.9999988824125"
-                    Point2="-49.2142795675566,24.9999988824125"
-                    Point3="-53.2142795675566,24.9999988824125" />
-                  <mssgle:LineSegment
-                    End="-90.9285591351131,24.9999988824125" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="60,130" />
+        <NodeLayout
+          Size="230,44"
+          Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Flat File Source Destination"
+          TopLeft="390,40" />
+        <NodeLayout
+          Size="230,44"
+          Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Data Conversion Destination"
+          TopLeft="390,130" />
+        <NodeLayout
+          Size="190,44"
+          Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Union All Airports"
+          TopLeft="225,240" />
+        <NodeLayout
+          Size="190,44"
+          Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\Sort"
+          TopLeft="225,330" />
+        <NodeLayout
+          Size="230,44"
+          Id="Package\SEQ_Load_DIM\DFT_Load_DIM_AIRPORT\OLE DB Destination"
+          TopLeft="225,420" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -7786,7 +8428,11 @@ where [refTable].[CRS_TIME] = ?</property>
     design-time-name="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph"
+        xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph"
+        xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph"
+        Capacity="19">
         <NodeLayout
           Size="155.428571428572,42.2857142857143"
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Flat File Source"
@@ -7940,28 +8586,6 @@ where [refTable].[CRS_TIME] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Flat File Source Output]"
-          TopLeft="913.428537543333,285.142845341138">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="88.5714176637787,0"
-              Start="0,0"
-              End="81.0714176637787,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="81.0714176637787,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT.Paths[Data Conversion Output]"
           TopLeft="1161.99995520711,278.642845631711">
           <EdgeLayout.Curve>
@@ -8037,6 +8661,10 @@ where [refTable].[CRS_TIME] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="190,44"
+          Id="Package\SEQ_LOAD_FACT\DFT_Load_FACT_FLIGHT\Count Source Rows"
+          TopLeft="757.999966114761,357.999988019467" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -8074,7 +8702,7 @@ where [refTable].[CRS_TIME] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DIM_DATE]</Value>
+          type="q3:string" />
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
