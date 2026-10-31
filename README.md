@@ -1,6 +1,8 @@
-# Flight Data Warehouse — SSIS
+# Flight Data Warehouse — SSIS và SSAS
 
 Project SSIS nạp CSV chuyến bay năm 2024 vào `Flight_DW`, phục vụ xây cube SSAS. File CSV đi kèm có **50.142 bản ghi, 366 ngày, mỗi ngày 137 bản ghi và 18 cột**.
+
+Project **`Flight_SSAS`** đã có Data Source, DSV, 7 Dimension dùng chung, 8 chiều Cube, 21 chỉ số và 15 truy vấn MDX. Xem [hướng dẫn SSAS](Flight_SSAS/docs/SSAS_GUIDE.md), [kết quả và nhận xét](Flight_SSAS/docs/QUERY_RESULTS.md), [xác minh 15 truy vấn](Flight_SSAS/results/verification.json). Database SSAS là `Flight_SSAS`, cube `FlightCube`; nguồn SQL vẫn là `Flight_DW`.
 
 ## Chạy trên máy của bạn
 

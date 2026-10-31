@@ -1,0 +1,7 @@
+﻿-- Top 5 tuyến từ 1.500 dặm theo Late Aircraft Delay tháng 12/2024.
+SELECT {[Measures].[Route Distance Miles], [Measures].[Total Flights], [Measures].[Operated Flights],
+ [Measures].[Late Aircraft Delay Minutes], [Measures].[Departure Delay Minutes], [Measures].[Average Arrival Delay]} ON COLUMNS,
+ TOPCOUNT(FILTER(NONEMPTY([Route].[Route].[Route].Members, [Measures].[Total Flights]),
+  [Measures].[Route Distance Miles] >= 1500), 5, [Measures].[Late Aircraft Delay Minutes]) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Month].&[202412]);

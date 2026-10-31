@@ -1,0 +1,5 @@
+﻿-- Tỷ lệ hủy của từng hãng, giảm dần; mẫu số là toàn bộ chuyến trong mẫu.
+SELECT {[Measures].[Total Flights], [Measures].[Cancelled Flights], [Measures].[Cancellation Rate]} ON COLUMNS,
+ ORDER(NONEMPTY([Carrier].[Carrier Code].[Carrier Code].Members, [Measures].[Total Flights]), [Measures].[Cancellation Rate], BDESC) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

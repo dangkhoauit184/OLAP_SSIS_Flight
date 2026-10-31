@@ -1,0 +1,10 @@
+﻿-- Hợp TOP 3 Carrier Delay và TOP 3 NAS Delay; loại AK/HI trước khi xếp hạng.
+WITH SET [Eligible Airports] AS
+ NONEMPTY(EXISTS([Origin Airport].[Airport Code].[Airport Code].Members,
+  EXCEPT([Origin Airport].[State].[State].Members, {[Origin Airport].[State].&[AK], [Origin Airport].[State].&[HI]})),
+  [Measures].[Total Flights])
+SELECT {[Measures].[Carrier Delay Minutes], [Measures].[NAS Delay Minutes]} ON COLUMNS,
+ UNION(TOPCOUNT([Eligible Airports], 3, [Measures].[Carrier Delay Minutes]),
+       TOPCOUNT([Eligible Airports], 3, [Measures].[NAS Delay Minutes])) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

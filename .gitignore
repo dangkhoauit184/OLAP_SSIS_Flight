@@ -11,3 +11,10 @@ obj/
 flight_data_2024.csv
 *.mdf
 *.ldf
+
+# Downloaded SSAS SDKs and local validation output
+.packages/
+*.dwproj.user
+*.deploymenttargets
+*.deploymentoptions
+*.configsettings

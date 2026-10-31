@@ -4,6 +4,10 @@
     <BuildType Name="Development" />
     <Platform Name="Default" />
   </Configurations>
+  <Project Path="Flight_SSAS/Flight_SSAS.dwproj" Type="d2abab84-bf74-430a-b69e-9dc6d40dda17">
+    <BuildType Project="Development" />
+    <Platform Project="?" />
+  </Project>
   <Project Path="SSIS/SSIS.dtproj" Type="c9674dcb-5085-4a16-b785-4c70dd1589bd">
     <Platform Project="?" />
   </Project>

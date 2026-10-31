@@ -1,0 +1,5 @@
+﻿-- Top 5 sân bay xuất phát theo số chuyến không hủy năm 2024.
+SELECT {[Measures].[Operated Flights]} ON COLUMNS,
+ TOPCOUNT(NONEMPTY([Origin Airport].[Airport Code].[Airport Code].Members, [Measures].[Operated Flights]), 5, [Measures].[Operated Flights]) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

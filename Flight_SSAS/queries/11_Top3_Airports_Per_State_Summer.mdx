@@ -1,0 +1,8 @@
+﻿-- Top 3 sân bay của mỗi bang theo chuyến không hủy trong tháng 6–8/2024.
+SELECT {[Measures].[Operated Flights]} ON COLUMNS,
+ GENERATE([Origin Airport].[State].[State].Members,
+  TOPCOUNT(NONEMPTY(
+   {[Origin Airport].[State].CurrentMember} * [Origin Airport].[Airport Code].[Airport Code].Members,
+   [Measures].[Operated Flights]), 3, [Measures].[Operated Flights])) ON ROWS
+FROM [FlightCube]
+WHERE ({[Date].[Month].&[202406], [Date].[Month].&[202407], [Date].[Month].&[202408]});

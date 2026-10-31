@@ -1,0 +1,138 @@
+{
+    "query":  8,
+    "title":  "Tuyến dài 1.000–2.000 dặm, có ít nhất 50 chuyến trong mẫu năm 2024.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  1448,
+                                    "Total Flights":  58,
+                                    "Operated Flights":  56
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "1,448.00",
+                                       "Total Flights":  "58",
+                                       "Operated Flights":  "56"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[17_291]",
+                                         "caption":  "ANC - SEA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  1107,
+                                    "Total Flights":  57,
+                                    "Operated Flights":  57
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "1,107.00",
+                                       "Total Flights":  "57",
+                                       "Operated Flights":  "57"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[291_246]",
+                                         "caption":  "SEA - PHX"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  1096,
+                                    "Total Flights":  55,
+                                    "Operated Flights":  55
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "1,096.00",
+                                       "Total Flights":  "55",
+                                       "Operated Flights":  "55"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[190_212]",
+                                         "caption":  "LGA - MIA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  1107,
+                                    "Total Flights":  54,
+                                    "Operated Flights":  54
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "1,107.00",
+                                       "Total Flights":  "54",
+                                       "Operated Flights":  "54"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[246_291]",
+                                         "caption":  "PHX - SEA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  1389,
+                                    "Total Flights":  51,
+                                    "Operated Flights":  49
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "1,389.00",
+                                       "Total Flights":  "51",
+                                       "Operated Flights":  "49"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[90_190]",
+                                         "caption":  "DFW - LGA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  1379,
+                                    "Total Flights":  50,
+                                    "Operated Flights":  49
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "1,379.00",
+                                       "Total Flights":  "50",
+                                       "Operated Flights":  "49"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[181_157]",
+                                         "caption":  "LAX - IAH"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  1389,
+                                    "Total Flights":  50,
+                                    "Operated Flights":  48
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "1,389.00",
+                                       "Total Flights":  "50",
+                                       "Operated Flights":  "48"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[190_90]",
+                                         "caption":  "LGA - DFW"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Route Distance Miles",
+                    "Total Flights",
+                    "Operated Flights"
+                ],
+    "rowCount":  7
+}

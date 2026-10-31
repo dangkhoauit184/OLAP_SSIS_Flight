@@ -1,0 +1,91 @@
+{
+    "query":  14,
+    "title":  "Hợp TOP 3 Carrier Delay và TOP 3 NAS Delay; loại AK/HI trước khi xếp hạng.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Carrier Delay Minutes":  14272,
+                                    "NAS Delay Minutes":  4901
+                                },
+                     "formatted":  {
+                                       "Carrier Delay Minutes":  "14,272.00",
+                                       "NAS Delay Minutes":  "4,901.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DEN]",
+                                         "caption":  "DEN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Carrier Delay Minutes":  13154,
+                                    "NAS Delay Minutes":  4802
+                                },
+                     "formatted":  {
+                                       "Carrier Delay Minutes":  "13,154.00",
+                                       "NAS Delay Minutes":  "4,802.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ATL]",
+                                         "caption":  "ATL"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Carrier Delay Minutes":  11976,
+                                    "NAS Delay Minutes":  4773
+                                },
+                     "formatted":  {
+                                       "Carrier Delay Minutes":  "11,976.00",
+                                       "NAS Delay Minutes":  "4,773.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DFW]",
+                                         "caption":  "DFW"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Carrier Delay Minutes":  10883,
+                                    "NAS Delay Minutes":  7986
+                                },
+                     "formatted":  {
+                                       "Carrier Delay Minutes":  "10,883.00",
+                                       "NAS Delay Minutes":  "7,986.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ORD]",
+                                         "caption":  "ORD"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Carrier Delay Minutes":  4619,
+                                    "NAS Delay Minutes":  5029
+                                },
+                     "formatted":  {
+                                       "Carrier Delay Minutes":  "4,619.00",
+                                       "NAS Delay Minutes":  "5,029.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MCO]",
+                                         "caption":  "MCO"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Carrier Delay Minutes",
+                    "NAS Delay Minutes"
+                ],
+    "rowCount":  5
+}

@@ -1,0 +1,135 @@
+{
+    "query":  13,
+    "title":  "Top 5 tuyến từ 1.500 dặm theo Late Aircraft Delay tháng 12/2024.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  1598,
+                                    "Total Flights":  6,
+                                    "Operated Flights":  6,
+                                    "Late Aircraft Delay Minutes":  103,
+                                    "Departure Delay Minutes":  483,
+                                    "Average Arrival Delay":  75
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "1,598.00",
+                                       "Total Flights":  "6",
+                                       "Operated Flights":  "6",
+                                       "Late Aircraft Delay Minutes":  "103.00",
+                                       "Departure Delay Minutes":  "483.00",
+                                       "Average Arrival Delay":  "75.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[170_301]",
+                                         "caption":  "JFK - SJU"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  1626,
+                                    "Total Flights":  1,
+                                    "Operated Flights":  1,
+                                    "Late Aircraft Delay Minutes":  99,
+                                    "Departure Delay Minutes":  109,
+                                    "Average Arrival Delay":  104
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "1,626.00",
+                                       "Total Flights":  "1",
+                                       "Operated Flights":  "1",
+                                       "Late Aircraft Delay Minutes":  "99.00",
+                                       "Departure Delay Minutes":  "109.00",
+                                       "Average Arrival Delay":  "104.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[84_243]",
+                                         "caption":  "DAL - PDX"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  2611,
+                                    "Total Flights":  6,
+                                    "Operated Flights":  6,
+                                    "Late Aircraft Delay Minutes":  87,
+                                    "Departure Delay Minutes":  125,
+                                    "Average Arrival Delay":  11.5
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "2,611.00",
+                                       "Total Flights":  "6",
+                                       "Operated Flights":  "6",
+                                       "Late Aircraft Delay Minutes":  "87.00",
+                                       "Departure Delay Minutes":  "125.00",
+                                       "Average Arrival Delay":  "11.50"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[181_43]",
+                                         "caption":  "LAX - BOS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  2338,
+                                    "Total Flights":  2,
+                                    "Operated Flights":  2,
+                                    "Late Aircraft Delay Minutes":  66,
+                                    "Departure Delay Minutes":  140,
+                                    "Average Arrival Delay":  36.5
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "2,338.00",
+                                       "Total Flights":  "2",
+                                       "Operated Flights":  "2",
+                                       "Late Aircraft Delay Minutes":  "66.00",
+                                       "Departure Delay Minutes":  "140.00",
+                                       "Average Arrival Delay":  "36.50"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[293_230]",
+                                         "caption":  "SFO - OGG"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Route Distance Miles":  1956,
+                                    "Total Flights":  3,
+                                    "Operated Flights":  3,
+                                    "Late Aircraft Delay Minutes":  60,
+                                    "Departure Delay Minutes":  85,
+                                    "Average Arrival Delay":  10
+                                },
+                     "formatted":  {
+                                       "Route Distance Miles":  "1,956.00",
+                                       "Total Flights":  "3",
+                                       "Operated Flights":  "3",
+                                       "Late Aircraft Delay Minutes":  "60.00",
+                                       "Departure Delay Minutes":  "85.00",
+                                       "Average Arrival Delay":  "10.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Route].[Route].\u0026[97_281]",
+                                         "caption":  "DTW - SAN"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Route Distance Miles",
+                    "Total Flights",
+                    "Operated Flights",
+                    "Late Aircraft Delay Minutes",
+                    "Departure Delay Minutes",
+                    "Average Arrival Delay"
+                ],
+    "rowCount":  5
+}

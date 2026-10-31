@@ -1,0 +1,6 @@
+﻿-- Số chuyến không hủy và trễ hạ cánh trung bình theo quý/tháng năm 2024.
+SELECT
+ {[Measures].[Operated Flights], [Measures].[Average Arrival Delay]} ON COLUMNS,
+ NON EMPTY HIERARCHIZE(UNION([Date].[Calendar].[Quarter].Members, [Date].[Calendar].[Month].Members)) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

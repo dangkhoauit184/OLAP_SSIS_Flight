@@ -1,0 +1,48 @@
+{
+    "query":  10,
+    "title":  "Sân bay có trên 200 chuyến không hủy và trễ hạ cánh trung bình trên 15 phút.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Operated Flights":  203,
+                                    "Arrival Observations":  203,
+                                    "Average Arrival Delay":  17.487684729064039
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "203",
+                                       "Arrival Observations":  "203",
+                                       "Average Arrival Delay":  "17.49"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PBI]",
+                                         "caption":  "PBI"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  275,
+                                    "Arrival Observations":  271,
+                                    "Average Arrival Delay":  15.822878228782288
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "275",
+                                       "Arrival Observations":  "271",
+                                       "Average Arrival Delay":  "15.82"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SJU]",
+                                         "caption":  "SJU"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Operated Flights",
+                    "Arrival Observations",
+                    "Average Arrival Delay"
+                ],
+    "rowCount":  2
+}

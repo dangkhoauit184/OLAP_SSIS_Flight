@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Flight_DW</ID>
+  <Name>Flight DW</Name>
+  <DataSourceID>Flight_DW</DataSourceID>
+  <Schema>
+    <xs:schema id="FlightDW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="FlightDW" msdata:IsDataSet="true" msdata:Locale="en-US" msdata:EnforceConstraints="False">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="DimDate" msprop:QueryDefinition="SELECT DATE_ID, FL_DATE, YEAR_NUM, QUARTER_NUM, MONTH_NUM, DAY_NUM,&#xA;       YEAR_NUM * 10 + QUARTER_NUM AS QUARTER_KEY,&#xA;       YEAR_NUM * 100 + MONTH_NUM AS MONTH_KEY,&#xA;       CONVERT(nvarchar(10), FL_DATE, 23) AS DATE_CAPTION,&#xA;       CONVERT(nvarchar(4), YEAR_NUM) AS YEAR_CAPTION,&#xA;       RIGHT(N'0' + CONVERT(nvarchar(2), MONTH_NUM), 2) AS MONTH_NUMBER_CAPTION,&#xA;       N'Q' + CONVERT(nvarchar(1), QUARTER_NUM) + N'/' + CONVERT(nvarchar(4), YEAR_NUM) AS QUARTER_CAPTION,&#xA;       RIGHT(N'0' + CONVERT(nvarchar(2), MONTH_NUM), 2) + N'/' + CONVERT(nvarchar(4), YEAR_NUM) AS MONTH_CAPTION,&#xA;       (DATEDIFF(day, CONVERT(date, '19000101', 112), FL_DATE) % 7) + 1 AS WEEKDAY_NUM,&#xA;       CASE (DATEDIFF(day, CONVERT(date, '19000101', 112), FL_DATE) % 7) + 1&#xA;          WHEN 1 THEN N'Thứ Hai' WHEN 2 THEN N'Thứ Ba' WHEN 3 THEN N'Thứ Tư'&#xA;          WHEN 4 THEN N'Thứ Năm' WHEN 5 THEN N'Thứ Sáu' WHEN 6 THEN N'Thứ Bảy' ELSE N'Chủ Nhật' END AS WEEKDAY_NAME&#xA;FROM dbo.DIM_DATE" msprop:FriendlyName="DimDate" msprop:TableType="View" msprop:DbTableName="DimDate">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DATE_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="DATE_ID" type="xs:int" />
+                  <xs:element name="FL_DATE" msprop:DbColumnName="FL_DATE" type="xs:dateTime" />
+                  <xs:element name="YEAR_NUM" msprop:DbColumnName="YEAR_NUM" type="xs:int" minOccurs="0" />
+                  <xs:element name="QUARTER_NUM" msprop:DbColumnName="QUARTER_NUM" type="xs:int" minOccurs="0" />
+                  <xs:element name="MONTH_NUM" msprop:DbColumnName="MONTH_NUM" type="xs:int" minOccurs="0" />
+                  <xs:element name="DAY_NUM" msprop:DbColumnName="DAY_NUM" type="xs:int" minOccurs="0" />
+                  <xs:element name="QUARTER_KEY" msdata:ReadOnly="true" msprop:DbColumnName="QUARTER_KEY" type="xs:int" minOccurs="0" />
+                  <xs:element name="MONTH_KEY" msdata:ReadOnly="true" msprop:DbColumnName="MONTH_KEY" type="xs:int" minOccurs="0" />
+                  <xs:element name="DATE_CAPTION" msdata:ReadOnly="true" msprop:DbColumnName="DATE_CAPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="YEAR_CAPTION" msdata:ReadOnly="true" msprop:DbColumnName="YEAR_CAPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MONTH_NUMBER_CAPTION" msdata:ReadOnly="true" msprop:DbColumnName="MONTH_NUMBER_CAPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="QUARTER_CAPTION" msdata:ReadOnly="true" msprop:DbColumnName="QUARTER_CAPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MONTH_CAPTION" msdata:ReadOnly="true" msprop:DbColumnName="MONTH_CAPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="WEEKDAY_NUM" msdata:ReadOnly="true" msprop:DbColumnName="WEEKDAY_NUM" type="xs:int" minOccurs="0" />
+                  <xs:element name="WEEKDAY_NAME" msdata:ReadOnly="true" msprop:DbColumnName="WEEKDAY_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DimCarrier" msprop:QueryDefinition="SELECT CARRIER_ID, CARRIER_CODE,&#xA;       CONVERT(nvarchar(100), CASE CARRIER_CODE&#xA;          WHEN '9E' THEN 'Endeavor Air' WHEN 'AA' THEN 'American Airlines'&#xA;          WHEN 'AS' THEN 'Alaska Airlines' WHEN 'B6' THEN 'JetBlue Airways'&#xA;          WHEN 'DL' THEN 'Delta Air Lines' WHEN 'F9' THEN 'Frontier Airlines'&#xA;          WHEN 'G4' THEN 'Allegiant Air' WHEN 'HA' THEN 'Hawaiian Airlines'&#xA;          WHEN 'MQ' THEN 'Envoy Air' WHEN 'NK' THEN 'Spirit Airlines'&#xA;          WHEN 'OH' THEN 'PSA Airlines' WHEN 'OO' THEN 'SkyWest Airlines'&#xA;          WHEN 'UA' THEN 'United Airlines' WHEN 'WN' THEN 'Southwest Airlines'&#xA;          WHEN 'YX' THEN 'Republic Airways' ELSE CARRIER_CODE END) AS CARRIER_NAME&#xA;FROM dbo.DIM_CARRIER" msprop:FriendlyName="DimCarrier" msprop:TableType="View" msprop:DbTableName="DimCarrier">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CARRIER_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="CARRIER_ID" type="xs:int" />
+                  <xs:element name="CARRIER_CODE" msprop:DbColumnName="CARRIER_CODE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CARRIER_NAME" msdata:ReadOnly="true" msprop:DbColumnName="CARRIER_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DimAirport" msprop:QueryDefinition="-- Airport states extracted from the original dataset, not market-city suffixes.&#xD;&#xA;SELECT a.AIRPORT_ID, a.AIRPORT_CODE, a.CITY_NAME,&#xD;&#xA;       CONVERT(nvarchar(2), s.STATE_CODE) AS STATE_CODE,&#xD;&#xA;       CONVERT(nvarchar(100), s.STATE_NAME) AS STATE_NAME,&#xD;&#xA;       CONVERT(nvarchar(100), RTRIM(LEFT(a.CITY_NAME, LEN(RTRIM(a.CITY_NAME)) - 4))) AS CITY_LABEL&#xD;&#xA;FROM dbo.DIM_AIRPORT a&#xD;&#xA;JOIN (VALUES&#xD;&#xA;(N'ABE',N'PA',N'Pennsylvania'),&#xD;&#xA;(N'ABI',N'TX',N'Texas'),&#xD;&#xA;(N'ABQ',N'NM',N'New Mexico'),&#xD;&#xA;(N'ABR',N'SD',N'South Dakota'),&#xD;&#xA;(N'ABY',N'GA',N'Georgia'),&#xD;&#xA;(N'ACK',N'MA',N'Massachusetts'),&#xD;&#xA;(N'ACT',N'TX',N'Texas'),&#xD;&#xA;(N'ACV',N'CA',N'California'),&#xD;&#xA;(N'ACY',N'NJ',N'New Jersey'),&#xD;&#xA;(N'ADK',N'AK',N'Alaska'),&#xD;&#xA;(N'ADQ',N'AK',N'Alaska'),&#xD;&#xA;(N'AEX',N'LA',N'Louisiana'),&#xD;&#xA;(N'AGS',N'GA',N'Georgia'),&#xD;&#xA;(N'ALB',N'NY',N'New York'),&#xD;&#xA;(N'ALW',N'WA',N'Washington'),&#xD;&#xA;(N'AMA',N'TX',N'Texas'),&#xD;&#xA;(N'ANC',N'AK',N'Alaska'),&#xD;&#xA;(N'APN',N'MI',N'Michigan'),&#xD;&#xA;(N'ASE',N'CO',N'Colorado'),&#xD;&#xA;(N'ATL',N'GA',N'Georgia'),&#xD;&#xA;(N'ATW',N'WI',N'Wisconsin'),&#xD;&#xA;(N'AUS',N'TX',N'Texas'),&#xD;&#xA;(N'AVL',N'NC',N'North Carolina'),&#xD;&#xA;(N'AVP',N'PA',N'Pennsylvania'),&#xD;&#xA;(N'AZA',N'AZ',N'Arizona'),&#xD;&#xA;(N'AZO',N'MI',N'Michigan'),&#xD;&#xA;(N'BDL',N'CT',N'Connecticut'),&#xD;&#xA;(N'BET',N'AK',N'Alaska'),&#xD;&#xA;(N'BFF',N'NE',N'Nebraska'),&#xD;&#xA;(N'BFL',N'CA',N'California'),&#xD;&#xA;(N'BGM',N'NY',N'New York'),&#xD;&#xA;(N'BGR',N'ME',N'Maine'),&#xD;&#xA;(N'BHM',N'AL',N'Alabama'),&#xD;&#xA;(N'BIH',N'CA',N'California'),&#xD;&#xA;(N'BIL',N'MT',N'Montana'),&#xD;&#xA;(N'BIS',N'ND',N'North Dakota'),&#xD;&#xA;(N'BJI',N'MN',N'Minnesota'),&#xD;&#xA;(N'BLI',N'WA',N'Washington'),&#xD;&#xA;(N'BLV',N'IL',N'Illinois'),&#xD;&#xA;(N'BMI',N'IL',N'Illinois'),&#xD;&#xA;(N'BNA',N'TN',N'Tennessee'),&#xD;&#xA;(N'BOI',N'ID',N'Idaho'),&#xD;&#xA;(N'BOS',N'MA',N'Massachusetts'),&#xD;&#xA;(N'BPT',N'TX',N'Texas'),&#xD;&#xA;(N'BQK',N'GA',N'Georgia'),&#xD;&#xA;(N'BQN',N'PR',N'Puerto Rico'),&#xD;&#xA;(N'BRD',N'MN',N'Minnesota'),&#xD;&#xA;(N'BRO',N'TX',N'Texas'),&#xD;&#xA;(N'BRW',N'AK',N'Alaska'),&#xD;&#xA;(N'BTM',N'MT',N'Montana'),&#xD;&#xA;(N'BTR',N'LA',N'Louisiana'),&#xD;&#xA;(N'BTV',N'VT',N'Vermont'),&#xD;&#xA;(N'BUF',N'NY',N'New York'),&#xD;&#xA;(N'BUR',N'CA',N'California'),&#xD;&#xA;(N'BWI',N'MD',N'Maryland'),&#xD;&#xA;(N'BZN',N'MT',N'Montana'),&#xD;&#xA;(N'CAE',N'SC',N'South Carolina'),&#xD;&#xA;(N'CAK',N'OH',N'Ohio'),&#xD;&#xA;(N'CDC',N'UT',N'Utah'),&#xD;&#xA;(N'CDV',N'AK',N'Alaska'),&#xD;&#xA;(N'CHA',N'TN',N'Tennessee'),&#xD;&#xA;(N'CHO',N'VA',N'Virginia'),&#xD;&#xA;(N'CHS',N'SC',N'South Carolina'),&#xD;&#xA;(N'CID',N'IA',N'Iowa'),&#xD;&#xA;(N'CIU',N'MI',N'Michigan'),&#xD;&#xA;(N'CKB',N'WV',N'West Virginia'),&#xD;&#xA;(N'CLE',N'OH',N'Ohio'),&#xD;&#xA;(N'CLL',N'TX',N'Texas'),&#xD;&#xA;(N'CLT',N'NC',N'North Carolina'),&#xD;&#xA;(N'CMH',N'OH',N'Ohio'),&#xD;&#xA;(N'CMI',N'IL',N'Illinois'),&#xD;&#xA;(N'CMX',N'MI',N'Michigan'),&#xD;&#xA;(N'COD',N'WY',N'Wyoming'),&#xD;&#xA;(N'COS',N'CO',N'Colorado'),&#xD;&#xA;(N'COU',N'MO',N'Missouri'),&#xD;&#xA;(N'CPR',N'WY',N'Wyoming'),&#xD;&#xA;(N'CRP',N'TX',N'Texas'),&#xD;&#xA;(N'CRW',N'WV',N'West Virginia'),&#xD;&#xA;(N'CSG',N'GA',N'Georgia'),&#xD;&#xA;(N'CVG',N'KY',N'Kentucky'),&#xD;&#xA;(N'CWA',N'WI',N'Wisconsin'),&#xD;&#xA;(N'CYS',N'WY',N'Wyoming'),&#xD;&#xA;(N'DAB',N'FL',N'Florida'),&#xD;&#xA;(N'DAL',N'TX',N'Texas'),&#xD;&#xA;(N'DAY',N'OH',N'Ohio'),&#xD;&#xA;(N'DCA',N'VA',N'Virginia'),&#xD;&#xA;(N'DDC',N'KS',N'Kansas'),&#xD;&#xA;(N'DEC',N'IL',N'Illinois'),&#xD;&#xA;(N'DEN',N'CO',N'Colorado'),&#xD;&#xA;(N'DFW',N'TX',N'Texas'),&#xD;&#xA;(N'DHN',N'AL',N'Alabama'),&#xD;&#xA;(N'DIK',N'ND',N'North Dakota'),&#xD;&#xA;(N'DLG',N'AK',N'Alaska'),&#xD;&#xA;(N'DLH',N'MN',N'Minnesota'),&#xD;&#xA;(N'DRO',N'CO',N'Colorado'),&#xD;&#xA;(N'DSM',N'IA',N'Iowa'),&#xD;&#xA;(N'DTW',N'MI',N'Michigan'),&#xD;&#xA;(N'DVL',N'ND',N'North Dakota'),&#xD;&#xA;(N'EAR',N'NE',N'Nebraska'),&#xD;&#xA;(N'ECP',N'FL',N'Florida'),&#xD;&#xA;(N'EGE',N'CO',N'Colorado'),&#xD;&#xA;(N'EKO',N'NV',N'Nevada'),&#xD;&#xA;(N'ELM',N'NY',N'New York'),&#xD;&#xA;(N'ELP',N'TX',N'Texas'),&#xD;&#xA;(N'ESC',N'MI',N'Michigan'),&#xD;&#xA;(N'EUG',N'OR',N'Oregon'),&#xD;&#xA;(N'EVV',N'IN',N'Indiana'),&#xD;&#xA;(N'EWR',N'NJ',N'New Jersey'),&#xD;&#xA;(N'EYW',N'FL',N'Florida'),&#xD;&#xA;(N'FAI',N'AK',N'Alaska'),&#xD;&#xA;(N'FAR',N'ND',N'North Dakota'),&#xD;&#xA;(N'FAT',N'CA',N'California'),&#xD;&#xA;(N'FAY',N'NC',N'North Carolina'),&#xD;&#xA;(N'FCA',N'MT',N'Montana'),&#xD;&#xA;(N'FLG',N'AZ',N'Arizona'),&#xD;&#xA;(N'FLL',N'FL',N'Florida'),&#xD;&#xA;(N'FNT',N'MI',N'Michigan'),&#xD;&#xA;(N'FOD',N'IA',N'Iowa'),&#xD;&#xA;(N'FSD',N'SD',N'South Dakota'),&#xD;&#xA;(N'FSM',N'AR',N'Arkansas'),&#xD;&#xA;(N'FWA',N'IN',N'Indiana'),&#xD;&#xA;(N'GCC',N'WY',N'Wyoming'),&#xD;&#xA;(N'GCK',N'KS',N'Kansas'),&#xD;&#xA;(N'GEG',N'WA',N'Washington'),&#xD;&#xA;(N'GFK',N'ND',N'North Dakota'),&#xD;&#xA;(N'GGG',N'TX',N'Texas'),&#xD;&#xA;(N'GJT',N'CO',N'Colorado'),&#xD;&#xA;(N'GNV',N'FL',N'Florida'),&#xD;&#xA;(N'GPT',N'MS',N'Mississippi'),&#xD;&#xA;(N'GRB',N'WI',N'Wisconsin'),&#xD;&#xA;(N'GRI',N'NE',N'Nebraska'),&#xD;&#xA;(N'GRK',N'TX',N'Texas'),&#xD;&#xA;(N'GRR',N'MI',N'Michigan'),&#xD;&#xA;(N'GSO',N'NC',N'North Carolina'),&#xD;&#xA;(N'GSP',N'SC',N'South Carolina'),&#xD;&#xA;(N'GST',N'AK',N'Alaska'),&#xD;&#xA;(N'GTF',N'MT',N'Montana'),&#xD;&#xA;(N'GTR',N'MS',N'Mississippi'),&#xD;&#xA;(N'GUC',N'CO',N'Colorado'),&#xD;&#xA;(N'GUM',N'TT',N'U.S. Pacific Trust Territories and Possessions'),&#xD;&#xA;(N'HDN',N'CO',N'Colorado'),&#xD;&#xA;(N'HGR',N'MD',N'Maryland'),&#xD;&#xA;(N'HHH',N'SC',N'South Carolina'),&#xD;&#xA;(N'HIB',N'MN',N'Minnesota'),&#xD;&#xA;(N'HLN',N'MT',N'Montana'),&#xD;&#xA;(N'HNL',N'HI',N'Hawaii'),&#xD;&#xA;(N'HOB',N'NM',N'New Mexico'),&#xD;&#xA;(N'HOU',N'TX',N'Texas'),&#xD;&#xA;(N'HPN',N'NY',N'New York'),&#xD;&#xA;(N'HRL',N'TX',N'Texas'),&#xD;&#xA;(N'HSV',N'AL',N'Alabama'),&#xD;&#xA;(N'HTS',N'WV',N'West Virginia'),&#xD;&#xA;(N'HYA',N'MA',N'Massachusetts'),&#xD;&#xA;(N'HYS',N'KS',N'Kansas'),&#xD;&#xA;(N'IAD',N'VA',N'Virginia'),&#xD;&#xA;(N'IAG',N'NY',N'New York'),&#xD;&#xA;(N'IAH',N'TX',N'Texas'),&#xD;&#xA;(N'ICT',N'KS',N'Kansas'),&#xD;&#xA;(N'IDA',N'ID',N'Idaho'),&#xD;&#xA;(N'ILM',N'NC',N'North Carolina'),&#xD;&#xA;(N'IMT',N'MI',N'Michigan'),&#xD;&#xA;(N'IND',N'IN',N'Indiana'),&#xD;&#xA;(N'INL',N'MN',N'Minnesota'),&#xD;&#xA;(N'ISP',N'NY',N'New York'),&#xD;&#xA;(N'ITH',N'NY',N'New York'),&#xD;&#xA;(N'ITO',N'HI',N'Hawaii'),&#xD;&#xA;(N'JAC',N'WY',N'Wyoming'),&#xD;&#xA;(N'JAN',N'MS',N'Mississippi'),&#xD;&#xA;(N'JAX',N'FL',N'Florida'),&#xD;&#xA;(N'JFK',N'NY',N'New York'),&#xD;&#xA;(N'JLN',N'MO',N'Missouri'),&#xD;&#xA;(N'JMS',N'ND',N'North Dakota'),&#xD;&#xA;(N'JNU',N'AK',N'Alaska'),&#xD;&#xA;(N'JST',N'PA',N'Pennsylvania'),&#xD;&#xA;(N'KOA',N'HI',N'Hawaii'),&#xD;&#xA;(N'KTN',N'AK',N'Alaska'),&#xD;&#xA;(N'LAN',N'MI',N'Michigan'),&#xD;&#xA;(N'LAR',N'WY',N'Wyoming'),&#xD;&#xA;(N'LAS',N'NV',N'Nevada'),&#xD;&#xA;(N'LAW',N'OK',N'Oklahoma'),&#xD;&#xA;(N'LAX',N'CA',N'California'),&#xD;&#xA;(N'LBB',N'TX',N'Texas'),&#xD;&#xA;(N'LBE',N'PA',N'Pennsylvania'),&#xD;&#xA;(N'LBF',N'NE',N'Nebraska'),&#xD;&#xA;(N'LBL',N'KS',N'Kansas'),&#xD;&#xA;(N'LCH',N'LA',N'Louisiana'),&#xD;&#xA;(N'LCK',N'OH',N'Ohio'),&#xD;&#xA;(N'LEX',N'KY',N'Kentucky'),&#xD;&#xA;(N'LFT',N'LA',N'Louisiana'),&#xD;&#xA;(N'LGA',N'NY',N'New York'),&#xD;&#xA;(N'LGB',N'CA',N'California'),&#xD;&#xA;(N'LIH',N'HI',N'Hawaii'),&#xD;&#xA;(N'LIT',N'AR',N'Arkansas'),&#xD;&#xA;(N'LNK',N'NE',N'Nebraska'),&#xD;&#xA;(N'LRD',N'TX',N'Texas'),&#xD;&#xA;(N'LSE',N'WI',N'Wisconsin'),&#xD;&#xA;(N'LWS',N'ID',N'Idaho'),&#xD;&#xA;(N'MAF',N'TX',N'Texas'),&#xD;&#xA;(N'MBS',N'MI',N'Michigan'),&#xD;&#xA;(N'MCI',N'MO',N'Missouri'),&#xD;&#xA;(N'MCO',N'FL',N'Florida'),&#xD;&#xA;(N'MCW',N'IA',N'Iowa'),&#xD;&#xA;(N'MDT',N'PA',N'Pennsylvania'),&#xD;&#xA;(N'MDW',N'IL',N'Illinois'),&#xD;&#xA;(N'MEI',N'MS',N'Mississippi'),&#xD;&#xA;(N'MEM',N'TN',N'Tennessee'),&#xD;&#xA;(N'MFE',N'TX',N'Texas'),&#xD;&#xA;(N'MFR',N'OR',N'Oregon'),&#xD;&#xA;(N'MGM',N'AL',N'Alabama'),&#xD;&#xA;(N'MHK',N'KS',N'Kansas'),&#xD;&#xA;(N'MHT',N'NH',N'New Hampshire'),&#xD;&#xA;(N'MIA',N'FL',N'Florida'),&#xD;&#xA;(N'MKE',N'WI',N'Wisconsin'),&#xD;&#xA;(N'MLB',N'FL',N'Florida'),&#xD;&#xA;(N'MLI',N'IL',N'Illinois'),&#xD;&#xA;(N'MLU',N'LA',N'Louisiana'),&#xD;&#xA;(N'MOB',N'AL',N'Alabama'),&#xD;&#xA;(N'MOT',N'ND',N'North Dakota'),&#xD;&#xA;(N'MQT',N'MI',N'Michigan'),&#xD;&#xA;(N'MRY',N'CA',N'California'),&#xD;&#xA;(N'MSN',N'WI',N'Wisconsin'),&#xD;&#xA;(N'MSO',N'MT',N'Montana'),&#xD;&#xA;(N'MSP',N'MN',N'Minnesota'),&#xD;&#xA;(N'MSY',N'LA',N'Louisiana'),&#xD;&#xA;(N'MTJ',N'CO',N'Colorado'),&#xD;&#xA;(N'MVY',N'MA',N'Massachusetts'),&#xD;&#xA;(N'MYR',N'SC',N'South Carolina'),&#xD;&#xA;(N'OAJ',N'NC',N'North Carolina'),&#xD;&#xA;(N'OAK',N'CA',N'California'),&#xD;&#xA;(N'OGG',N'HI',N'Hawaii'),&#xD;&#xA;(N'OKC',N'OK',N'Oklahoma'),&#xD;&#xA;(N'OMA',N'NE',N'Nebraska'),&#xD;&#xA;(N'OME',N'AK',N'Alaska'),&#xD;&#xA;(N'ONT',N'CA',N'California'),&#xD;&#xA;(N'ORD',N'IL',N'Illinois'),&#xD;&#xA;(N'ORF',N'VA',N'Virginia'),&#xD;&#xA;(N'ORH',N'MA',N'Massachusetts'),&#xD;&#xA;(N'OTH',N'OR',N'Oregon'),&#xD;&#xA;(N'OTZ',N'AK',N'Alaska'),&#xD;&#xA;(N'PAE',N'WA',N'Washington'),&#xD;&#xA;(N'PBG',N'NY',N'New York'),&#xD;&#xA;(N'PBI',N'FL',N'Florida'),&#xD;&#xA;(N'PDX',N'OR',N'Oregon'),&#xD;&#xA;(N'PGD',N'FL',N'Florida'),&#xD;&#xA;(N'PHL',N'PA',N'Pennsylvania'),&#xD;&#xA;(N'PHX',N'AZ',N'Arizona'),&#xD;&#xA;(N'PIA',N'IL',N'Illinois'),&#xD;&#xA;(N'PIB',N'MS',N'Mississippi'),&#xD;&#xA;(N'PIE',N'FL',N'Florida'),&#xD;&#xA;(N'PIH',N'ID',N'Idaho'),&#xD;&#xA;(N'PIT',N'PA',N'Pennsylvania'),&#xD;&#xA;(N'PLN',N'MI',N'Michigan'),&#xD;&#xA;(N'PNS',N'FL',N'Florida'),&#xD;&#xA;(N'PPG',N'TT',N'U.S. Pacific Trust Territories and Possessions'),&#xD;&#xA;(N'PQI',N'ME',N'Maine'),&#xD;&#xA;(N'PRC',N'AZ',N'Arizona'),&#xD;&#xA;(N'PSC',N'WA',N'Washington'),&#xD;&#xA;(N'PSE',N'PR',N'Puerto Rico'),&#xD;&#xA;(N'PSG',N'AK',N'Alaska'),&#xD;&#xA;(N'PSM',N'NH',N'New Hampshire'),&#xD;&#xA;(N'PSP',N'CA',N'California'),&#xD;&#xA;(N'PVD',N'RI',N'Rhode Island'),&#xD;&#xA;(N'PVU',N'UT',N'Utah'),&#xD;&#xA;(N'PWM',N'ME',N'Maine'),&#xD;&#xA;(N'RAP',N'SD',N'South Dakota'),&#xD;&#xA;(N'RDD',N'CA',N'California'),&#xD;&#xA;(N'RDM',N'OR',N'Oregon'),&#xD;&#xA;(N'RDU',N'NC',N'North Carolina'),&#xD;&#xA;(N'RFD',N'IL',N'Illinois'),&#xD;&#xA;(N'RHI',N'WI',N'Wisconsin'),&#xD;&#xA;(N'RIC',N'VA',N'Virginia'),&#xD;&#xA;(N'RIW',N'WY',N'Wyoming'),&#xD;&#xA;(N'RKS',N'WY',N'Wyoming'),&#xD;&#xA;(N'RNO',N'NV',N'Nevada'),&#xD;&#xA;(N'ROA',N'VA',N'Virginia'),&#xD;&#xA;(N'ROC',N'NY',N'New York'),&#xD;&#xA;(N'ROW',N'NM',N'New Mexico'),&#xD;&#xA;(N'RST',N'MN',N'Minnesota'),&#xD;&#xA;(N'RSW',N'FL',N'Florida'),&#xD;&#xA;(N'SAF',N'NM',N'New Mexico'),&#xD;&#xA;(N'SAN',N'CA',N'California'),&#xD;&#xA;(N'SAT',N'TX',N'Texas'),&#xD;&#xA;(N'SAV',N'GA',N'Georgia'),&#xD;&#xA;(N'SBA',N'CA',N'California'),&#xD;&#xA;(N'SBN',N'IN',N'Indiana'),&#xD;&#xA;(N'SBP',N'CA',N'California'),&#xD;&#xA;(N'SCC',N'AK',N'Alaska'),&#xD;&#xA;(N'SCE',N'PA',N'Pennsylvania'),&#xD;&#xA;(N'SCK',N'CA',N'California'),&#xD;&#xA;(N'SDF',N'KY',N'Kentucky'),&#xD;&#xA;(N'SEA',N'WA',N'Washington'),&#xD;&#xA;(N'SFB',N'FL',N'Florida'),&#xD;&#xA;(N'SFO',N'CA',N'California'),&#xD;&#xA;(N'SGF',N'MO',N'Missouri'),&#xD;&#xA;(N'SGU',N'UT',N'Utah'),&#xD;&#xA;(N'SHR',N'WY',N'Wyoming'),&#xD;&#xA;(N'SHV',N'LA',N'Louisiana'),&#xD;&#xA;(N'SIT',N'AK',N'Alaska'),&#xD;&#xA;(N'SJC',N'CA',N'California'),&#xD;&#xA;(N'SJT',N'TX',N'Texas'),&#xD;&#xA;(N'SJU',N'PR',N'Puerto Rico'),&#xD;&#xA;(N'SLC',N'UT',N'Utah'),&#xD;&#xA;(N'SLN',N'KS',N'Kansas'),&#xD;&#xA;(N'SMF',N'CA',N'California'),&#xD;&#xA;(N'SMX',N'CA',N'California'),&#xD;&#xA;(N'SNA',N'CA',N'California'),&#xD;&#xA;(N'SPN',N'TT',N'U.S. Pacific Trust Territories and Possessions'),&#xD;&#xA;(N'SPS',N'TX',N'Texas'),&#xD;&#xA;(N'SRQ',N'FL',N'Florida'),&#xD;&#xA;(N'STC',N'MN',N'Minnesota'),&#xD;&#xA;(N'STL',N'MO',N'Missouri'),&#xD;&#xA;(N'STS',N'CA',N'California'),&#xD;&#xA;(N'STT',N'VI',N'U.S. Virgin Islands'),&#xD;&#xA;(N'STX',N'VI',N'U.S. Virgin Islands'),&#xD;&#xA;(N'SUN',N'ID',N'Idaho'),&#xD;&#xA;(N'SUX',N'IA',N'Iowa'),&#xD;&#xA;(N'SWF',N'NY',N'New York'),&#xD;&#xA;(N'SWO',N'OK',N'Oklahoma'),&#xD;&#xA;(N'SYR',N'NY',N'New York'),&#xD;&#xA;(N'TLH',N'FL',N'Florida'),&#xD;&#xA;(N'TOL',N'OH',N'Ohio'),&#xD;&#xA;(N'TPA',N'FL',N'Florida'),&#xD;&#xA;(N'TRI',N'TN',N'Tennessee'),&#xD;&#xA;(N'TTN',N'NJ',N'New Jersey'),&#xD;&#xA;(N'TUL',N'OK',N'Oklahoma'),&#xD;&#xA;(N'TUS',N'AZ',N'Arizona'),&#xD;&#xA;(N'TVC',N'MI',N'Michigan'),&#xD;&#xA;(N'TWF',N'ID',N'Idaho'),&#xD;&#xA;(N'TXK',N'AR',N'Arkansas'),&#xD;&#xA;(N'TYR',N'TX',N'Texas'),&#xD;&#xA;(N'TYS',N'TN',N'Tennessee'),&#xD;&#xA;(N'USA',N'NC',N'North Carolina'),&#xD;&#xA;(N'VCT',N'TX',N'Texas'),&#xD;&#xA;(N'VEL',N'UT',N'Utah'),&#xD;&#xA;(N'VLD',N'GA',N'Georgia'),&#xD;&#xA;(N'VPS',N'FL',N'Florida'),&#xD;&#xA;(N'WRG',N'AK',N'Alaska'),&#xD;&#xA;(N'WYS',N'MT',N'Montana'),&#xD;&#xA;(N'XNA',N'AR',N'Arkansas'),&#xD;&#xA;(N'XWA',N'ND',N'North Dakota'),&#xD;&#xA;(N'YAK',N'AK',N'Alaska'),&#xD;&#xA;(N'YUM',N'AZ',N'Arizona')&#xD;&#xA;) s(AIRPORT_CODE, STATE_CODE, STATE_NAME) ON a.AIRPORT_CODE=s.AIRPORT_CODE" msprop:FriendlyName="DimAirport" msprop:TableType="View" msprop:DbTableName="DimAirport">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AIRPORT_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="AIRPORT_ID" type="xs:int" />
+                  <xs:element name="AIRPORT_CODE" msprop:DbColumnName="AIRPORT_CODE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CITY_NAME" msprop:DbColumnName="CITY_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STATE_CODE" msdata:ReadOnly="true" msprop:DbColumnName="STATE_CODE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STATE_NAME" msdata:ReadOnly="true" msprop:DbColumnName="STATE_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CITY_LABEL" msdata:ReadOnly="true" msprop:DbColumnName="CITY_LABEL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DimTime" msprop:QueryDefinition="SELECT TIME_ID, CRS_TIME, (CRS_TIME / 100) % 24 AS HOUR_NUM,&#xA;       RIGHT(N'0' + CONVERT(nvarchar(2), (CRS_TIME / 100) % 24), 2) + N':' +&#xA;       RIGHT(N'0' + CONVERT(nvarchar(2), CRS_TIME % 100), 2) AS TIME_CAPTION,&#xA;       RIGHT(N'0' + CONVERT(nvarchar(2), (CRS_TIME / 100) % 24), 2) + N':00' AS HOUR_CAPTION,&#xA;       CASE WHEN (CRS_TIME / 100) % 24 BETWEEN 6 AND 11 THEN 1&#xA;            WHEN (CRS_TIME / 100) % 24 BETWEEN 12 AND 13 THEN 2&#xA;            WHEN (CRS_TIME / 100) % 24 BETWEEN 14 AND 17 THEN 3 ELSE 4 END AS TIME_BAND_KEY,&#xA;       CONVERT(nvarchar(20), CASE WHEN (CRS_TIME / 100) % 24 BETWEEN 6 AND 11 THEN N'Sáng'&#xA;            WHEN (CRS_TIME / 100) % 24 BETWEEN 12 AND 13 THEN N'Trưa'&#xA;            WHEN (CRS_TIME / 100) % 24 BETWEEN 14 AND 17 THEN N'Chiều' ELSE N'Tối' END) AS TIME_BAND_NAME&#xA;FROM dbo.DIM_TIME" msprop:FriendlyName="DimTime" msprop:TableType="View" msprop:DbTableName="DimTime">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TIME_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="TIME_ID" type="xs:int" />
+                  <xs:element name="CRS_TIME" msprop:DbColumnName="CRS_TIME" type="xs:int" />
+                  <xs:element name="HOUR_NUM" msdata:ReadOnly="true" msprop:DbColumnName="HOUR_NUM" type="xs:int" minOccurs="0" />
+                  <xs:element name="TIME_CAPTION" msdata:ReadOnly="true" msprop:DbColumnName="TIME_CAPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HOUR_CAPTION" msdata:ReadOnly="true" msprop:DbColumnName="HOUR_CAPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TIME_BAND_KEY" msdata:ReadOnly="true" msprop:DbColumnName="TIME_BAND_KEY" type="xs:int" minOccurs="0" />
+                  <xs:element name="TIME_BAND_NAME" msdata:ReadOnly="true" msprop:DbColumnName="TIME_BAND_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DimCancellation" msprop:QueryDefinition="SELECT CANCELLATION_ID, CANCELLATION_CODE, CANCELLATION_REASON&#xA;FROM dbo.DIM_CANCELLATION" msprop:FriendlyName="DimCancellation" msprop:TableType="View" msprop:DbTableName="DimCancellation">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CANCELLATION_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="CANCELLATION_ID" type="xs:int" />
+                  <xs:element name="CANCELLATION_CODE" msprop:DbColumnName="CANCELLATION_CODE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CANCELLATION_REASON" msprop:DbColumnName="CANCELLATION_REASON" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DimRoute" msprop:QueryDefinition="SELECT CONVERT(nvarchar(50), CONVERT(varchar(12), f.ORIGIN_AIRPORT_ID) + N'_' + CONVERT(varchar(12), f.DEST_AIRPORT_ID)) AS ROUTE_KEY,&#xA;       CONVERT(nvarchar(105), o.AIRPORT_CODE + N' - ' + d.AIRPORT_CODE) AS ROUTE_NAME,&#xA;       o.AIRPORT_CODE AS ORIGIN_CODE, d.AIRPORT_CODE AS DEST_CODE,&#xA;       MIN(f.DISTANCE) AS DISTANCE_MILES,&#xA;       CONVERT(nvarchar(20), MIN(f.DISTANCE)) AS DISTANCE_CAPTION&#xA;FROM dbo.FACT_FLIGHT f&#xA;JOIN dbo.DIM_AIRPORT o ON o.AIRPORT_ID = f.ORIGIN_AIRPORT_ID&#xA;JOIN dbo.DIM_AIRPORT d ON d.AIRPORT_ID = f.DEST_AIRPORT_ID&#xA;GROUP BY f.ORIGIN_AIRPORT_ID, f.DEST_AIRPORT_ID, o.AIRPORT_CODE, d.AIRPORT_CODE" msprop:FriendlyName="DimRoute" msprop:TableType="View" msprop:DbTableName="DimRoute">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ROUTE_KEY" msdata:ReadOnly="true" msprop:DbColumnName="ROUTE_KEY">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ROUTE_NAME" msdata:ReadOnly="true" msprop:DbColumnName="ROUTE_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="105" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ORIGIN_CODE" msprop:DbColumnName="ORIGIN_CODE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEST_CODE" msprop:DbColumnName="DEST_CODE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISTANCE_MILES" msdata:ReadOnly="true" msprop:DbColumnName="DISTANCE_MILES" type="xs:double" minOccurs="0" />
+                  <xs:element name="DISTANCE_CAPTION" msdata:ReadOnly="true" msprop:DbColumnName="DISTANCE_CAPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DimStatus" msprop:QueryDefinition="SELECT DISTINCT CANCELLED AS STATUS_KEY,&#xA;       CONVERT(nvarchar(30), CASE WHEN CANCELLED = 1 THEN N'Đã hủy' ELSE N'Không hủy' END) AS STATUS_NAME&#xA;FROM dbo.FACT_FLIGHT" msprop:FriendlyName="DimStatus" msprop:TableType="View" msprop:DbTableName="DimStatus">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="STATUS_KEY" msprop:DbColumnName="STATUS_KEY" type="xs:int" />
+                  <xs:element name="STATUS_NAME" msdata:ReadOnly="true" msprop:DbColumnName="STATUS_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="FactFlight" msprop:QueryDefinition="SELECT f.*,&#xA;       CONVERT(nvarchar(50), CONVERT(varchar(12), ORIGIN_AIRPORT_ID) + N'_' + CONVERT(varchar(12), DEST_AIRPORT_ID)) AS ROUTE_KEY,&#xA;       CAST(1 AS bigint) AS TOTAL_FLIGHTS,&#xA;       CAST(CASE WHEN CANCELLED = 0 THEN 1 ELSE 0 END AS bigint) AS OPERATED_FLIGHTS,&#xA;       CAST(CANCELLED AS bigint) AS CANCELLED_FLIGHTS,&#xA;       CAST(CASE WHEN CANCELLED = 0 AND DEP_DELAY IS NOT NULL THEN 1 ELSE 0 END AS bigint) AS DEPARTURE_OBSERVATIONS,&#xA;       CAST(CASE WHEN CANCELLED = 0 AND ARR_DELAY IS NOT NULL THEN 1 ELSE 0 END AS bigint) AS ARRIVAL_OBSERVATIONS,&#xA;       CAST(CASE WHEN CANCELLED = 0 AND DEP_DELAY &gt;= 15 THEN 1 ELSE 0 END AS bigint) AS DELAYED_DEPARTURES,&#xA;       CASE WHEN CANCELLED = 0 AND DEP_DELAY &gt; 0 THEN DEP_DELAY ELSE 0.0 END AS DEPARTURE_LATE_MINUTES,&#xA;       CASE WHEN CANCELLED = 0 AND ARR_DELAY &gt; 0 THEN ARR_DELAY ELSE 0.0 END AS ARRIVAL_LATE_MINUTES,&#xA;       CASE WHEN CANCELLED = 0 THEN DEP_DELAY ELSE NULL END AS DEPARTURE_DELAY_VALUE,&#xA;       CASE WHEN CANCELLED = 0 THEN ARR_DELAY ELSE NULL END AS ARRIVAL_DELAY_VALUE&#xA;FROM dbo.FACT_FLIGHT f" msprop:FriendlyName="FactFlight" msprop:TableType="View" msprop:DbTableName="FactFlight">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FLIGHT_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="FLIGHT_ID" type="xs:int" />
+                  <xs:element name="DATE_ID" msprop:DbColumnName="DATE_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="DEP_TIME_ID" msprop:DbColumnName="DEP_TIME_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="CARRIER_ID" msprop:DbColumnName="CARRIER_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="ORIGIN_AIRPORT_ID" msprop:DbColumnName="ORIGIN_AIRPORT_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="DEST_AIRPORT_ID" msprop:DbColumnName="DEST_AIRPORT_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="CANCELLATION_ID" msprop:DbColumnName="CANCELLATION_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="CRS_DEP_TIME" msprop:DbColumnName="CRS_DEP_TIME" type="xs:int" minOccurs="0" />
+                  <xs:element name="CRS_ARR_TIME" msprop:DbColumnName="CRS_ARR_TIME" type="xs:int" minOccurs="0" />
+                  <xs:element name="DISTANCE" msprop:DbColumnName="DISTANCE" type="xs:double" minOccurs="0" />
+                  <xs:element name="CANCELLED" msprop:DbColumnName="CANCELLED" type="xs:int" minOccurs="0" />
+                  <xs:element name="DEP_DELAY" msprop:DbColumnName="DEP_DELAY" type="xs:double" minOccurs="0" />
+                  <xs:element name="ARR_DELAY" msprop:DbColumnName="ARR_DELAY" type="xs:double" minOccurs="0" />
+                  <xs:element name="CARRIER_DELAY" msprop:DbColumnName="CARRIER_DELAY" type="xs:double" minOccurs="0" />
+                  <xs:element name="WEATHER_DELAY" msprop:DbColumnName="WEATHER_DELAY" type="xs:double" minOccurs="0" />
+                  <xs:element name="NAS_DELAY" msprop:DbColumnName="NAS_DELAY" type="xs:double" minOccurs="0" />
+                  <xs:element name="SECURITY_DELAY" msprop:DbColumnName="SECURITY_DELAY" type="xs:double" minOccurs="0" />
+                  <xs:element name="LATE_AIRCRAFT_DELAY" msprop:DbColumnName="LATE_AIRCRAFT_DELAY" type="xs:double" minOccurs="0" />
+                  <xs:element name="ROUTE_KEY" msdata:ReadOnly="true" msprop:DbColumnName="ROUTE_KEY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TOTAL_FLIGHTS" msdata:ReadOnly="true" msprop:DbColumnName="TOTAL_FLIGHTS" type="xs:long" minOccurs="0" />
+                  <xs:element name="OPERATED_FLIGHTS" msdata:ReadOnly="true" msprop:DbColumnName="OPERATED_FLIGHTS" type="xs:long" minOccurs="0" />
+                  <xs:element name="CANCELLED_FLIGHTS" msdata:ReadOnly="true" msprop:DbColumnName="CANCELLED_FLIGHTS" type="xs:long" minOccurs="0" />
+                  <xs:element name="DEPARTURE_OBSERVATIONS" msdata:ReadOnly="true" msprop:DbColumnName="DEPARTURE_OBSERVATIONS" type="xs:long" minOccurs="0" />
+                  <xs:element name="ARRIVAL_OBSERVATIONS" msdata:ReadOnly="true" msprop:DbColumnName="ARRIVAL_OBSERVATIONS" type="xs:long" minOccurs="0" />
+                  <xs:element name="DELAYED_DEPARTURES" msdata:ReadOnly="true" msprop:DbColumnName="DELAYED_DEPARTURES" type="xs:long" minOccurs="0" />
+                  <xs:element name="DEPARTURE_LATE_MINUTES" msdata:ReadOnly="true" msprop:DbColumnName="DEPARTURE_LATE_MINUTES" type="xs:double" minOccurs="0" />
+                  <xs:element name="ARRIVAL_LATE_MINUTES" msdata:ReadOnly="true" msprop:DbColumnName="ARRIVAL_LATE_MINUTES" type="xs:double" minOccurs="0" />
+                  <xs:element name="DEPARTURE_DELAY_VALUE" msdata:ReadOnly="true" msprop:DbColumnName="DEPARTURE_DELAY_VALUE" type="xs:double" minOccurs="0" />
+                  <xs:element name="ARRIVAL_DELAY_VALUE" msdata:ReadOnly="true" msprop:DbColumnName="ARRIVAL_DELAY_VALUE" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DimDate" />
+          <xs:field xpath="DATE_ID" />
+        </xs:unique>
+        <xs:unique name="DimCarrier_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DimCarrier" />
+          <xs:field xpath="CARRIER_ID" />
+        </xs:unique>
+        <xs:unique name="DimAirport_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DimAirport" />
+          <xs:field xpath="AIRPORT_ID" />
+        </xs:unique>
+        <xs:unique name="DimTime_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DimTime" />
+          <xs:field xpath="TIME_ID" />
+        </xs:unique>
+        <xs:unique name="DimCancellation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DimCancellation" />
+          <xs:field xpath="CANCELLATION_ID" />
+        </xs:unique>
+        <xs:unique name="DimRoute_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DimRoute" />
+          <xs:field xpath="ROUTE_KEY" />
+        </xs:unique>
+        <xs:unique name="DimStatus_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DimStatus" />
+          <xs:field xpath="STATUS_KEY" />
+        </xs:unique>
+        <xs:unique name="FactFlight_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//FactFlight" />
+          <xs:field xpath="FLIGHT_ID" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="FK_DATE_ID" msdata:parent="DimDate" msdata:child="FactFlight" msdata:parentkey="DATE_ID" msdata:childkey="DATE_ID" />
+          <msdata:Relationship name="FK_CARRIER_ID" msdata:parent="DimCarrier" msdata:child="FactFlight" msdata:parentkey="CARRIER_ID" msdata:childkey="CARRIER_ID" />
+          <msdata:Relationship name="FK_ORIGIN_AIRPORT_ID" msdata:parent="DimAirport" msdata:child="FactFlight" msdata:parentkey="AIRPORT_ID" msdata:childkey="ORIGIN_AIRPORT_ID" />
+          <msdata:Relationship name="FK_DEST_AIRPORT_ID" msdata:parent="DimAirport" msdata:child="FactFlight" msdata:parentkey="AIRPORT_ID" msdata:childkey="DEST_AIRPORT_ID" />
+          <msdata:Relationship name="FK_DEP_TIME_ID" msdata:parent="DimTime" msdata:child="FactFlight" msdata:parentkey="TIME_ID" msdata:childkey="DEP_TIME_ID" />
+          <msdata:Relationship name="FK_CANCELLATION_ID" msdata:parent="DimCancellation" msdata:child="FactFlight" msdata:parentkey="CANCELLATION_ID" msdata:childkey="CANCELLATION_ID" />
+          <msdata:Relationship name="FK_ROUTE_KEY" msdata:parent="DimRoute" msdata:child="FactFlight" msdata:parentkey="ROUTE_KEY" msdata:childkey="ROUTE_KEY" />
+          <msdata:Relationship name="FK_CANCELLED" msdata:parent="DimStatus" msdata:child="FactFlight" msdata:parentkey="STATUS_KEY" msdata:childkey="CANCELLED" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <FlightDW xmlns="" />
+  </Schema>
+</DataSourceView>

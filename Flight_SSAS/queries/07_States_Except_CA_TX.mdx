@@ -1,0 +1,7 @@
+﻿-- Chuyến không hủy theo bang/vùng lãnh thổ và tháng, trừ CA/TX.
+SELECT {[Measures].[Operated Flights]} ON COLUMNS,
+ NON EMPTY CROSSJOIN(
+  EXCEPT([Origin Airport].[State].[State].Members, {[Origin Airport].[State].&[CA], [Origin Airport].[State].&[TX]}),
+  [Date].[Month].[Month].Members) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

@@ -1,0 +1,5 @@
+﻿-- Hãng có ít nhất 100 chuyến hủy năm 2024.
+SELECT {[Measures].[Total Flights], [Measures].[Cancelled Flights]} ON COLUMNS,
+ ORDER(FILTER([Carrier].[Carrier Code].[Carrier Code].Members, [Measures].[Cancelled Flights] >= 100), [Measures].[Cancelled Flights], BDESC) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

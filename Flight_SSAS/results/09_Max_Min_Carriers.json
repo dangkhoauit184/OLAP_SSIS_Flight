@@ -1,0 +1,38 @@
+{
+    "query":  9,
+    "title":  "Hãng có tổng chuyến cao nhất và thấp nhất năm 2024.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Total Flights":  10079
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "10,079"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[WN]",
+                                         "caption":  "WN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  572
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "572"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[HA]",
+                                         "caption":  "HA"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Total Flights"
+                ],
+    "rowCount":  2
+}

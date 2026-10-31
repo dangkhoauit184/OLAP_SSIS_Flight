@@ -1,0 +1,9 @@
+﻿-- Mỗi khung giờ: TOP 2 hãng có tỷ lệ trễ từ 15 phút cao nhất, ít nhất 100 chuyến không hủy.
+SELECT {[Measures].[Operated Flights], [Measures].[Departure Observations], [Measures].[Delayed Departures], [Measures].[Departure Delay Rate]} ON COLUMNS,
+ GENERATE([Departure Time].[Time Band].[Time Band].Members,
+  TOPCOUNT(FILTER(
+   {[Departure Time].[Time Band].CurrentMember} * [Carrier].[Carrier Code].[Carrier Code].Members,
+   [Measures].[Operated Flights] >= 100 AND [Measures].[Departure Observations] > 0),
+   2, [Measures].[Departure Delay Rate])) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

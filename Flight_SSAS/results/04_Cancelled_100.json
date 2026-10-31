@@ -1,0 +1,59 @@
+{
+    "query":  4,
+    "title":  "Hãng có ít nhất 100 chuyến hủy năm 2024.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Total Flights":  5516,
+                                    "Cancelled Flights":  129
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "5,516",
+                                       "Cancelled Flights":  "129"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[UA]",
+                                         "caption":  "UA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  6840,
+                                    "Cancelled Flights":  114
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "6,840",
+                                       "Cancelled Flights":  "114"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[AA]",
+                                         "caption":  "AA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  10079,
+                                    "Cancelled Flights":  111
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "10,079",
+                                       "Cancelled Flights":  "111"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[WN]",
+                                         "caption":  "WN"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Total Flights",
+                    "Cancelled Flights"
+                ],
+    "rowCount":  3
+}

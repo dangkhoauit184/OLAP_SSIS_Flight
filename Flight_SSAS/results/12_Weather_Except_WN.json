@@ -1,0 +1,235 @@
+{
+    "query":  12,
+    "title":  "Hãng trừ WN, tổng chuyến từ 300, sắp theo Weather Delay giảm dần.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Total Flights":  5298,
+                                    "Weather Delay Minutes":  12889
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "5,298",
+                                       "Weather Delay Minutes":  "12,889.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[OO]",
+                                         "caption":  "OO"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  6840,
+                                    "Weather Delay Minutes":  8631
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "6,840",
+                                       "Weather Delay Minutes":  "8,631.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[AA]",
+                                         "caption":  "AA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1909,
+                                    "Weather Delay Minutes":  5128
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,909",
+                                       "Weather Delay Minutes":  "5,128.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[MQ]",
+                                         "caption":  "MQ"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1607,
+                                    "Weather Delay Minutes":  3380
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,607",
+                                       "Weather Delay Minutes":  "3,380.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[OH]",
+                                         "caption":  "OH"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  5516,
+                                    "Weather Delay Minutes":  3201
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "5,516",
+                                       "Weather Delay Minutes":  "3,201.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[UA]",
+                                         "caption":  "UA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  6976,
+                                    "Weather Delay Minutes":  2256
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "6,976",
+                                       "Weather Delay Minutes":  "2,256.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[DL]",
+                                         "caption":  "DL"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1393,
+                                    "Weather Delay Minutes":  1749
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,393",
+                                       "Weather Delay Minutes":  "1,749.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[9E]",
+                                         "caption":  "9E"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  2177,
+                                    "Weather Delay Minutes":  1557
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "2,177",
+                                       "Weather Delay Minutes":  "1,557.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[YX]",
+                                         "caption":  "YX"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  838,
+                                    "Weather Delay Minutes":  1368
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "838",
+                                       "Weather Delay Minutes":  "1,368.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[G4]",
+                                         "caption":  "G4"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1862,
+                                    "Weather Delay Minutes":  982
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,862",
+                                       "Weather Delay Minutes":  "982.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[NK]",
+                                         "caption":  "NK"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1821,
+                                    "Weather Delay Minutes":  831
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,821",
+                                       "Weather Delay Minutes":  "831.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[AS]",
+                                         "caption":  "AS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1470,
+                                    "Weather Delay Minutes":  542
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,470",
+                                       "Weather Delay Minutes":  "542.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[F9]",
+                                         "caption":  "F9"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1784,
+                                    "Weather Delay Minutes":  436
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,784",
+                                       "Weather Delay Minutes":  "436.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[B6]",
+                                         "caption":  "B6"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  572,
+                                    "Weather Delay Minutes":  90
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "572",
+                                       "Weather Delay Minutes":  "90.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[HA]",
+                                         "caption":  "HA"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Total Flights",
+                    "Weather Delay Minutes"
+                ],
+    "rowCount":  14
+}

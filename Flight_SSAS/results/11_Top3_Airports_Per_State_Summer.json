@@ -1,0 +1,2566 @@
+{
+    "query":  11,
+    "title":  "Top 3 sân bay của mỗi bang theo chuyến không hủy trong tháng 6–8/2024.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Operated Flights":  44
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "44"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AK]",
+                                         "caption":  "AK"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ANC]",
+                                         "caption":  "ANC"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  8
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "8"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AK]",
+                                         "caption":  "AK"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[FAI]",
+                                         "caption":  "FAI"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  7
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "7"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AK]",
+                                         "caption":  "AK"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[JNU]",
+                                         "caption":  "JNU"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  32
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "32"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AL]",
+                                         "caption":  "AL"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BHM]",
+                                         "caption":  "BHM"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  14
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "14"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AL]",
+                                         "caption":  "AL"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[HSV]",
+                                         "caption":  "HSV"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AL]",
+                                         "caption":  "AL"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MGM]",
+                                         "caption":  "MGM"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  25
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "25"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AR]",
+                                         "caption":  "AR"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[LIT]",
+                                         "caption":  "LIT"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  19
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "19"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AR]",
+                                         "caption":  "AR"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[XNA]",
+                                         "caption":  "XNA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AR]",
+                                         "caption":  "AR"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[FSM]",
+                                         "caption":  "FSM"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  319
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "319"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AZ]",
+                                         "caption":  "AZ"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PHX]",
+                                         "caption":  "PHX"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  23
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "23"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AZ]",
+                                         "caption":  "AZ"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[TUS]",
+                                         "caption":  "TUS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  6
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "6"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[AZ]",
+                                         "caption":  "AZ"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[AZA]",
+                                         "caption":  "AZA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  339
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "339"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[CA]",
+                                         "caption":  "CA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[LAX]",
+                                         "caption":  "LAX"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  244
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "244"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[CA]",
+                                         "caption":  "CA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SFO]",
+                                         "caption":  "SFO"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  199
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "199"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[CA]",
+                                         "caption":  "CA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SAN]",
+                                         "caption":  "SAN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  592
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "592"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[CO]",
+                                         "caption":  "CO"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DEN]",
+                                         "caption":  "DEN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  18
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "18"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[CO]",
+                                         "caption":  "CO"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[COS]",
+                                         "caption":  "COS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  13
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "13"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[CO]",
+                                         "caption":  "CO"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ASE]",
+                                         "caption":  "ASE"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  34
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "34"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[CT]",
+                                         "caption":  "CT"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BDL]",
+                                         "caption":  "BDL"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  239
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "239"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[FL]",
+                                         "caption":  "FL"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MCO]",
+                                         "caption":  "MCO"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  152
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "152"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[FL]",
+                                         "caption":  "FL"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MIA]",
+                                         "caption":  "MIA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  135
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "135"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[FL]",
+                                         "caption":  "FL"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[FLL]",
+                                         "caption":  "FLL"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  606
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "606"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[GA]",
+                                         "caption":  "GA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ATL]",
+                                         "caption":  "ATL"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  27
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "27"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[GA]",
+                                         "caption":  "GA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SAV]",
+                                         "caption":  "SAV"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  8
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "8"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[GA]",
+                                         "caption":  "GA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[AGS]",
+                                         "caption":  "AGS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  103
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "103"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[HI]",
+                                         "caption":  "HI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[HNL]",
+                                         "caption":  "HNL"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  39
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "39"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[HI]",
+                                         "caption":  "HI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[OGG]",
+                                         "caption":  "OGG"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  32
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "32"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[HI]",
+                                         "caption":  "HI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[LIH]",
+                                         "caption":  "LIH"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  23
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "23"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[IA]",
+                                         "caption":  "IA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DSM]",
+                                         "caption":  "DSM"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  20
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "20"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[IA]",
+                                         "caption":  "IA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[CID]",
+                                         "caption":  "CID"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  3
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "3"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[IA]",
+                                         "caption":  "IA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SUX]",
+                                         "caption":  "SUX"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  49
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "49"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[ID]",
+                                         "caption":  "ID"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BOI]",
+                                         "caption":  "BOI"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  6
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "6"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[ID]",
+                                         "caption":  "ID"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[IDA]",
+                                         "caption":  "IDA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[ID]",
+                                         "caption":  "ID"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PIH]",
+                                         "caption":  "PIH"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  491
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "491"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[IL]",
+                                         "caption":  "IL"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ORD]",
+                                         "caption":  "ORD"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  156
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "156"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[IL]",
+                                         "caption":  "IL"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MDW]",
+                                         "caption":  "MDW"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  5
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "5"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[IL]",
+                                         "caption":  "IL"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MLI]",
+                                         "caption":  "MLI"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  93
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "93"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[IN]",
+                                         "caption":  "IN"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[IND]",
+                                         "caption":  "IND"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  11
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "11"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[IN]",
+                                         "caption":  "IN"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SBN]",
+                                         "caption":  "SBN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  6
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "6"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[IN]",
+                                         "caption":  "IN"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[FWA]",
+                                         "caption":  "FWA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  16
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "16"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[KS]",
+                                         "caption":  "KS"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ICT]",
+                                         "caption":  "ICT"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  3
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "3"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[KS]",
+                                         "caption":  "KS"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DDC]",
+                                         "caption":  "DDC"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[KS]",
+                                         "caption":  "KS"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MHK]",
+                                         "caption":  "MHK"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  65
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "65"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[KY]",
+                                         "caption":  "KY"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[CVG]",
+                                         "caption":  "CVG"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  37
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "37"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[KY]",
+                                         "caption":  "KY"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SDF]",
+                                         "caption":  "SDF"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  13
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "13"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[KY]",
+                                         "caption":  "KY"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[LEX]",
+                                         "caption":  "LEX"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  75
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "75"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[LA]",
+                                         "caption":  "LA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MSY]",
+                                         "caption":  "MSY"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  8
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "8"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[LA]",
+                                         "caption":  "LA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SHV]",
+                                         "caption":  "SHV"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  7
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "7"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[LA]",
+                                         "caption":  "LA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MLU]",
+                                         "caption":  "MLU"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  251
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "251"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MA]",
+                                         "caption":  "MA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BOS]",
+                                         "caption":  "BOS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  9
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "9"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MA]",
+                                         "caption":  "MA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ACK]",
+                                         "caption":  "ACK"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  5
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "5"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MA]",
+                                         "caption":  "MA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MVY]",
+                                         "caption":  "MVY"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  179
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "179"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MD]",
+                                         "caption":  "MD"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BWI]",
+                                         "caption":  "BWI"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MD]",
+                                         "caption":  "MD"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[HGR]",
+                                         "caption":  "HGR"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  30
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "30"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[ME]",
+                                         "caption":  "ME"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PWM]",
+                                         "caption":  "PWM"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  5
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "5"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[ME]",
+                                         "caption":  "ME"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BGR]",
+                                         "caption":  "BGR"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  226
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "226"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MI]",
+                                         "caption":  "MI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DTW]",
+                                         "caption":  "DTW"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  20
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "20"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MI]",
+                                         "caption":  "MI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[GRR]",
+                                         "caption":  "GRR"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  16
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "16"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MI]",
+                                         "caption":  "MI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[TVC]",
+                                         "caption":  "TVC"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  229
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "229"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MN]",
+                                         "caption":  "MN"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MSP]",
+                                         "caption":  "MSP"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MN]",
+                                         "caption":  "MN"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DLH]",
+                                         "caption":  "DLH"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MN]",
+                                         "caption":  "MN"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BRD]",
+                                         "caption":  "BRD"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  119
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "119"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MO]",
+                                         "caption":  "MO"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[STL]",
+                                         "caption":  "STL"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  88
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "88"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MO]",
+                                         "caption":  "MO"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MCI]",
+                                         "caption":  "MCI"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  14
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "14"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MO]",
+                                         "caption":  "MO"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SGF]",
+                                         "caption":  "SGF"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  13
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "13"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MS]",
+                                         "caption":  "MS"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[JAN]",
+                                         "caption":  "JAN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  3
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "3"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MS]",
+                                         "caption":  "MS"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[GPT]",
+                                         "caption":  "GPT"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  3
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "3"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MS]",
+                                         "caption":  "MS"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MEI]",
+                                         "caption":  "MEI"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  25
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "25"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MT]",
+                                         "caption":  "MT"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BZN]",
+                                         "caption":  "BZN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  16
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "16"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MT]",
+                                         "caption":  "MT"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MSO]",
+                                         "caption":  "MSO"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  13
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "13"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[MT]",
+                                         "caption":  "MT"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[FCA]",
+                                         "caption":  "FCA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  355
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "355"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NC]",
+                                         "caption":  "NC"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[CLT]",
+                                         "caption":  "CLT"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  126
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "126"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NC]",
+                                         "caption":  "NC"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[RDU]",
+                                         "caption":  "RDU"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  17
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "17"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NC]",
+                                         "caption":  "NC"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[GSO]",
+                                         "caption":  "GSO"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  15
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "15"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[ND]",
+                                         "caption":  "ND"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[FAR]",
+                                         "caption":  "FAR"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  11
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "11"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[ND]",
+                                         "caption":  "ND"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BIS]",
+                                         "caption":  "BIS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  6
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "6"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[ND]",
+                                         "caption":  "ND"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[XWA]",
+                                         "caption":  "XWA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  50
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "50"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NE]",
+                                         "caption":  "NE"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[OMA]",
+                                         "caption":  "OMA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  6
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "6"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NE]",
+                                         "caption":  "NE"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[LNK]",
+                                         "caption":  "LNK"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NE]",
+                                         "caption":  "NE"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[GRI]",
+                                         "caption":  "GRI"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  13
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "13"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NH]",
+                                         "caption":  "NH"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MHT]",
+                                         "caption":  "MHT"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  1
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "1"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NH]",
+                                         "caption":  "NH"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PSM]",
+                                         "caption":  "PSM"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  220
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "220"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NJ]",
+                                         "caption":  "NJ"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[EWR]",
+                                         "caption":  "EWR"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  9
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "9"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NJ]",
+                                         "caption":  "NJ"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ACY]",
+                                         "caption":  "ACY"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NJ]",
+                                         "caption":  "NJ"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[TTN]",
+                                         "caption":  "TTN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  47
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "47"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NM]",
+                                         "caption":  "NM"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ABQ]",
+                                         "caption":  "ABQ"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  5
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "5"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NM]",
+                                         "caption":  "NM"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[HOB]",
+                                         "caption":  "HOB"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NM]",
+                                         "caption":  "NM"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SAF]",
+                                         "caption":  "SAF"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  333
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "333"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NV]",
+                                         "caption":  "NV"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[LAS]",
+                                         "caption":  "LAS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  36
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "36"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NV]",
+                                         "caption":  "NV"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[RNO]",
+                                         "caption":  "RNO"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  1
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "1"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NV]",
+                                         "caption":  "NV"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[EKO]",
+                                         "caption":  "EKO"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  283
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "283"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NY]",
+                                         "caption":  "NY"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[LGA]",
+                                         "caption":  "LGA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  193
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "193"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NY]",
+                                         "caption":  "NY"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[JFK]",
+                                         "caption":  "JFK"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  35
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "35"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[NY]",
+                                         "caption":  "NY"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BUF]",
+                                         "caption":  "BUF"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  82
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "82"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[OH]",
+                                         "caption":  "OH"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[CLE]",
+                                         "caption":  "CLE"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  64
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "64"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[OH]",
+                                         "caption":  "OH"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[CMH]",
+                                         "caption":  "CMH"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  9
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "9"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[OH]",
+                                         "caption":  "OH"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DAY]",
+                                         "caption":  "DAY"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  38
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "38"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[OK]",
+                                         "caption":  "OK"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[OKC]",
+                                         "caption":  "OKC"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  28
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "28"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[OK]",
+                                         "caption":  "OK"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[TUL]",
+                                         "caption":  "TUL"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[OK]",
+                                         "caption":  "OK"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[LAW]",
+                                         "caption":  "LAW"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  108
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "108"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[OR]",
+                                         "caption":  "OR"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PDX]",
+                                         "caption":  "PDX"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  14
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "14"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[OR]",
+                                         "caption":  "OR"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[RDM]",
+                                         "caption":  "RDM"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  9
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "9"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[OR]",
+                                         "caption":  "OR"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[EUG]",
+                                         "caption":  "EUG"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  204
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "204"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[PA]",
+                                         "caption":  "PA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PHL]",
+                                         "caption":  "PHL"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  80
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "80"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[PA]",
+                                         "caption":  "PA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PIT]",
+                                         "caption":  "PIT"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  9
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "9"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[PA]",
+                                         "caption":  "PA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MDT]",
+                                         "caption":  "MDT"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  78
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "78"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[PR]",
+                                         "caption":  "PR"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SJU]",
+                                         "caption":  "SJU"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  3
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "3"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[PR]",
+                                         "caption":  "PR"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BQN]",
+                                         "caption":  "BQN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  30
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "30"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[RI]",
+                                         "caption":  "RI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PVD]",
+                                         "caption":  "PVD"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  52
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "52"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[SC]",
+                                         "caption":  "SC"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[CHS]",
+                                         "caption":  "CHS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  49
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "49"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[SC]",
+                                         "caption":  "SC"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MYR]",
+                                         "caption":  "MYR"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  21
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "21"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[SC]",
+                                         "caption":  "SC"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[GSP]",
+                                         "caption":  "GSP"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  13
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "13"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[SD]",
+                                         "caption":  "SD"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[FSD]",
+                                         "caption":  "FSD"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  12
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "12"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[SD]",
+                                         "caption":  "SD"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[RAP]",
+                                         "caption":  "RAP"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[SD]",
+                                         "caption":  "SD"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ABR]",
+                                         "caption":  "ABR"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  158
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "158"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[TN]",
+                                         "caption":  "TN"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BNA]",
+                                         "caption":  "BNA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  48
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "48"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[TN]",
+                                         "caption":  "TN"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MEM]",
+                                         "caption":  "MEM"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  35
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "35"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[TN]",
+                                         "caption":  "TN"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[TYS]",
+                                         "caption":  "TYS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[TT]",
+                                         "caption":  "TT"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[GUM]",
+                                         "caption":  "GUM"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  1
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "1"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[TT]",
+                                         "caption":  "TT"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PPG]",
+                                         "caption":  "PPG"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  554
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "554"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[TX]",
+                                         "caption":  "TX"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DFW]",
+                                         "caption":  "DFW"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  198
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "198"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[TX]",
+                                         "caption":  "TX"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[IAH]",
+                                         "caption":  "IAH"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  168
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "168"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[TX]",
+                                         "caption":  "TX"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[AUS]",
+                                         "caption":  "AUS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  223
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "223"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[UT]",
+                                         "caption":  "UT"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SLC]",
+                                         "caption":  "SLC"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  6
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "6"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[UT]",
+                                         "caption":  "UT"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SGU]",
+                                         "caption":  "SGU"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  3
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "3"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[UT]",
+                                         "caption":  "UT"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PVU]",
+                                         "caption":  "PVU"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  231
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "231"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[VA]",
+                                         "caption":  "VA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DCA]",
+                                         "caption":  "DCA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  96
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "96"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[VA]",
+                                         "caption":  "VA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[IAD]",
+                                         "caption":  "IAD"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  35
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "35"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[VA]",
+                                         "caption":  "VA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ORF]",
+                                         "caption":  "ORF"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  5
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "5"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[VI]",
+                                         "caption":  "VI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[STT]",
+                                         "caption":  "STT"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[VI]",
+                                         "caption":  "VI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[STX]",
+                                         "caption":  "STX"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  20
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "20"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[VT]",
+                                         "caption":  "VT"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[BTV]",
+                                         "caption":  "BTV"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  305
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "305"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[WA]",
+                                         "caption":  "WA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[SEA]",
+                                         "caption":  "SEA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  26
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "26"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[WA]",
+                                         "caption":  "WA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[GEG]",
+                                         "caption":  "GEG"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  8
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "8"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[WA]",
+                                         "caption":  "WA"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[PSC]",
+                                         "caption":  "PSC"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  47
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "47"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[WI]",
+                                         "caption":  "WI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MKE]",
+                                         "caption":  "MKE"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  18
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "18"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[WI]",
+                                         "caption":  "WI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[MSN]",
+                                         "caption":  "MSN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  10
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "10"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[WI]",
+                                         "caption":  "WI"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[GRB]",
+                                         "caption":  "GRB"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  1
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "1"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[WV]",
+                                         "caption":  "WV"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[HTS]",
+                                         "caption":  "HTS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  9
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "9"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[WY]",
+                                         "caption":  "WY"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[JAC]",
+                                         "caption":  "JAC"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  3
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "3"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[WY]",
+                                         "caption":  "WY"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[COD]",
+                                         "caption":  "COD"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[State].\u0026[WY]",
+                                         "caption":  "WY"
+                                     },
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[CPR]",
+                                         "caption":  "CPR"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Operated Flights"
+                ],
+    "rowCount":  142
+}
