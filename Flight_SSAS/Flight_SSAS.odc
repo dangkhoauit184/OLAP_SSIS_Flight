@@ -1,0 +1,5 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>FlightCube</title>
+<xml id="docprops"><o:DocumentProperties><o:Name>Flight SSAS</o:Name><o:Description>Local FlightCube connection; Windows authentication; no stored password.</o:Description></o:DocumentProperties></xml>
+<xml id="msodc"><odc:OfficeDataConnection xmlns:odc="urn:schemas-microsoft-com:office:odc"><odc:Connection odc:Type="OLEDB"><odc:ConnectionString>Provider=MSOLAP;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Flight_SSAS;Data Source=localhost;</odc:ConnectionString><odc:CommandType>Cube</odc:CommandType><odc:CommandText>FlightCube</odc:CommandText></odc:Connection></odc:OfficeDataConnection></xml>
+</head><body>FlightCube on localhost / Flight_SSAS</body></html>

@@ -1,0 +1,80 @@
+{
+    "query":  3,
+    "title":  "Top 5 sân bay xuất phát theo số chuyến không hủy năm 2024.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Operated Flights":  2319
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2,319"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ATL]",
+                                         "caption":  "ATL"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2212
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2,212"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DEN]",
+                                         "caption":  "DEN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2129
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2,129"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[DFW]",
+                                         "caption":  "DFW"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  1909
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "1,909"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[ORD]",
+                                         "caption":  "ORD"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  1527
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "1,527"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Origin Airport].[Airport Code].\u0026[CLT]",
+                                         "caption":  "CLT"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Operated Flights"
+                ],
+    "rowCount":  5
+}

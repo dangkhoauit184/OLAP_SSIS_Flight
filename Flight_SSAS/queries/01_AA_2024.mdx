@@ -1,0 +1,6 @@
+﻿-- Tổng chuyến, chuyến không hủy, chuyến hủy và phút trễ cất cánh của AA năm 2024.
+SELECT
+ {[Measures].[Total Flights], [Measures].[Operated Flights], [Measures].[Cancelled Flights], [Measures].[Departure Delay Minutes]} ON COLUMNS,
+ {[Carrier].[Carrier Code].&[AA]} ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

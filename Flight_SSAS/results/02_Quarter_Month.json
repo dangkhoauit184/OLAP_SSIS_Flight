@@ -1,0 +1,267 @@
+{
+    "query":  2,
+    "title":  "Số chuyến không hủy và trễ hạ cánh trung bình theo quý/tháng năm 2024.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Operated Flights":  12198,
+                                    "Average Arrival Delay":  6.4639405204460969
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "12,198",
+                                       "Average Arrival Delay":  "6.46"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Quarter].\u0026[20241]",
+                                         "caption":  "Q1/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4065,
+                                    "Average Arrival Delay":  11.975700471113315
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,065",
+                                       "Average Arrival Delay":  "11.98"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202401]",
+                                         "caption":  "01/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  3934,
+                                    "Average Arrival Delay":  0.43021766965428937
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "3,934",
+                                       "Average Arrival Delay":  "0.43"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202402]",
+                                         "caption":  "02/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4199,
+                                    "Average Arrival Delay":  6.783777297816175
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,199",
+                                       "Average Arrival Delay":  "6.78"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202403]",
+                                         "caption":  "03/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  12282,
+                                    "Average Arrival Delay":  9.8657855852897711
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "12,282",
+                                       "Average Arrival Delay":  "9.87"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Quarter].\u0026[20242]",
+                                         "caption":  "Q2/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4057,
+                                    "Average Arrival Delay":  5.42629878200348
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,057",
+                                       "Average Arrival Delay":  "5.43"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202404]",
+                                         "caption":  "04/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4177,
+                                    "Average Arrival Delay":  13.377413127413128
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,177",
+                                       "Average Arrival Delay":  "13.38"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202405]",
+                                         "caption":  "05/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4048,
+                                    "Average Arrival Delay":  10.689663760896638
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,048",
+                                       "Average Arrival Delay":  "10.69"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202406]",
+                                         "caption":  "06/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  12342,
+                                    "Average Arrival Delay":  9.5493670886075943
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "12,342",
+                                       "Average Arrival Delay":  "9.55"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Quarter].\u0026[20243]",
+                                         "caption":  "Q3/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4119,
+                                    "Average Arrival Delay":  18.63974547234459
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,119",
+                                       "Average Arrival Delay":  "18.64"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202407]",
+                                         "caption":  "07/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4155,
+                                    "Average Arrival Delay":  9.84327996118389
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,155",
+                                       "Average Arrival Delay":  "9.84"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202408]",
+                                         "caption":  "08/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4068,
+                                    "Average Arrival Delay":  0.0485509041367352
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,068",
+                                       "Average Arrival Delay":  "0.05"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202409]",
+                                         "caption":  "09/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  12452,
+                                    "Average Arrival Delay":  1.3751517604208823
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "12,452",
+                                       "Average Arrival Delay":  "1.38"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Quarter].\u0026[20244]",
+                                         "caption":  "Q4/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4180,
+                                    "Average Arrival Delay":  -1.1526404629852907
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,180",
+                                       "Average Arrival Delay":  "-1.15"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202410]",
+                                         "caption":  "10/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4069,
+                                    "Average Arrival Delay":  -0.645528858062918
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,069",
+                                       "Average Arrival Delay":  "-0.65"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202411]",
+                                         "caption":  "11/2024"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  4203,
+                                    "Average Arrival Delay":  5.8441620714456963
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "4,203",
+                                       "Average Arrival Delay":  "5.84"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Date].[Calendar].[Month].\u0026[202412]",
+                                         "caption":  "12/2024"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Operated Flights",
+                    "Average Arrival Delay"
+                ],
+    "rowCount":  16
+}

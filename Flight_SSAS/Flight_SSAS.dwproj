@@ -1,0 +1,76 @@
+<Project>
+  <ProductVersion>17.3.0.0</ProductVersion>
+  <SchemaVersion>9.0.2.10</SchemaVersion>
+  <Database>
+    <Name>Flight_SSAS.database</Name>
+    <FullPath>Flight_SSAS.database</FullPath>
+  </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>FlightCube.cube</Name>
+      <FullPath>FlightCube.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>FlightCube.partitions</Name>
+          <FullPath>FlightCube.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Date.dim</Name>
+      <FullPath>Date.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Carrier.dim</Name>
+      <FullPath>Carrier.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Airport.dim</Name>
+      <FullPath>Airport.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Departure Time.dim</Name>
+      <FullPath>Departure Time.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Cancellation.dim</Name>
+      <FullPath>Cancellation.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Route.dim</Name>
+      <FullPath>Route.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Flight Status.dim</Name>
+      <FullPath>Flight Status.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Flight_DW.ds</Name>
+      <FullPath>Flight_DW.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Flight_DW.dsv</Name>
+      <FullPath>Flight_DW.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
+  <MiningModels />
+  <Roles />
+  <Assemblies />
+  <Miscellaneous />
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ServerName>localhost</ServerName>
+        <DatabaseName>Flight_SSAS</DatabaseName>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

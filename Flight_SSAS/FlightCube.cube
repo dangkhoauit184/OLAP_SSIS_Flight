@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>FlightCube</ID>
+  <Name>FlightCube</Name>
+  <Description>2024 sampled flights. Counts and delay denominators are documented in docs/SSAS_GUIDE.md.</Description>
+  <Dimensions>
+    <Dimension>
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Month Of Year</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>Calendar</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>Carrier</ID>
+      <Name>Carrier</Name>
+      <DimensionID>Carrier</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Carrier</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Carrier Code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Carrier Name</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>Airlines</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>Origin Airport</ID>
+      <Name>Origin Airport</Name>
+      <DimensionID>Airport</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Airport</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Airport Code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>State</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>Geography</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>Destination Airport</ID>
+      <Name>Destination Airport</Name>
+      <DimensionID>Airport</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Airport</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Airport Code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>State</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>Geography</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>Departure Time</ID>
+      <Name>Departure Time</Name>
+      <DimensionID>Departure Time</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Scheduled Time</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Hour</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Time Band</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>Daily Schedule</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>Cancellation</ID>
+      <Name>Cancellation</Name>
+      <DimensionID>Cancellation</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Cancellation</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Reason</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>Route</ID>
+      <Name>Route</Name>
+      <DimensionID>Route</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Route</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Origin Code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Destination Code</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Distance Miles</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>Flight Status</ID>
+      <Name>Flight Status</Name>
+      <DimensionID>Flight Status</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Status</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <DefaultMeasure>[Measures].[Total Flights]</DefaultMeasure>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>FlightFacts</ID>
+      <Name>Flight Facts</Name>
+      <Measures>
+        <Measure>
+          <ID>Total Flights</ID>
+          <Name>Total Flights</Name>
+          <DataType>BigInt</DataType>
+          <Source>
+            <DataType>BigInt</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>TOTAL_FLIGHTS</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Flights</DisplayFolder>
+          <FormatString>#,0</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Operated Flights</ID>
+          <Name>Operated Flights</Name>
+          <DataType>BigInt</DataType>
+          <Source>
+            <DataType>BigInt</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>OPERATED_FLIGHTS</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Flights</DisplayFolder>
+          <FormatString>#,0</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Cancelled Flights</ID>
+          <Name>Cancelled Flights</Name>
+          <DataType>BigInt</DataType>
+          <Source>
+            <DataType>BigInt</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>CANCELLED_FLIGHTS</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Flights</DisplayFolder>
+          <FormatString>#,0</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Departure Observations</ID>
+          <Name>Departure Observations</Name>
+          <DataType>BigInt</DataType>
+          <Source>
+            <DataType>BigInt</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>DEPARTURE_OBSERVATIONS</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Flights</DisplayFolder>
+          <FormatString>#,0</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Arrival Observations</ID>
+          <Name>Arrival Observations</Name>
+          <DataType>BigInt</DataType>
+          <Source>
+            <DataType>BigInt</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>ARRIVAL_OBSERVATIONS</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Flights</DisplayFolder>
+          <FormatString>#,0</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Delayed Departures</ID>
+          <Name>Delayed Departures</Name>
+          <DataType>BigInt</DataType>
+          <Source>
+            <DataType>BigInt</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>DELAYED_DEPARTURES</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Flights</DisplayFolder>
+          <FormatString>#,0</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Departure Delay Minutes</ID>
+          <Name>Departure Delay Minutes</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>DEPARTURE_LATE_MINUTES</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Delays</DisplayFolder>
+          <FormatString>#,0.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Arrival Late Minutes</ID>
+          <Name>Arrival Late Minutes</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>ARRIVAL_LATE_MINUTES</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Delays</DisplayFolder>
+          <FormatString>#,0.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Departure Delay Sum</ID>
+          <Name>Departure Delay Sum</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>DEPARTURE_DELAY_VALUE</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Delays</DisplayFolder>
+          <FormatString>#,0.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Arrival Delay Sum</ID>
+          <Name>Arrival Delay Sum</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>ARRIVAL_DELAY_VALUE</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Delays</DisplayFolder>
+          <FormatString>#,0.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Carrier Delay Minutes</ID>
+          <Name>Carrier Delay Minutes</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>CARRIER_DELAY</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Delays</DisplayFolder>
+          <FormatString>#,0.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Weather Delay Minutes</ID>
+          <Name>Weather Delay Minutes</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>WEATHER_DELAY</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Delays</DisplayFolder>
+          <FormatString>#,0.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>NAS Delay Minutes</ID>
+          <Name>NAS Delay Minutes</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>NAS_DELAY</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Delays</DisplayFolder>
+          <FormatString>#,0.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Security Delay Minutes</ID>
+          <Name>Security Delay Minutes</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>SECURITY_DELAY</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Delays</DisplayFolder>
+          <FormatString>#,0.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Late Aircraft Delay Minutes</ID>
+          <Name>Late Aircraft Delay Minutes</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>LATE_AIRCRAFT_DELAY</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Delays</DisplayFolder>
+          <FormatString>#,0.00</FormatString>
+        </Measure>
+        <Measure>
+          <ID>Distance Miles Sum</ID>
+          <Name>Distance Miles Sum</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <Source xsi:type="ColumnBinding">
+              <TableID>FactFlight</TableID>
+              <ColumnID>DISTANCE</ColumnID>
+            </Source>
+          </Source>
+          <DisplayFolder>Distance</DisplayFolder>
+          <FormatString>#,0.00</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>FactFlight</TableID>
+                    <ColumnID>DATE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Carrier</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Carrier</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>FactFlight</TableID>
+                    <ColumnID>CARRIER_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Origin Airport</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Airport</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>FactFlight</TableID>
+                    <ColumnID>ORIGIN_AIRPORT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Destination Airport</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Airport</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>FactFlight</TableID>
+                    <ColumnID>DEST_AIRPORT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Departure Time</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Scheduled Time</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>FactFlight</TableID>
+                    <ColumnID>DEP_TIME_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Cancellation</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Cancellation</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>FactFlight</TableID>
+                    <ColumnID>CANCELLATION_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Route</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Route</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>FactFlight</TableID>
+                    <ColumnID>ROUTE_KEY</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Flight Status</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Status</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>Error</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>FactFlight</TableID>
+                    <ColumnID>CANCELLED</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source>
+    <DataSourceViewID>Flight_DW</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript>
+      <ID>Calculations</ID>
+      <Name>Calculations</Name>
+      <Commands>
+        <Command>
+          <Text>CALCULATE;
+CREATE MEMBER CURRENTCUBE.[Measures].[Average Arrival Delay] AS
+ IIF([Measures].[Arrival Observations]=0,NULL,[Measures].[Arrival Delay Sum]/[Measures].[Arrival Observations]),
+ FORMAT_STRING='#,0.00',DISPLAY_FOLDER='Rates and Averages',VISIBLE=1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Average Departure Delay] AS
+ IIF([Measures].[Departure Observations]=0,NULL,[Measures].[Departure Delay Sum]/[Measures].[Departure Observations]),
+ FORMAT_STRING='#,0.00',DISPLAY_FOLDER='Rates and Averages',VISIBLE=1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Cancellation Rate] AS
+ IIF([Measures].[Total Flights]=0,NULL,[Measures].[Cancelled Flights]/[Measures].[Total Flights]),
+ FORMAT_STRING='0.00%',DISPLAY_FOLDER='Rates and Averages',VISIBLE=1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Departure Delay Rate] AS
+ IIF([Measures].[Departure Observations]=0,NULL,[Measures].[Delayed Departures]/[Measures].[Departure Observations]),
+ FORMAT_STRING='0.00%',DISPLAY_FOLDER='Rates and Averages',VISIBLE=1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Route Distance Miles] AS
+ IIF([Measures].[Total Flights]=0,NULL,[Measures].[Distance Miles Sum]/[Measures].[Total Flights]),
+ FORMAT_STRING='#,0.00',DISPLAY_FOLDER='Distance',VISIBLE=1;</Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

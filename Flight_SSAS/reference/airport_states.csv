@@ -1,0 +1,343 @@
+AIRPORT_CODE,STATE_CODE,STATE_NAME
+ABE,PA,Pennsylvania
+ABI,TX,Texas
+ABQ,NM,New Mexico
+ABR,SD,South Dakota
+ABY,GA,Georgia
+ACK,MA,Massachusetts
+ACT,TX,Texas
+ACV,CA,California
+ACY,NJ,New Jersey
+ADK,AK,Alaska
+ADQ,AK,Alaska
+AEX,LA,Louisiana
+AGS,GA,Georgia
+ALB,NY,New York
+ALW,WA,Washington
+AMA,TX,Texas
+ANC,AK,Alaska
+APN,MI,Michigan
+ASE,CO,Colorado
+ATL,GA,Georgia
+ATW,WI,Wisconsin
+AUS,TX,Texas
+AVL,NC,North Carolina
+AVP,PA,Pennsylvania
+AZA,AZ,Arizona
+AZO,MI,Michigan
+BDL,CT,Connecticut
+BET,AK,Alaska
+BFF,NE,Nebraska
+BFL,CA,California
+BGM,NY,New York
+BGR,ME,Maine
+BHM,AL,Alabama
+BIH,CA,California
+BIL,MT,Montana
+BIS,ND,North Dakota
+BJI,MN,Minnesota
+BLI,WA,Washington
+BLV,IL,Illinois
+BMI,IL,Illinois
+BNA,TN,Tennessee
+BOI,ID,Idaho
+BOS,MA,Massachusetts
+BPT,TX,Texas
+BQK,GA,Georgia
+BQN,PR,Puerto Rico
+BRD,MN,Minnesota
+BRO,TX,Texas
+BRW,AK,Alaska
+BTM,MT,Montana
+BTR,LA,Louisiana
+BTV,VT,Vermont
+BUF,NY,New York
+BUR,CA,California
+BWI,MD,Maryland
+BZN,MT,Montana
+CAE,SC,South Carolina
+CAK,OH,Ohio
+CDC,UT,Utah
+CDV,AK,Alaska
+CHA,TN,Tennessee
+CHO,VA,Virginia
+CHS,SC,South Carolina
+CID,IA,Iowa
+CIU,MI,Michigan
+CKB,WV,West Virginia
+CLE,OH,Ohio
+CLL,TX,Texas
+CLT,NC,North Carolina
+CMH,OH,Ohio
+CMI,IL,Illinois
+CMX,MI,Michigan
+COD,WY,Wyoming
+COS,CO,Colorado
+COU,MO,Missouri
+CPR,WY,Wyoming
+CRP,TX,Texas
+CRW,WV,West Virginia
+CSG,GA,Georgia
+CVG,KY,Kentucky
+CWA,WI,Wisconsin
+CYS,WY,Wyoming
+DAB,FL,Florida
+DAL,TX,Texas
+DAY,OH,Ohio
+DCA,VA,Virginia
+DDC,KS,Kansas
+DEC,IL,Illinois
+DEN,CO,Colorado
+DFW,TX,Texas
+DHN,AL,Alabama
+DIK,ND,North Dakota
+DLG,AK,Alaska
+DLH,MN,Minnesota
+DRO,CO,Colorado
+DSM,IA,Iowa
+DTW,MI,Michigan
+DVL,ND,North Dakota
+EAR,NE,Nebraska
+ECP,FL,Florida
+EGE,CO,Colorado
+EKO,NV,Nevada
+ELM,NY,New York
+ELP,TX,Texas
+ESC,MI,Michigan
+EUG,OR,Oregon
+EVV,IN,Indiana
+EWR,NJ,New Jersey
+EYW,FL,Florida
+FAI,AK,Alaska
+FAR,ND,North Dakota
+FAT,CA,California
+FAY,NC,North Carolina
+FCA,MT,Montana
+FLG,AZ,Arizona
+FLL,FL,Florida
+FNT,MI,Michigan
+FOD,IA,Iowa
+FSD,SD,South Dakota
+FSM,AR,Arkansas
+FWA,IN,Indiana
+GCC,WY,Wyoming
+GCK,KS,Kansas
+GEG,WA,Washington
+GFK,ND,North Dakota
+GGG,TX,Texas
+GJT,CO,Colorado
+GNV,FL,Florida
+GPT,MS,Mississippi
+GRB,WI,Wisconsin
+GRI,NE,Nebraska
+GRK,TX,Texas
+GRR,MI,Michigan
+GSO,NC,North Carolina
+GSP,SC,South Carolina
+GST,AK,Alaska
+GTF,MT,Montana
+GTR,MS,Mississippi
+GUC,CO,Colorado
+GUM,TT,U.S. Pacific Trust Territories and Possessions
+HDN,CO,Colorado
+HGR,MD,Maryland
+HHH,SC,South Carolina
+HIB,MN,Minnesota
+HLN,MT,Montana
+HNL,HI,Hawaii
+HOB,NM,New Mexico
+HOU,TX,Texas
+HPN,NY,New York
+HRL,TX,Texas
+HSV,AL,Alabama
+HTS,WV,West Virginia
+HYA,MA,Massachusetts
+HYS,KS,Kansas
+IAD,VA,Virginia
+IAG,NY,New York
+IAH,TX,Texas
+ICT,KS,Kansas
+IDA,ID,Idaho
+ILM,NC,North Carolina
+IMT,MI,Michigan
+IND,IN,Indiana
+INL,MN,Minnesota
+ISP,NY,New York
+ITH,NY,New York
+ITO,HI,Hawaii
+JAC,WY,Wyoming
+JAN,MS,Mississippi
+JAX,FL,Florida
+JFK,NY,New York
+JLN,MO,Missouri
+JMS,ND,North Dakota
+JNU,AK,Alaska
+JST,PA,Pennsylvania
+KOA,HI,Hawaii
+KTN,AK,Alaska
+LAN,MI,Michigan
+LAR,WY,Wyoming
+LAS,NV,Nevada
+LAW,OK,Oklahoma
+LAX,CA,California
+LBB,TX,Texas
+LBE,PA,Pennsylvania
+LBF,NE,Nebraska
+LBL,KS,Kansas
+LCH,LA,Louisiana
+LCK,OH,Ohio
+LEX,KY,Kentucky
+LFT,LA,Louisiana
+LGA,NY,New York
+LGB,CA,California
+LIH,HI,Hawaii
+LIT,AR,Arkansas
+LNK,NE,Nebraska
+LRD,TX,Texas
+LSE,WI,Wisconsin
+LWS,ID,Idaho
+MAF,TX,Texas
+MBS,MI,Michigan
+MCI,MO,Missouri
+MCO,FL,Florida
+MCW,IA,Iowa
+MDT,PA,Pennsylvania
+MDW,IL,Illinois
+MEI,MS,Mississippi
+MEM,TN,Tennessee
+MFE,TX,Texas
+MFR,OR,Oregon
+MGM,AL,Alabama
+MHK,KS,Kansas
+MHT,NH,New Hampshire
+MIA,FL,Florida
+MKE,WI,Wisconsin
+MLB,FL,Florida
+MLI,IL,Illinois
+MLU,LA,Louisiana
+MOB,AL,Alabama
+MOT,ND,North Dakota
+MQT,MI,Michigan
+MRY,CA,California
+MSN,WI,Wisconsin
+MSO,MT,Montana
+MSP,MN,Minnesota
+MSY,LA,Louisiana
+MTJ,CO,Colorado
+MVY,MA,Massachusetts
+MYR,SC,South Carolina
+OAJ,NC,North Carolina
+OAK,CA,California
+OGG,HI,Hawaii
+OKC,OK,Oklahoma
+OMA,NE,Nebraska
+OME,AK,Alaska
+ONT,CA,California
+ORD,IL,Illinois
+ORF,VA,Virginia
+ORH,MA,Massachusetts
+OTH,OR,Oregon
+OTZ,AK,Alaska
+PAE,WA,Washington
+PBG,NY,New York
+PBI,FL,Florida
+PDX,OR,Oregon
+PGD,FL,Florida
+PHL,PA,Pennsylvania
+PHX,AZ,Arizona
+PIA,IL,Illinois
+PIB,MS,Mississippi
+PIE,FL,Florida
+PIH,ID,Idaho
+PIT,PA,Pennsylvania
+PLN,MI,Michigan
+PNS,FL,Florida
+PPG,TT,U.S. Pacific Trust Territories and Possessions
+PQI,ME,Maine
+PRC,AZ,Arizona
+PSC,WA,Washington
+PSE,PR,Puerto Rico
+PSG,AK,Alaska
+PSM,NH,New Hampshire
+PSP,CA,California
+PVD,RI,Rhode Island
+PVU,UT,Utah
+PWM,ME,Maine
+RAP,SD,South Dakota
+RDD,CA,California
+RDM,OR,Oregon
+RDU,NC,North Carolina
+RFD,IL,Illinois
+RHI,WI,Wisconsin
+RIC,VA,Virginia
+RIW,WY,Wyoming
+RKS,WY,Wyoming
+RNO,NV,Nevada
+ROA,VA,Virginia
+ROC,NY,New York
+ROW,NM,New Mexico
+RST,MN,Minnesota
+RSW,FL,Florida
+SAF,NM,New Mexico
+SAN,CA,California
+SAT,TX,Texas
+SAV,GA,Georgia
+SBA,CA,California
+SBN,IN,Indiana
+SBP,CA,California
+SCC,AK,Alaska
+SCE,PA,Pennsylvania
+SCK,CA,California
+SDF,KY,Kentucky
+SEA,WA,Washington
+SFB,FL,Florida
+SFO,CA,California
+SGF,MO,Missouri
+SGU,UT,Utah
+SHR,WY,Wyoming
+SHV,LA,Louisiana
+SIT,AK,Alaska
+SJC,CA,California
+SJT,TX,Texas
+SJU,PR,Puerto Rico
+SLC,UT,Utah
+SLN,KS,Kansas
+SMF,CA,California
+SMX,CA,California
+SNA,CA,California
+SPN,TT,U.S. Pacific Trust Territories and Possessions
+SPS,TX,Texas
+SRQ,FL,Florida
+STC,MN,Minnesota
+STL,MO,Missouri
+STS,CA,California
+STT,VI,U.S. Virgin Islands
+STX,VI,U.S. Virgin Islands
+SUN,ID,Idaho
+SUX,IA,Iowa
+SWF,NY,New York
+SWO,OK,Oklahoma
+SYR,NY,New York
+TLH,FL,Florida
+TOL,OH,Ohio
+TPA,FL,Florida
+TRI,TN,Tennessee
+TTN,NJ,New Jersey
+TUL,OK,Oklahoma
+TUS,AZ,Arizona
+TVC,MI,Michigan
+TWF,ID,Idaho
+TXK,AR,Arkansas
+TYR,TX,Texas
+TYS,TN,Tennessee
+USA,NC,North Carolina
+VCT,TX,Texas
+VEL,UT,Utah
+VLD,GA,Georgia
+VPS,FL,Florida
+WRG,AK,Alaska
+WYS,MT,Montana
+XNA,AR,Arkansas
+XWA,ND,North Dakota
+YAK,AK,Alaska
+YUM,AZ,Arizona

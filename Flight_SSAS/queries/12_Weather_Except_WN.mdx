@@ -1,0 +1,6 @@
+﻿-- Hãng trừ WN, tổng chuyến từ 300, sắp theo Weather Delay giảm dần.
+SELECT {[Measures].[Total Flights], [Measures].[Weather Delay Minutes]} ON COLUMNS,
+ ORDER(FILTER(EXCEPT([Carrier].[Carrier Code].[Carrier Code].Members, {[Carrier].[Carrier Code].&[WN]}),
+  [Measures].[Total Flights] >= 300), [Measures].[Weather Delay Minutes], BDESC) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

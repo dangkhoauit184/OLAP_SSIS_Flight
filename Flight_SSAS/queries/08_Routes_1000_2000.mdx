@@ -1,0 +1,7 @@
+﻿-- Tuyến dài 1.000–2.000 dặm, có ít nhất 50 chuyến trong mẫu năm 2024.
+SELECT {[Measures].[Route Distance Miles], [Measures].[Total Flights], [Measures].[Operated Flights]} ON COLUMNS,
+ ORDER(FILTER(NONEMPTY([Route].[Route].[Route].Members, [Measures].[Total Flights]),
+  [Measures].[Route Distance Miles] >= 1000 AND [Measures].[Route Distance Miles] <= 2000 AND [Measures].[Total Flights] >= 50),
+  [Measures].[Total Flights], BDESC) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

@@ -1,0 +1,33 @@
+﻿{
+    "cubeTotals":  [
+                       50142,
+                       49274,
+                       868,
+                       48887,
+                       49274
+                   ],
+    "version":  "17.0.25.218",
+    "passed":  true,
+    "state":  "Processed",
+    "cubeDimensions":  8,
+    "sqlTotals":  [
+                      50142,
+                      49274,
+                      868,
+                      48887,
+                      49274
+                  ],
+    "database":  "Flight_SSAS",
+    "databaseDimensions":  7,
+    "measureOrder":  [
+                         "Total Flights",
+                         "Operated Flights",
+                         "Cancelled Flights",
+                         "Arrival Observations",
+                         "Departure Observations"
+                     ],
+    "mode":  "Multidimensional",
+    "baseMeasures":  16,
+    "verifiedUtc":  "2026-10-31T11:40:03.2905083Z",
+    "server":  "DESKTOP-7IVUF8R"
+}

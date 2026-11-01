@@ -1,0 +1,205 @@
+{
+    "query":  15,
+    "title":  "Mỗi khung giờ: TOP 2 hãng có tỷ lệ trễ từ 15 phút cao nhất, ít nhất 100 chuyến không hủy.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Operated Flights":  450,
+                                    "Departure Observations":  450,
+                                    "Delayed Departures":  85,
+                                    "Departure Delay Rate":  0.18888888888888888
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "450",
+                                       "Departure Observations":  "450",
+                                       "Delayed Departures":  "85",
+                                       "Departure Delay Rate":  "18.89%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Departure Time].[Time Band].\u0026[1]",
+                                         "caption":  "Sáng"
+                                     },
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[F9]",
+                                         "caption":  "F9"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  590,
+                                    "Departure Observations":  590,
+                                    "Delayed Departures":  101,
+                                    "Departure Delay Rate":  0.1711864406779661
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "590",
+                                       "Departure Observations":  "590",
+                                       "Delayed Departures":  "101",
+                                       "Departure Delay Rate":  "17.12%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Departure Time].[Time Band].\u0026[1]",
+                                         "caption":  "Sáng"
+                                     },
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[NK]",
+                                         "caption":  "NK"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  205,
+                                    "Departure Observations":  205,
+                                    "Delayed Departures":  70,
+                                    "Departure Delay Rate":  0.34146341463414637
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "205",
+                                       "Departure Observations":  "205",
+                                       "Delayed Departures":  "70",
+                                       "Departure Delay Rate":  "34.15%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Departure Time].[Time Band].\u0026[2]",
+                                         "caption":  "Trưa"
+                                     },
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[B6]",
+                                         "caption":  "B6"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  165,
+                                    "Departure Observations":  165,
+                                    "Delayed Departures":  52,
+                                    "Departure Delay Rate":  0.31515151515151513
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "165",
+                                       "Departure Observations":  "165",
+                                       "Delayed Departures":  "52",
+                                       "Departure Delay Rate":  "31.52%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Departure Time].[Time Band].\u0026[2]",
+                                         "caption":  "Trưa"
+                                     },
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[F9]",
+                                         "caption":  "F9"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  327,
+                                    "Departure Observations":  327,
+                                    "Delayed Departures":  110,
+                                    "Departure Delay Rate":  0.3363914373088685
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "327",
+                                       "Departure Observations":  "327",
+                                       "Delayed Departures":  "110",
+                                       "Departure Delay Rate":  "33.64%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Departure Time].[Time Band].\u0026[3]",
+                                         "caption":  "Chiều"
+                                     },
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[F9]",
+                                         "caption":  "F9"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  1438,
+                                    "Departure Observations":  1438,
+                                    "Delayed Departures":  460,
+                                    "Departure Delay Rate":  0.31988873435326842
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "1,438",
+                                       "Departure Observations":  "1,438",
+                                       "Delayed Departures":  "460",
+                                       "Departure Delay Rate":  "31.99%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Departure Time].[Time Band].\u0026[3]",
+                                         "caption":  "Chiều"
+                                     },
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[AA]",
+                                         "caption":  "AA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2405,
+                                    "Departure Observations":  2405,
+                                    "Delayed Departures":  852,
+                                    "Departure Delay Rate":  0.35426195426195428
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2,405",
+                                       "Departure Observations":  "2,405",
+                                       "Delayed Departures":  "852",
+                                       "Departure Delay Rate":  "35.43%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Departure Time].[Time Band].\u0026[4]",
+                                         "caption":  "Tối"
+                                     },
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[WN]",
+                                         "caption":  "WN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  481,
+                                    "Departure Observations":  481,
+                                    "Delayed Departures":  167,
+                                    "Departure Delay Rate":  0.34719334719334721
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "481",
+                                       "Departure Observations":  "481",
+                                       "Delayed Departures":  "167",
+                                       "Departure Delay Rate":  "34.72%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Departure Time].[Time Band].\u0026[4]",
+                                         "caption":  "Tối"
+                                     },
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[F9]",
+                                         "caption":  "F9"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Operated Flights",
+                    "Departure Observations",
+                    "Delayed Departures",
+                    "Departure Delay Rate"
+                ],
+    "rowCount":  8
+}

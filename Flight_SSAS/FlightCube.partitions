@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>FlightCube</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>FlightFacts</ID>
+      <Partitions>
+        <Partition>
+          <ID>AllFlights</ID>
+          <Name>All Flights</Name>
+          <Source xsi:type="QueryBinding">
+            <DataSourceID>Flight_DW</DataSourceID>
+            <QueryDefinition>SELECT f.*,
+       CONVERT(nvarchar(50), CONVERT(varchar(12), ORIGIN_AIRPORT_ID) + N'_' + CONVERT(varchar(12), DEST_AIRPORT_ID)) AS ROUTE_KEY,
+       CAST(1 AS bigint) AS TOTAL_FLIGHTS,
+       CAST(CASE WHEN CANCELLED = 0 THEN 1 ELSE 0 END AS bigint) AS OPERATED_FLIGHTS,
+       CAST(CANCELLED AS bigint) AS CANCELLED_FLIGHTS,
+       CAST(CASE WHEN CANCELLED = 0 AND DEP_DELAY IS NOT NULL THEN 1 ELSE 0 END AS bigint) AS DEPARTURE_OBSERVATIONS,
+       CAST(CASE WHEN CANCELLED = 0 AND ARR_DELAY IS NOT NULL THEN 1 ELSE 0 END AS bigint) AS ARRIVAL_OBSERVATIONS,
+       CAST(CASE WHEN CANCELLED = 0 AND DEP_DELAY &gt;= 15 THEN 1 ELSE 0 END AS bigint) AS DELAYED_DEPARTURES,
+       CASE WHEN CANCELLED = 0 AND DEP_DELAY &gt; 0 THEN DEP_DELAY ELSE 0.0 END AS DEPARTURE_LATE_MINUTES,
+       CASE WHEN CANCELLED = 0 AND ARR_DELAY &gt; 0 THEN ARR_DELAY ELSE 0.0 END AS ARRIVAL_LATE_MINUTES,
+       CASE WHEN CANCELLED = 0 THEN DEP_DELAY ELSE NULL END AS DEPARTURE_DELAY_VALUE,
+       CASE WHEN CANCELLED = 0 THEN ARR_DELAY ELSE NULL END AS ARRIVAL_DELAY_VALUE
+FROM dbo.FACT_FLIGHT f</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

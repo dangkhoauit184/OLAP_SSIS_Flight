@@ -1,0 +1,59 @@
+{
+    "query":  5,
+    "title":  "Top 3 hãng theo tổng phút trễ cất cánh trong quý 2/2024.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Operated Flights":  1633,
+                                    "Departure Delay Minutes":  45809
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "1,633",
+                                       "Departure Delay Minutes":  "45,809.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[AA]",
+                                         "caption":  "AA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  2495,
+                                    "Departure Delay Minutes":  42459
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "2,495",
+                                       "Departure Delay Minutes":  "42,459.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[WN]",
+                                         "caption":  "WN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Operated Flights":  1760,
+                                    "Departure Delay Minutes":  26742
+                                },
+                     "formatted":  {
+                                       "Operated Flights":  "1,760",
+                                       "Departure Delay Minutes":  "26,742.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[DL]",
+                                         "caption":  "DL"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Operated Flights",
+                    "Departure Delay Minutes"
+                ],
+    "rowCount":  3
+}

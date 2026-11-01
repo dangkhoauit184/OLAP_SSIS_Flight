@@ -1,0 +1,7 @@
+﻿-- Hãng có tổng chuyến cao nhất và thấp nhất năm 2024.
+SELECT {[Measures].[Total Flights]} ON COLUMNS,
+ UNION(
+  TOPCOUNT(NONEMPTY([Carrier].[Carrier Code].[Carrier Code].Members, [Measures].[Total Flights]), 1, [Measures].[Total Flights]),
+  BOTTOMCOUNT(NONEMPTY([Carrier].[Carrier Code].[Carrier Code].Members, [Measures].[Total Flights]), 1, [Measures].[Total Flights])) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);

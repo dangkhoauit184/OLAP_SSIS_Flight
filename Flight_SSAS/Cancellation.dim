@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Cancellation</ID>
+  <Name>Cancellation</Name>
+  <Description>Source: DimCancellation; strict dimension keys.</Description>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>Flight_DW</DataSourceViewID>
+  </Source>
+  <Attributes>
+    <Attribute>
+      <ID>Cancellation</ID>
+      <Name>Cancellation</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <NullProcessing>Error</NullProcessing>
+          <Source xsi:type="ColumnBinding">
+            <TableID>DimCancellation</TableID>
+            <ColumnID>CANCELLATION_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <NullProcessing>Error</NullProcessing>
+        <Source xsi:type="ColumnBinding">
+          <TableID>DimCancellation</TableID>
+          <ColumnID>CANCELLATION_CODE</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Reason</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Reason</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute>
+      <ID>Reason</ID>
+      <Name>Reason</Name>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>Error</NullProcessing>
+          <Source xsi:type="ColumnBinding">
+            <TableID>DimCancellation</TableID>
+            <ColumnID>CANCELLATION_CODE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <NullProcessing>Error</NullProcessing>
+        <Source xsi:type="ColumnBinding">
+          <TableID>DimCancellation</TableID>
+          <ColumnID>CANCELLATION_REASON</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+  </Attributes>
+</Dimension>

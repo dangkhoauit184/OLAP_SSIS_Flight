@@ -1,0 +1,84 @@
+{
+  "source_sha256": "a7206899152f7d81b1058f94f69be121ed3a2e1721e4b4c64674ac0952230166",
+  "source_rows_2024": 50142,
+  "delay_threshold_minutes": 15,
+  "comparison": "Independent pandas aggregation of the original 18 CSV columns versus actual SSAS MDX results",
+  "checks": [
+    {
+      "query": 1,
+      "rows": 1,
+      "result": "PASS"
+    },
+    {
+      "query": 2,
+      "rows": 16,
+      "result": "PASS"
+    },
+    {
+      "query": 3,
+      "rows": 5,
+      "result": "PASS"
+    },
+    {
+      "query": 4,
+      "rows": 3,
+      "result": "PASS"
+    },
+    {
+      "query": 5,
+      "rows": 3,
+      "result": "PASS"
+    },
+    {
+      "query": 6,
+      "rows": 15,
+      "result": "PASS"
+    },
+    {
+      "query": 7,
+      "rows": 592,
+      "result": "PASS"
+    },
+    {
+      "query": 8,
+      "rows": 7,
+      "result": "PASS"
+    },
+    {
+      "query": 9,
+      "rows": 2,
+      "result": "PASS"
+    },
+    {
+      "query": 10,
+      "rows": 2,
+      "result": "PASS"
+    },
+    {
+      "query": 11,
+      "rows": 142,
+      "result": "PASS"
+    },
+    {
+      "query": 12,
+      "rows": 14,
+      "result": "PASS"
+    },
+    {
+      "query": 13,
+      "rows": 5,
+      "result": "PASS"
+    },
+    {
+      "query": 14,
+      "rows": 5,
+      "result": "PASS"
+    },
+    {
+      "query": 15,
+      "rows": 8,
+      "result": "PASS"
+    }
+  ],
+  "passed": true
+}

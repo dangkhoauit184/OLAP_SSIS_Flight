@@ -1,0 +1,5 @@
+﻿-- Top 3 hãng theo tổng phút trễ cất cánh trong quý 2/2024.
+SELECT {[Measures].[Operated Flights], [Measures].[Departure Delay Minutes]} ON COLUMNS,
+ TOPCOUNT([Carrier].[Carrier Code].[Carrier Code].Members, 3, [Measures].[Departure Delay Minutes]) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Quarter].&[20242]);

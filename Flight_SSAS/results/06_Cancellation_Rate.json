@@ -1,0 +1,282 @@
+{
+    "query":  6,
+    "title":  "Tỷ lệ hủy của từng hãng, giảm dần; mẫu số là toàn bộ chuyến trong mẫu.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Total Flights":  572,
+                                    "Cancelled Flights":  19,
+                                    "Cancellation Rate":  0.033216783216783216
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "572",
+                                       "Cancelled Flights":  "19",
+                                       "Cancellation Rate":  "3.32%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[HA]",
+                                         "caption":  "HA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1470,
+                                    "Cancelled Flights":  47,
+                                    "Cancellation Rate":  0.031972789115646258
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,470",
+                                       "Cancelled Flights":  "47",
+                                       "Cancellation Rate":  "3.20%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[F9]",
+                                         "caption":  "F9"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1821,
+                                    "Cancelled Flights":  55,
+                                    "Cancellation Rate":  0.030203185063152116
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,821",
+                                       "Cancelled Flights":  "55",
+                                       "Cancellation Rate":  "3.02%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[AS]",
+                                         "caption":  "AS"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  838,
+                                    "Cancelled Flights":  22,
+                                    "Cancellation Rate":  0.026252983293556086
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "838",
+                                       "Cancelled Flights":  "22",
+                                       "Cancellation Rate":  "2.63%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[G4]",
+                                         "caption":  "G4"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1862,
+                                    "Cancelled Flights":  45,
+                                    "Cancellation Rate":  0.024167561761546726
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,862",
+                                       "Cancelled Flights":  "45",
+                                       "Cancellation Rate":  "2.42%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[NK]",
+                                         "caption":  "NK"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  5516,
+                                    "Cancelled Flights":  129,
+                                    "Cancellation Rate":  0.023386511965192168
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "5,516",
+                                       "Cancelled Flights":  "129",
+                                       "Cancellation Rate":  "2.34%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[UA]",
+                                         "caption":  "UA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1909,
+                                    "Cancelled Flights":  41,
+                                    "Cancellation Rate":  0.021477213200628602
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,909",
+                                       "Cancelled Flights":  "41",
+                                       "Cancellation Rate":  "2.15%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[MQ]",
+                                         "caption":  "MQ"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1393,
+                                    "Cancelled Flights":  28,
+                                    "Cancellation Rate":  0.020100502512562814
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,393",
+                                       "Cancelled Flights":  "28",
+                                       "Cancellation Rate":  "2.01%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[9E]",
+                                         "caption":  "9E"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  2177,
+                                    "Cancelled Flights":  41,
+                                    "Cancellation Rate":  0.018833256775378962
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "2,177",
+                                       "Cancelled Flights":  "41",
+                                       "Cancellation Rate":  "1.88%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[YX]",
+                                         "caption":  "YX"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1784,
+                                    "Cancelled Flights":  33,
+                                    "Cancellation Rate":  0.018497757847533634
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,784",
+                                       "Cancelled Flights":  "33",
+                                       "Cancellation Rate":  "1.85%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[B6]",
+                                         "caption":  "B6"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  5298,
+                                    "Cancelled Flights":  98,
+                                    "Cancellation Rate":  0.018497546243865608
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "5,298",
+                                       "Cancelled Flights":  "98",
+                                       "Cancellation Rate":  "1.85%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[OO]",
+                                         "caption":  "OO"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  6840,
+                                    "Cancelled Flights":  114,
+                                    "Cancellation Rate":  0.016666666666666666
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "6,840",
+                                       "Cancelled Flights":  "114",
+                                       "Cancellation Rate":  "1.67%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[AA]",
+                                         "caption":  "AA"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  1607,
+                                    "Cancelled Flights":  26,
+                                    "Cancellation Rate":  0.016179215930304917
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "1,607",
+                                       "Cancelled Flights":  "26",
+                                       "Cancellation Rate":  "1.62%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[OH]",
+                                         "caption":  "OH"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  10079,
+                                    "Cancelled Flights":  111,
+                                    "Cancellation Rate":  0.011012997321162813
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "10,079",
+                                       "Cancelled Flights":  "111",
+                                       "Cancellation Rate":  "1.10%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[WN]",
+                                         "caption":  "WN"
+                                     }
+                                 ]
+                 },
+                 {
+                     "values":  {
+                                    "Total Flights":  6976,
+                                    "Cancelled Flights":  59,
+                                    "Cancellation Rate":  0.00845756880733945
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "6,976",
+                                       "Cancelled Flights":  "59",
+                                       "Cancellation Rate":  "0.85%"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[DL]",
+                                         "caption":  "DL"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Total Flights",
+                    "Cancelled Flights",
+                    "Cancellation Rate"
+                ],
+    "rowCount":  15
+}

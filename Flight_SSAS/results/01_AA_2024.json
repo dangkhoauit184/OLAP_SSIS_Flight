@@ -1,0 +1,33 @@
+{
+    "query":  1,
+    "title":  "Tổng chuyến, chuyến không hủy, chuyến hủy và phút trễ cất cánh của AA năm 2024.",
+    "rows":  [
+                 {
+                     "values":  {
+                                    "Total Flights":  6840,
+                                    "Operated Flights":  6726,
+                                    "Cancelled Flights":  114,
+                                    "Departure Delay Minutes":  148696
+                                },
+                     "formatted":  {
+                                       "Total Flights":  "6,840",
+                                       "Operated Flights":  "6,726",
+                                       "Cancelled Flights":  "114",
+                                       "Departure Delay Minutes":  "148,696.00"
+                                   },
+                     "members":  [
+                                     {
+                                         "uniqueName":  "[Carrier].[Carrier Code].\u0026[AA]",
+                                         "caption":  "AA"
+                                     }
+                                 ]
+                 }
+             ],
+    "columns":  [
+                    "Total Flights",
+                    "Operated Flights",
+                    "Cancelled Flights",
+                    "Departure Delay Minutes"
+                ],
+    "rowCount":  1
+}

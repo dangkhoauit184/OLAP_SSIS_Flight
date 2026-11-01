@@ -1,0 +1,7 @@
+﻿-- Sân bay có trên 200 chuyến không hủy và trễ hạ cánh trung bình trên 15 phút.
+SELECT {[Measures].[Operated Flights], [Measures].[Arrival Observations], [Measures].[Average Arrival Delay]} ON COLUMNS,
+ ORDER(FILTER([Origin Airport].[Airport Code].[Airport Code].Members,
+  [Measures].[Operated Flights] > 200 AND [Measures].[Average Arrival Delay] > 15),
+  [Measures].[Average Arrival Delay], BDESC) ON ROWS
+FROM [FlightCube]
+WHERE ([Date].[Year].&[2024]);
